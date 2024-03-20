@@ -1,0 +1,82 @@
+[
+    {
+        "userCode" : 1,
+        "userName" : "송강", 
+        "userId" : "songriver1",
+        "userPw" : "songriver001",
+        "userEmail" : "songriver1@gmail.com",
+        "userPhone" : "010-1234-5678"
+    },
+    {
+        "userCode" : 2,
+        "userName" : "배수지", 
+        "userId" : "shipsoozi1",
+        "userPw" : "shipsoozi001",
+        "userEmail" : "shipsoozi1@gmail.com",
+        "userPhone" : "010-2345-6789"
+    },
+    {
+        "userCode" : 3,
+        "userName" : "김지원", 
+        "userId" : "kimji1",
+        "userPw" : "kimji001",
+        "userEmail" : "kimji1@gmail.com",
+        "userPhone" : "010-1236-7895"
+    },
+    {
+        "userCode" : 4,
+        "userName" : "조승우", 
+        "userId" : "billionwinwoo1",
+        "userPw" : "billionwinwoo001",
+        "userEmail" : "billionwinwoo1@gmail.com",
+        "userPhone" : "010-9876-5432"
+    },
+    {
+        "userCode" : 5,
+        "userName" : "김고은", 
+        "userId" : "kimhighsilver1",
+        "userPw" : "kimhighsilver001",
+        "userEmail" : "kimhighsilver1@gmail.com",
+        "userPhone" : "010-5645-7895"
+    },
+    {
+        "userCode" : 6,
+        "userName" : "채종협", 
+        "userId" : "bellhyeop1",
+        "userPw" : "bellhyeop001",
+        "userEmail" : "bellhyeop1@gmail.com",
+        "userPhone" : "010-3257-6543"
+    },
+    {
+        "userCode" : 7,
+        "userName" : "채수빈", 
+        "userId" : "waterbean1",
+        "userPw" : "waterbean001",
+        "userEmail" : "waterbean1@gmail.com",
+        "userPhone" : "010-6543-1354"
+    },
+    {
+        "userCode" : 8,
+        "userName" : "원빈", 
+        "userId" : "onebean1",
+        "userPw" : "onebean001",
+        "userEmail" : "onebean1@gmail.com",
+        "userPhone" : "010-3215-7554"
+    },
+    {
+        "userCode" : 9,
+        "userName" : "고수", 
+        "userId" : "highwater1",
+        "userPw" : "highwater001",
+        "userEmail" : "highwater1@gmail.com",
+        "userPhone" : "010-3215-5444"
+    },
+    {
+        "userCode" : 10,
+        "userName" : "임영웅", 
+        "userId" : "iamhero1",
+        "userPw" : "iamhero001",
+        "userEmail" : "iamhero1@gmail.com",
+        "userPhone" : "010-9876-3156"
+    }
+]
