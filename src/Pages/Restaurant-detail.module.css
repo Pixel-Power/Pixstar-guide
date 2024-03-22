@@ -1,0 +1,62 @@
+.resImages {
+    display: flex;
+    /* position: absolute; */
+    height: 400px;
+    object-fit: cover;
+    /* border: 1px solid greenyellow; */
+}
+
+.resImage {
+    left: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.resInfo {
+    margin-left: 1%;
+    margin-top: 1%;
+    display: flex;
+}
+
+.pixStar {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.resInfoBox {
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.iconSize {
+    block-size: 30px;
+}
+
+.resInfoTextBox {
+    border: 1px solid rgb(190, 190, 190);
+    block-size: 100%;
+    margin-bottom: 1%;
+    height: 100%;
+    width: 100%;
+}
+
+.map {
+    block-size: 100%;
+    height: 500px;
+    border: 1px solid rgb(190, 190, 190);
+    margin-bottom: 1%;
+}
+
+.preferResBox {
+    display: flex;
+    margin: auto;
+}
+
+.preferRes {
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    margin: 1%;
+    display: block;
+}
