@@ -3,7 +3,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Outlet } from 'react-router-dom';
 
-function Layout(){
+function Layout1(){
+    
 
     return(
         <>
@@ -15,4 +16,4 @@ function Layout(){
     );
 }
 
-export default Layout;
+export default Layout1;
