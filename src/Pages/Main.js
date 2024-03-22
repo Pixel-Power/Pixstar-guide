@@ -30,6 +30,7 @@ function Main() {
                 <img src="/images/이달의 식당.jpg" />
             </div>
         </div>
+
     );
 }
 
