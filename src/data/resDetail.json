@@ -6,7 +6,7 @@
         "longitude": 127.021599,
         "latitude": 37.520715,
         "phone": "없음",
-        "bestMenu": "창작",
+        "category": "창작",
         "price": "120,000 - 230,000",
         "img": ""
     },
@@ -17,7 +17,7 @@
         "longitude": 127.024317,
         "latitude": 37.517052,
         "phone": "없음",
-        "bestMenu": "우동",
+        "category": "우동",
         "price": "8,000 - 14,000",
         "img": ""
     },
@@ -28,7 +28,7 @@
         "longitude": 127.026846,
         "latitude": 37.519984,
         "phone": "없음",
-        "bestMenu": "일식",
+        "category": "일식",
         "price": "110,000 - 130,000",
         "img": ""
     },
@@ -39,7 +39,7 @@
         "longitude": 127.045692,
         "latitude": 37.482735,
         "phone": "없음",
-        "bestMenu": "쿠시아게",
+        "category": "쿠시아게",
         "price": "80,000 - 100,000",
         "img": ""
     },
@@ -50,7 +50,7 @@
         "longitude": 127.038679,
         "latitude": 37.494392,
         "phone": "www.restaurantevett.com",
-        "bestMenu": "창작",
+        "category": "창작",
         "price": "65,000 - 180,000",
         "img": ""
     },
@@ -61,7 +61,7 @@
         "longitude": 127.023793,
         "latitude": 37.519057,
         "phone": "없음",
-        "bestMenu": "한식",
+        "category": "한식",
         "price": "10,000 - 86,000",
         "img": ""
     },
@@ -72,7 +72,7 @@
         "longitude": 127.023783,
         "latitude": 37.517228,
         "phone": "없음",
-        "bestMenu": "스시",
+        "category": "스시",
         "price": "45,000 - 150,000",
         "img": ""
     },
@@ -83,7 +83,7 @@
         "longitude": 127.036348,
         "latitude": 37.522702,
         "phone": "www.gaonkr.com",
-        "bestMenu": "한식",
+        "category": "한식",
         "price": "280,000 - 300,000",
         "img": ""
     },
@@ -94,7 +94,7 @@
         "longitude": 127.042055,
         "latitude": 37.52318,
         "phone": "없음",
-        "bestMenu": "프렌치",
+        "category": "프렌치",
         "price": "65,000 - 150,000",
         "img": ""
     },
@@ -105,7 +105,7 @@
         "longitude": 127.041036,
         "latitude": 37.523516,
         "phone": "02-514-1522",
-        "bestMenu": "이탈리안",
+        "category": "이탈리안",
         "price": "45,000 - 80,000",
         "img": ""
     },
@@ -116,7 +116,7 @@
         "longitude": 127.041031,
         "latitude": 37.523509,
         "phone": "02-511-2579",
-        "bestMenu": "카페",
+        "category": "카페",
         "price": "8,000 - 15,000",
         "img": ""
     },
@@ -127,7 +127,7 @@
         "longitude": 127.04074,
         "latitude": 37.523654,
         "phone": "02-540-1533",
-        "bestMenu": "카페",
+        "category": "카페",
         "price": "5,000 - 10,000",
         "img": ""
     },
@@ -138,9 +138,9 @@
         "longitude": 127.040738,
         "latitude": 37.523692,
         "phone": "02-515-1392",
-        "bestMenu": "브런치",
+        "category": "브런치",
         "price": "20,000 - 35,000",
-        "img": ""
+        "img": "../../public/img/img13.jpg"
     },
     {
         "code": 14,
@@ -149,9 +149,9 @@
         "longitude": 127.041769,
         "latitude": 37.523535,
         "phone": "02-511-3394",
-        "bestMenu": "카페",
+        "category": "카페",
         "price": "8,000 - 16,000",
-        "img": ""
+        "img": "../../public/img/img14.jpg"
     },
     {
         "code": 15,
@@ -160,9 +160,9 @@
         "longitude": 127.041741,
         "latitude": 37.523464,
         "phone": "02-511-0700",
-        "bestMenu": "이자카야",
+        "category": "이자카야",
         "price": "20,000 - 50,000",
-        "img": ""
+        "img": "../../public/img/img15.jpg"
     },
     {
         "code": 16,
@@ -171,9 +171,9 @@
         "longitude": 127.041672,
         "latitude": 37.523506,
         "phone": "02-3446-1104",
-        "bestMenu": "멕시코",
+        "category": "멕시코",
         "price": "15,000 - 25,000",
-        "img": ""
+        "img": "../../public/img/img16.jpg"
     },
     {
         "code": 17,
@@ -182,9 +182,9 @@
         "longitude": 127.041548,
         "latitude": 37.523454,
         "phone": "02-3443-0508",
-        "bestMenu": "카페",
+        "category": "카페",
         "price": "8,000 - 15,000",
-        "img": ""
+        "img": "../../public/img/img17.jpg"
     },
     {
         "code": 18,
@@ -193,9 +193,9 @@
         "longitude": 127.041304,
         "latitude": 37.523389,
         "phone": "02-3446-0669",
-        "bestMenu": "카페",
+        "category": "카페",
         "price": "6,000 - 12,000",
-        "img": ""
+        "img": "../../public/img/img18.jpg"
     },
     {
         "code": 19,
@@ -204,7 +204,7 @@
         "longitude": 127.041551,
         "latitude": 37.523362,
         "phone": "02-511-2414",
-        "bestMenu": "카페",
+        "category": "카페",
         "price": "6,000 - 12,000",
         "img": ""
     },
@@ -212,7 +212,7 @@
         "code": 20,
         "name": "프렌치에그베이커리",
         "address": "서울특별시 강남구",
-        "bestMenu": "도넛",
+        "category": "도넛",
         "price": "2,000 - 4,000",
         "img": ""
     },
@@ -223,7 +223,7 @@
         "longitude": 127.040746,
         "latitude": 37.522965,
         "phone": "02-540-3112",
-        "bestMenu": "베이글",
+        "category": "베이글",
         "price": "3,000 - 5,000",
         "img": ""
     },
@@ -234,7 +234,7 @@
         "longitude": 127.040749,
         "latitude": 37.522923,
         "phone": "02-3443-0805",
-        "bestMenu": "베이커리",
+        "category": "베이커리",
         "price": "4,000 - 8,000",
         "img": ""
     },
@@ -245,7 +245,7 @@
         "longitude": 127.041473,
         "latitude": 37.522866,
         "phone": "02-511-2672",
-        "bestMenu": "서양식",
+        "category": "서양식",
         "price": "15,000 - 30,000",
         "img": ""
     },
@@ -256,7 +256,7 @@
         "longitude": 127.04075,
         "latitude": 37.522883,
         "phone": "02-540-2102",
-        "bestMenu": "카페",
+        "category": "카페",
         "price": "6,000 - 10,000",
         "img": ""
     },
@@ -267,7 +267,7 @@
         "longitude": 127.041471,
         "latitude": 37.522827,
         "phone": "02-511-2680",
-        "bestMenu": "한식",
+        "category": "한식",
         "price": "20,000 - 40,000",
         "img": ""
     },
@@ -278,7 +278,7 @@
         "longitude": 127.040752,
         "latitude": 37.522802,
         "phone": "02-540-3696",
-        "bestMenu": "아시아음식",
+        "category": "아시아음식",
         "price": "12,000 - 20,000",
         "img": ""
     },
@@ -289,7 +289,7 @@
         "longitude": 127.041476,
         "latitude": 37.522797,
         "phone": "02-511-2420",
-        "bestMenu": "일식",
+        "category": "일식",
         "price": "15,000 - 30,000",
         "img": ""
     },
@@ -300,7 +300,7 @@
         "longitude": 127.040756,
         "latitude": 37.522757,
         "phone": "02-540-3478",
-        "bestMenu": "패스트푸드",
+        "category": "패스트푸드",
         "price": "5,000 - 10,000",
         "img": ""
     },
@@ -311,7 +311,7 @@
         "longitude": 127.041476,
         "latitude": 37.522728,
         "phone": "02-511-2422",
-        "bestMenu": "한식",
+        "category": "한식",
         "price": "20,000 - 40,000",
         "img": ""
     }
