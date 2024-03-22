@@ -1,0 +1,24 @@
+header{
+    
+    border-bottom: 1px solid black;
+    height: 80px;
+    
+}
+
+.logoImg {
+    height: 70px;
+    position: absolute;
+    padding-left: 40%;
+}
+
+.headerMenu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 22px;
+    padding-right: 10px;
+}
+
+.headerMenu :hover{
+    opacity: 0.5;
+}
