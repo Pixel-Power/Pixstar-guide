@@ -2,45 +2,62 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getResDetail } from "../apis/RestaurantAPI";
 import styles from "./Restaurant-detail.module.css";
-import Map from "../components/Map";
 
 const { kakao } =  window;
 
 function RestaurantDetail(){
 
+    // const {code} = useParams();
+    const code = 1;
+    const [restaurant, setRestaurant] = useState({
+        name: '',
+        address: '',
+        longitude: 0,
+        latitude: 0,
+        phone: '',
+        category: '',
+        price: '',
+        image: ''
+    });
+
 
     const [kakaoMap, setKakaoMap] = useState(null);
 
-    useEffect(() => {
-        const latitude = 37.520715;
-        const longitude = 127.021599;
-        const container = document.getElementById('map');           // 지도를 담을 영역의 DOM 레퍼런스
-        const options = {
-            center : new kakao.maps.LatLng(latitude, longitude ),  // 지도의 중심좌표.
-            level : 3                                               
-        };
-        const map = new kakao.maps.Map(container, options);         // 지도 생성 및 객체 리턴
-        setKakaoMap(map);
-        const markerPosition = new kakao.maps.LatLng(latitude, longitude );
-        const marker = new kakao.maps.Marker({
-            position: markerPosition,
-            clickable: true
-        });
-        marker.setMap(map);
-        const iwContent = '<div style="padding:5px;"><p>류니끄</p><br><p>서울특별시 강남구 강남대로 162길 40</p></div>';
-        const iwRemoveable = true;
-        const iwPosition = new kakao.maps.LatLng(latitude, longitude);
-        const infowindow = new kakao.maps.InfoWindow({
-            // position : iwPosition,
-            // content : iwContent
-            content : iwContent,
-            removable : iwRemoveable
-        });
-        kakao.maps.event.addListener(marker, 'click', function() {
-            infowindow.open(map, marker);
-        } );
-    },
-    []
+    useEffect(
+        () => {
+            setRestaurant(getResDetail(code));
+            console.log(restaurant);
+            const latitude = restaurant.latitude;
+            // const latitude = 37.520715;
+            const longitude = restaurant.longitude;
+            // const longitude = 127.021599;
+            const container = document.getElementById('map');           // 지도를 담을 영역의 DOM 레퍼런스
+            const options = {
+                center : new kakao.maps.LatLng(latitude, longitude ),  // 지도의 중심좌표.
+                level : 3                                               
+            };
+            const map = new kakao.maps.Map(container, options);         // 지도 생성 및 객체 리턴
+            setKakaoMap(map);
+            const markerPosition = new kakao.maps.LatLng(latitude, longitude );
+            const marker = new kakao.maps.Marker({
+                position: markerPosition,
+                clickable: true
+            });
+            marker.setMap(map);
+            const iwContent = '<div style="padding:5px;"><p>류니끄</p><br><p>서울특별시 강남구 강남대로 162길 40</p></div>';
+            const iwRemoveable = true;
+            const iwPosition = new kakao.maps.LatLng(latitude, longitude);
+            const infowindow = new kakao.maps.InfoWindow({
+                // position : iwPosition,
+                // content : iwContent
+                content : iwContent,
+                removable : iwRemoveable
+            });
+            kakao.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map, marker);
+            } );
+        },
+        []
     )
 
     return(
@@ -55,7 +72,7 @@ function RestaurantDetail(){
                 <div className={styles.resInfoBox}>
                     <div>
                         <img className={styles.pixStar} src="/images/restaurant-detail/pixstar.png"></img>
-                        <h3>식당이름</h3>
+                        <h3>{restaurant.name}</h3>
                     </div>
                     <hr/>
                     <div className={styles.resInfoTextBox}>
@@ -63,13 +80,13 @@ function RestaurantDetail(){
                             <img className={styles.iconSize} src="/images/restaurant-detail/location-pin.png"></img>
                             <p>&nbsp;&nbsp;&nbsp;</p>
                             <p>주소&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                            <p>주소내용</p>
+                            <p>{restaurant.address}</p>
                         </div>
                         <div className={styles.resInfo}>
                             <img className={styles.iconSize} src="/images/restaurant-detail/phone.png"></img>
                             <p>&nbsp;&nbsp;&nbsp;</p>
                             <p>전화&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                            <p>전화번호내용</p>
+                            <p>{restaurant.phone}</p>
                         </div>
                         <div className={styles.resInfo}>
                             <img className={styles.iconSize} src="/images/restaurant-detail/clock.png"></img>
@@ -83,13 +100,13 @@ function RestaurantDetail(){
                             <img className={styles.iconSize} src="/images/restaurant-detail/won.png"></img>
                             <p>&nbsp;&nbsp;&nbsp;</p>
                             <p>가격대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                            <p>가격대내용</p>
+                            <p>{restaurant.price}</p>
                         </div>
                         <div className={styles.resInfo}>
                             <img className={styles.iconSize} src="/images/restaurant-detail/bulleted-list.png"></img>
                             <p>&nbsp;&nbsp;&nbsp;</p>
                             <p>카테고리&nbsp;&nbsp;&nbsp;</p>
-                            <p>카테고리내용</p>
+                            <p>{restaurant.category}</p>
                         </div>
                     </div>
                     <div>
