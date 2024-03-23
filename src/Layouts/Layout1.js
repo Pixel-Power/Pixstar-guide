@@ -1,5 +1,5 @@
 import Header1 from '../components/Header1';
-import Sidebar from '../components/Sidebar';
+import Sidebar1 from '../components/Sidebar1';
 import Footer from '../components/Footer';
 import { Outlet } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ function Layout1(){
     return(
         <>
             <Header1/>
-            <Sidebar/>
+            <Sidebar1/>
             <Outlet/>
             <Footer/>
         </>
