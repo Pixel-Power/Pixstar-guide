@@ -1,0 +1,49 @@
+.flexContainer {
+    
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    justify-content: center;
+}
+
+.flexItem {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin-left: 15%;
+}
+
+.ResTitleName{
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-bottom: 2%;
+    font-weight: bold;
+    font-size: large;
+}
+
+.RestaurantBox1,
+.RestaurantBox2,
+.RestaurantBox3{
+    flex: 0 0 auto;
+    width: 33.33%;
+}
+
+.img16 {
+    width: 200px;
+    height: 250px;
+    border-radius: 5%;
+}
+.ResTitle {
+    align-items: center;
+}
+
+.ResName {
+    margin-right: 5px;
+}
+
+.ResCategory {
+    font-size: 0.8em;
+    background-color: #f0f0f0;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
