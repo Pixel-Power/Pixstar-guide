@@ -1,14 +1,12 @@
 header{
-    
     border-bottom: 1px solid black;
     height: 80px;
-    
 }
 
 .logoImg {
     height: 70px;
     position: absolute;
-    padding-left: 40%;
+    padding-left: 47.5%;
 }
 
 .headerMenu{

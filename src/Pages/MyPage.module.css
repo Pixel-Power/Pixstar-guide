@@ -1,0 +1,77 @@
+.MyPage1{
+    text-align: center;
+}
+
+.UserBox{
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid black;
+    padding: 50px;
+}
+
+.UserImg{
+    display: inline-table;
+    margin-left: 20px;
+}
+
+.UserName {
+    font-size: 35px;
+    font-weight: bold;
+    display: inline;
+}
+
+.UserRefer{
+    font-size: 20px;
+    font-weight: bold;
+    display: inline;
+}
+
+.UserNameBox{
+    display: inline-table;
+    width: 50%;
+    margin-left: 30px;
+    
+    text-align: left;
+}
+
+.UserIntroduce{
+    display: block;
+}
+
+button{
+    width: 90px;
+    height: 45px;
+
+    font-size: large;
+    font-weight: bold;
+
+    background-color: rgb(251, 75, 85);
+    border-radius: 25%;
+
+    color: white;
+
+    margin: 20px;
+}
+
+.reviewBoxAll{
+    width: 70%;
+    height: auto;
+}
+
+.reviewBox{
+    width: 300px;
+    height: 300px;
+
+    display: inline-block;
+    margin: 20px;
+
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 90%, rgb(241, 241, 241));
+    border-radius: 5%;
+}
+
+.reviewImgs{
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5%;
+}

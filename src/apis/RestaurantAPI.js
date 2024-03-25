@@ -9,6 +9,8 @@ export function getResList(){
 export function getResDetail(code){
     const restaurant = resDetail.find(restaurant => restaurant.code === code);
     return resDetail ? restaurant : null;
+    console.log(typeof code);
+    return resDetail.filter(restaurant => restaurant.code === parseInt(code))[0];
 }
 
 // 카테고리를 기반으로 식당을 검색하는 함수
