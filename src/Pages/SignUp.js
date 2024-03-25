@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+import userData from '../data/memDetail.json';
 
 function SignUp() {
     const navigate = useNavigate();
@@ -12,6 +13,15 @@ function SignUp() {
     const [email, setEmail] = useState('');
     const [users, setUsers] = useState([]);
     const [isSignedUp, setIsSignedUp] = useState(false);
+    
+
+    useEffect(() => {
+        setUsers(userData);
+    }, [userData]);
+
+    const isDuplicateId = (id) => {
+        return users.filter(user => user.userId === id).length > 0;
+    }
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -25,17 +35,27 @@ function SignUp() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         // 빈 값 검사
         if (!id || !password || !cfPassword || !name || !phone || !email) {
             alert('모든 필드를 입력해주세요');
             return;
         }
 
+        if (password !== cfPassword) {
+            alert('비밀번호와 비밀번호 확인이 일치해야 합니다.');
+            return;
+        }
+
+        if (isDuplicateId(id)) {
+            alert('이미 존재하는 아이디입니다.');
+            return;
+        }
+
         // 사용자 데이터 추가
         const newUser = { id, password, cfPassword, name, phone, email };
         setUsers([...users, newUser]);
-        
+
         setIsSignedUp(true);
         alert('회원가입이 완료되었습니다');
         navigate('/login');

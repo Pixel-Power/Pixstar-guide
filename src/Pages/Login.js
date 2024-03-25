@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import usersData from '../data/memDetail.json'; 
 import { useNavigate } from 'react-router-dom';
-const Login = () => {
+function Login() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
@@ -26,6 +26,7 @@ const Login = () => {
     if (userFound) {
       setIsLoggedIn(true);
       alert('로그인 되었습니다')
+      navigate('/main')
     } else {
       alert('아이디 또는 비밀번호가 잘못되었습니다');
     }
