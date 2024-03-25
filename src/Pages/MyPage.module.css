@@ -27,7 +27,7 @@
 }
 
 .UserNameBox{
-    display: inline-table;
+    display: inline-block;
     width: 50%;
     margin-left: 30px;
     
@@ -38,7 +38,7 @@
     display: block;
 }
 
-.Button{
+.Button1{
     width: 90px;
     height: 45px;
 
@@ -53,14 +53,25 @@
     margin: 20px;
 }
 
-.reviewBoxAll{
-    width: 70%;
-    height: auto;
+.Button2{
+    width: 90px;
+    height: 45px;
+
+    font-size: large;
+    font-weight: bold;
+
+    background: #7E7D79;
+    border-radius: 25%;
+
+    color: white;
+
+    margin: 20px;
 }
 
 .reviewBox{
     width: 300px;
     height: 300px;
+    text-align: left;
 
     display: inline-block;
     margin: 20px;

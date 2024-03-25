@@ -15,19 +15,20 @@ function MyPage(){
                 </Link>
             </div>
             <div>
-                <button className={styles.Button}>리뷰</button>
-                <button className={styles.Button}>예약</button>
+                <button className={styles.Button1}>리뷰</button>
+                <Link to="/reservation">
+                    <button className={styles.Button2}>예약</button>
+                </Link>
             </div>
             <div>
-                <div reviewBoxAll>
-                    
-                        <div className={styles.reviewBox}> 
-                            <img className={styles.reviewImgs} src="/images/food/hamburger/hamburger (1).jpg" alt='reviewImg1'/>
-                            <h5>햄버거 맛집</h5>
-                            <img src="/images/myPage-images/5star.png" alt='5star'/>
-                            <br/>
-                            치즈버거가 너무 잘생겼고 사장님이 맛있습니다. 인생 최고의 햄버거 맛집
-                        </div>
+                <div>
+                    <div className={styles.reviewBox}> 
+                        <img className={styles.reviewImgs} src="/images/food/hamburger/hamburger (1).jpg" alt='reviewImg1'/>
+                        <h5>햄버거 맛집</h5>
+                        <img src="/images/myPage-images/5star.png" alt='5star'/>
+                        <br/>
+                        치즈버거가 너무 잘생겼고 사장님이 맛있습니다. 인생 최고의 햄버거 맛집
+                    </div>
                     
                     <div className={styles.reviewBox}> 
                         <img className={styles.reviewImgs} src="/images/food/chinesefood/chinesefood (1).jpg" alt='reviewImg2'/>
@@ -44,7 +45,7 @@ function MyPage(){
                         치즈버거가 너무 잘생겼고 사장님이 맛있습니다. 인생 최고의 햄버거 맛집
                     </div>
                 </div>
-                <div reviewBoxAll>
+                <div>
                     <div className={styles.reviewBox}> 
                         <img className={styles.reviewImgs} src="/images/food/hamburger/hamburger (1).jpg" alt='reviewImg4'/>
                         <h5>햄버거 맛집</h5>
