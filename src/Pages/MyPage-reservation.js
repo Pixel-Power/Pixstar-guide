@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import styles from './MyPage-reservation.module.css';
 
-function MyPage(){
+function Reservation(){
+
     return(
         <div className={styles.MyPage1}>
             <div className={styles.UserBox}>
@@ -36,7 +37,7 @@ function MyPage(){
                     </Link>
                     <div className={styles.ReservationBox}> 
                         <img className={styles.ReservationImgs} src="/images/food/chinesefood/chinesefood (13).jpg" alt='reviewImg1'/>
-                        <div className={styles.ReservationText}>
+                        <div className={styles.ReservationText}>    
                             <h4>양귀족 양꼬치 양갈비</h4>
                             <p className={styles.Date}>2024.03.25 오후 6:30</p>
                             <p className={styles.Personnel}>예약 인원 :</p>
@@ -92,4 +93,4 @@ function MyPage(){
     );
 }
 
-export default MyPage;
+export default Reservation;

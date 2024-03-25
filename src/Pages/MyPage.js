@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './MyPage.module.css';
-
 function MyPage(){
+
     return(
         <div className={styles.MyPage1}>
             <div className={styles.UserBox}>
@@ -28,7 +28,7 @@ function MyPage(){
                         <h4>햄버거 맛집</h4>
                         <img src="/images/myPage-images/5star.png" alt='5star'/>
                         <br/>
-                        치즈버거가 너무 잘생겼고 사s장님이 맛있습니다. 인생 최고의 햄버거 맛집
+                        치즈버거가 너무 잘생겼고 사장님이 맛있습니다. 인생 최고의 햄버거 맛집
                     </div>
                 
                     <div className={styles.reviewBox}> 
