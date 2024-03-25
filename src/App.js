@@ -6,7 +6,7 @@ import RestaurantSearchResult from "./Pages/Restaurant-search-result";
 import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
 import MyPage from './Pages/MyPage';
-// import RestaurantDetail from './Pages/Restaurant-detail';
+import RestaurantDetail from './Pages/Restaurant-detail';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
 
           <Route path="/" element={<Layout3/>}>
             <Route path="/login" element={<Login/>}/>
-            {/* <Route path="/restaurantdetail" element={<RestaurantDetail/>}/> */}
+            <Route path="/restaurantdetail" element={<RestaurantDetail/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
