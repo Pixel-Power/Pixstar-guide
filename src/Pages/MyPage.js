@@ -20,7 +20,7 @@ function MyPage(){
             </div>
             <div>
                 <div reviewBoxAll>
-                    <Link to="/reservationdetail">
+                    
                         <div className={styles.reviewBox}> 
                             <img className={styles.reviewImgs} src="/images/food/hamburger/hamburger (1).jpg" alt='reviewImg1'/>
                             <h5>햄버거 맛집</h5>
@@ -28,7 +28,7 @@ function MyPage(){
                             <br/>
                             치즈버거가 너무 잘생겼고 사장님이 맛있습니다. 인생 최고의 햄버거 맛집
                         </div>
-                    </Link>
+                    
                     <div className={styles.reviewBox}> 
                         <img className={styles.reviewImgs} src="/images/food/chinesefood/chinesefood (1).jpg" alt='reviewImg2'/>
                         <h5>중식 맛집</h5>
