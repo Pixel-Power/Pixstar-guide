@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getResDetail } from "../apis/RestaurantAPI";
 import styles from "./Restaurant-detail.module.css";
+import CalendarModal from "../components/CalendarModal";
 
 const { kakao } =  window;
 
@@ -17,11 +18,12 @@ function RestaurantDetail(){
         phone: '',
         category: '',
         price: '',
+        time: '',
+        pixStar: '',
         image: ''
     });
 
-    const [reservation, setReservation] = useState('오늘(월) / 2명');
-
+    const [calendarModal, setCalendarModal] = useState(false);
 
     const [kakaoMap, setKakaoMap] = useState(null);
 
@@ -46,7 +48,7 @@ function RestaurantDetail(){
                 clickable: true
             });
             marker.setMap(map);
-            const iwContent = '<div style="padding:5px;"><p>류니끄</p><br><p>서울특별시 강남구 강남대로 162길 40</p></div>';
+            const iwContent = `<div style="padding:5px;"><p>${restaurant.name}</p><br><p>${restaurant.address}</p></div>`;
             const iwRemoveable = true;
             const iwPosition = new kakao.maps.LatLng(latitude, longitude);
             const infowindow = new kakao.maps.InfoWindow({
@@ -62,7 +64,7 @@ function RestaurantDetail(){
         []
     )
 
-    return(
+    return (
 
         <>
             <div>
@@ -94,7 +96,7 @@ function RestaurantDetail(){
                             <img className={styles.iconSize} src="/images/restaurant-detail/clock.png"></img>
                             <p>&nbsp;&nbsp;&nbsp;</p>
                             <p>영업시간&nbsp;&nbsp;</p>
-                            <p>영업시간내용</p>
+                            <p>{restaurant.time}</p>
                         </div>
                     </div>
                     <div className={styles.resInfoTextBox}>
@@ -115,28 +117,13 @@ function RestaurantDetail(){
                         <h3>예약하기</h3>
                         <div className={styles.resInfoTextBox}>
                             <h4 className={styles.reservationDateTimeText}>예약 일시</h4>
-                            <div className={styles.reservationBox}>
-                                <div className={styles.calendarIconTextBox}>
-                                    <img className={styles.calendarIcon} src="/images/restaurant-detail/calendar.png"></img>
-                                    <div className={styles.reservationText}>{reservation}</div>
-                                </div>
-                                <button className={styles.vIcon}>V</button>
-                            </div>
-                            <div>
-                                <button className={styles.timeItem}>오후 6:00</button>
-                                <button className={styles.timeItem}>오후 6:30</button>
-                                <button className={styles.timeItem}>오후 7:00</button>
-                                <button className={styles.timeItem}>오후 7:30</button>
-                                <button className={styles.timeItem}>오후 8:00</button>
-                            </div>
-                            <button className={styles.reservationButton}>예약하기</button>
+                            <CalendarModal/>
                         </div>
                     </div>
                     <div>
                         <h3>매장위치</h3>
                         <div className={styles.map}>
                             <div id="map" style={{width: '100%', height: '100%'}}>실제지도</div>
-                            {/* <Map/> */}
                         </div>
                     </div>
                     <div>

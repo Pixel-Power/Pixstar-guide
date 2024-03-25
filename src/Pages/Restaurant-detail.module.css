@@ -16,6 +16,7 @@
     margin-left: 1%;
     margin-top: 1%;
     display: flex;
+    align-items: center;
 }
 
 .pixStar {
@@ -41,6 +42,10 @@
     width: 100%;
 }
 
+.reservationDateTimeText {
+    margin-left: 2%;
+}
+
 .map {
     block-size: 100%;
     height: 500px;
@@ -51,6 +56,7 @@
 .preferResBox {
     display: flex;
     margin: auto;
+    text-align: center;
 }
 
 .preferRes {
@@ -61,74 +67,6 @@
     display: block;
 }
 
-
-.reservationDateTimeText {
-    margin-left: 2%;
-}
-.reservationBox {
-    display: flex;
-    border: 1px solid rgb(190, 190, 190);
-    border-radius: 5%;
-    margin-left: 2%;
-    margin-right: 70%;
-    align-items: center;
-    justify-content: space-between;
-    height: 45px;
-}
-
-.calendarIconTextBox {
-    display: flex;
-    margin-left: 3%;
-}
-
-.calendarIcon {
-    block-size: 25px;
-}
-
-.vIcon {
-    cursor: pointer;
-    block-size: 25px;
-    width: fit-content;
-    color: rgb(251, 75, 85);
-    background: white;
-    border: 0;
-    /* align-items: end; */
-}
-
-.vIcon:hover {
-    border: 1px solid rgb(251, 75, 85);
-}
-
-.reservationText {
-    width: 200px;
-    margin-left: 1%;
-    
-}
-
-.timeItem {
-    cursor: pointer;
-    font-size: medium;
-    /* width: fit-content;
-    height: fit-content; */
-    border: 0;
-    border-radius: 10%;
-    margin-right: -1%;
-}
-
-.reservationButton {
-    cursor: pointer;
-    border: 1px solid rgb(251, 75, 85);
-    background: white;
-    color: rgb(251, 75, 85);
-    border-radius: 10%;
-    margin-left: 45%;
-}
-
-.timeItem:hover {
-    background-color: gray;
-    color: white;
-}
-
-.reservationButton:hover {
-    border: 2px solid rgb(251, 75, 85);
+.preferResText {
+    /* text-align: center; */
 }
