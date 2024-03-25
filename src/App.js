@@ -17,16 +17,17 @@ function App() {
           <Route path="/" element={<Layout1/>}>
             <Route index element={<Main/>}/>
             <Route path="main" element={<Main/>}/>
-            <Route path="restaurant-search-result" element={<RestaurantSearchResult/>}/>
+            <Route path="restaurantsearchresult" element={<RestaurantSearchResult/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/signup' element={<SignUp/>}/>
-            <Route path='/myPage' element={<MyPage/>}/>
           </Route>
 
           <Route path="/" element={<Layout3/>}>
             <Route path="/login" element={<Login/>}/>
-            <Route path='/signup' element={<SignUp/>}/>
-            <Route path="/restaurant-detail" element={<RestaurantDetail/>}/>
+            <Route path="/restaurantdetail" element={<RestaurantDetail/>}/>
+            <Route path='reservationdetail' element={<ReservationDetail/>}/>
+            <Route path='/mypage' element={<MyPage/>}/>
+            <Route path='reservation' element={<Reservation/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
