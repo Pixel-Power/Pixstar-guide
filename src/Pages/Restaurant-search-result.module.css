@@ -1,16 +1,17 @@
 .flexContainer {
-    
     display: flex;
     flex-wrap: nowrap;
     overflow: auto;
     justify-content: center;
 }
 
-.flexItem {
+.flexItem1 {
     display: flex;
     justify-content: space-evenly;
     width: 80%;
     margin-left: 15%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .ResTitleName{
@@ -21,24 +22,35 @@
     font-size: large;
 }
 
-.RestaurantBox1,
-.RestaurantBox2,
-.RestaurantBox3{
+.RestaurantBox1
+{
     flex: 0 0 auto;
     width: 33.33%;
 }
 
-.img16 {
+.imgRes {
     width: 200px;
     height: 250px;
     border-radius: 5%;
 }
+
+.pixstar {
+    
+}
+
 .ResTitle {
     align-items: center;
+    font-weight: 800;
+}
+
+.ResDetail {
+    font-size: 12pt;
+    font-family: 'Noto-Sans';
 }
 
 .ResName {
     margin-right: 5px;
+
 }
 
 .ResCategory {
@@ -46,4 +58,40 @@
     background-color: #f0f0f0;
     padding: 2px 5px;
     border-radius: 3px;
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+.address, .phone {
+    margin-right: 10px;
+}
+
+.description {
+    font-size: 10pt;
+}
+
+.paging {
+    text-align: center;
+    margin-top: 2%;
+    font-size: 15pt;
+}
+
+.select1{
+    display: inline-block;
+    background-color: rgb(255, 209, 45, 0.8);
+    border: 2px ;
+    border-radius: 10%;
+    padding: 5px 8px;
+}
+.select2 {
+    display: inline-block;
+    margin: 0.5%;
+    border: 1px solid rgba(0, 0, 0, 0.382);
+    padding: 5px 8px;
+    border-radius: 10%;
+}
+
+.navlink:focus, .navlink:active , .navlink:visited {
+    text-decoration: none;
+    color: black;
 }

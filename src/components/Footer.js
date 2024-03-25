@@ -3,6 +3,7 @@ function Footer(){
 
     return(
         <>
+        <footer>
         <div className={itemStyle.Footer}>
         <ul>
             <a>이용약관 | </a>
@@ -19,6 +20,7 @@ function Footer(){
 
         </ul>
         </div>
+        </footer>
        
         
        
