@@ -9,14 +9,14 @@
     display: flex;
     justify-content: space-evenly;
     width: 80%;
-    margin-left: 15%;
+    margin-left: 12%;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
 .ResTitleName{
     margin-top: 3%;
-    margin-left: 15%;
+    margin-left: 12%;
     margin-bottom: 2%;
     font-weight: bold;
     font-size: large;
@@ -24,8 +24,15 @@
 
 .RestaurantBox1
 {
+    
     flex: 0 0 auto;
-    width: 33.33%;
+    width: 400px;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    position: relative;
+    border: 1px solid rgba(80, 80, 80, 0.427);
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px #cac7c7d5;
 }
 
 .imgRes {
@@ -35,7 +42,7 @@
 }
 
 .pixstar {
-    
+    width: 20%
 }
 
 .ResTitle {
@@ -44,7 +51,7 @@
 }
 
 .ResDetail {
-    font-size: 12pt;
+    font-size: 10pt;
     font-family: 'Noto-Sans';
 }
 

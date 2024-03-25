@@ -43,10 +43,6 @@ ul {
     list-style: none;
 }
 
-a {
-    text-decoration: none;
-}
-
 /* l NAV */
 .navBox{
     background-color:rgb(255, 209, 45, 0.8) ;
@@ -119,6 +115,7 @@ a {
 
 .nav_name {
     font-size: var(--small-font-size);
+    text-decoration: none;
 }
 
 /* Expander menu */
@@ -170,3 +167,13 @@ a {
     transform: rotate(180deg);
     transition: .5s;
 }
+
+.nav-links {
+    list-style-type: none;
+    transition: var(--mainTransition);
+    height: 0;
+    overflow: hidden;
+  }
+  .show-nav {
+    height: 216px;
+  }
