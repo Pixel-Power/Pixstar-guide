@@ -6,8 +6,8 @@
     --nav--width: 20%;
 
     /* Colores */
-    --first-color: rgb(255, 209, 45);
-    --bg-color: rgb(255, 209, 45);
+    --first-color: rgb(255, 209, 45, 0.7);
+    --bg-color: rgb(255, 209, 45, 0.7);
     --sub-color: #b6cefc;
     --white-color: #fff;
 
@@ -49,7 +49,7 @@ a {
 
 /* l NAV */
 .navBox{
-    background-color:rgb(255, 209, 45) ;
+    background-color:rgb(255, 209, 45, 0.8) ;
     border-radius: 5%;
     max-width: 20%;
     height: 100%;

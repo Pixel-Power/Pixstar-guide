@@ -8,7 +8,7 @@
         "phone": "없음",
         "category": "창작",
         "price": "120,000 - 230,000",
-        "img": ""
+        "img": "../../public/img/img13.jpg"
     },
     {
         "code": 2,
@@ -19,7 +19,7 @@
         "phone": "없음",
         "category": "우동",
         "price": "8,000 - 14,000",
-        "img": ""
+        "img": "../../public/img/img13.jpg"
     },
     {
         "code": 3,
@@ -30,7 +30,7 @@
         "phone": "없음",
         "category": "일식",
         "price": "110,000 - 130,000",
-        "img": ""
+        "img": "../../public/img/img13.jpg"
     },
     {
         "code": 4,
@@ -41,7 +41,7 @@
         "phone": "없음",
         "category": "쿠시아게",
         "price": "80,000 - 100,000",
-        "img": ""
+        "img": "../../public/img/img13.jpg"
     },
     {
         "code": 5,
@@ -151,7 +151,7 @@
         "phone": "02-511-3394",
         "category": "카페",
         "price": "8,000 - 16,000",
-        "img": "../../public/img/img14.jpg"
+        "img": "img/img14.jpg"
     },
     {
         "code": 15,
@@ -162,7 +162,7 @@
         "phone": "02-511-0700",
         "category": "이자카야",
         "price": "20,000 - 50,000",
-        "img": "../../public/img/img15.jpg"
+        "img": "img/img15.jpg"
     },
     {
         "code": 16,
@@ -173,7 +173,7 @@
         "phone": "02-3446-1104",
         "category": "멕시코",
         "price": "15,000 - 25,000",
-        "img": "../../public/img/img16.jpg"
+        "img": "img/img16.jpg"
     },
     {
         "code": 17,
@@ -184,7 +184,7 @@
         "phone": "02-3443-0508",
         "category": "카페",
         "price": "8,000 - 15,000",
-        "img": "../../public/img/img17.jpg"
+        "img": "img/img17.jpg"
     },
     {
         "code": 18,
@@ -195,7 +195,7 @@
         "phone": "02-3446-0669",
         "category": "카페",
         "price": "6,000 - 12,000",
-        "img": "../../public/img/img18.jpg"
+        "img": "img/img18.jpg"
     },
     {
         "code": 19,
