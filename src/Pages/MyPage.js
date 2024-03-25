@@ -14,19 +14,21 @@ function MyPage(){
                     <img src="/images/myPage-images/editImg.png" alt="UserEdit"/>
                 </Link>
             </div>
-            <div className={styles.Button}>
-                <button>리뷰</button>
-                <button>예약</button>
+            <div>
+                <button className={styles.Button}>리뷰</button>
+                <button className={styles.Button}>예약</button>
             </div>
             <div>
                 <div reviewBoxAll>
-                    <div className={styles.reviewBox}> 
-                        <img className={styles.reviewImgs} src="/images/food/hamburger/hamburger (1).jpg" alt='reviewImg1'/>
-                        <h5>햄버거 맛집</h5>
-                        <img src="/images/myPage-images/5star.png" alt='5star'/>
-                        <br/>
-                        치즈버거가 너무 잘생겼고 사장님이 맛있습니다. 인생 최고의 햄버거 맛집
-                    </div>
+                    <Link to="/reservationdetail">
+                        <div className={styles.reviewBox}> 
+                            <img className={styles.reviewImgs} src="/images/food/hamburger/hamburger (1).jpg" alt='reviewImg1'/>
+                            <h5>햄버거 맛집</h5>
+                            <img src="/images/myPage-images/5star.png" alt='5star'/>
+                            <br/>
+                            치즈버거가 너무 잘생겼고 사장님이 맛있습니다. 인생 최고의 햄버거 맛집
+                        </div>
+                    </Link>
                     <div className={styles.reviewBox}> 
                         <img className={styles.reviewImgs} src="/images/food/chinesefood/chinesefood (1).jpg" alt='reviewImg2'/>
                         <h5>중식 맛집</h5>

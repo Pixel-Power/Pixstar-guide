@@ -38,14 +38,14 @@
     display: block;
 }
 
-button{
+.Button{
     width: 90px;
     height: 45px;
 
     font-size: large;
     font-weight: bold;
 
-    background-color: rgb(251, 75, 85);
+    background: rgb(251, 75, 85);
     border-radius: 25%;
 
     color: white;
