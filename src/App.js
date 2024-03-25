@@ -7,6 +7,8 @@ import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
 import MyPage from './Pages/MyPage';
 import RestaurantDetail from './Pages/Restaurant-detail';
+import ReservationDetail from './Pages/MyPage-reservation-detail';
+import Reservation from './Pages/MyPage-reservation';
 
 function App() {
   return (
