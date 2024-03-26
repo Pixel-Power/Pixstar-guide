@@ -1,0 +1,112 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 10pt;
+}
+
+/* BASE */
+ ::before, ::after {
+    box-sizing: border-box;
+}
+
+.navBox{
+    border-right: 2px solid rgba(177, 177, 177, 0.315);
+    width: 10%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+}
+
+.l-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--bg-color);
+    padding: 1.5rem 1.5rem 2rem;
+    transition: .5s;
+    z-index: var(--z-fixed);
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.nav__linkActive {
+    display: inline-block;
+    margin-top: 10%;
+    padding: 0;
+    list-style: none;
+    font-size: 11pt;
+    font-weight: 500;
+    color: rgb(14, 14, 14);
+    cursor: pointer;
+}
+
+.nav__toggle {
+    font-size: 1.25rem;
+    padding: .75rem;
+    cursor: pointer;
+}
+
+.nav__logo {
+    color: var(--bg-color);
+    font-weight: 600;
+}
+
+.nav__link {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: .75rem;
+    padding: .75rem;
+    color: var(--white-color);
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.nav__link:hover {
+    background-color: var(--first-color);
+}
+
+.nav__icon {
+    font-size: 1.25rem;
+}
+
+.nav_name {
+    font-size: var(--small-font-size);
+    text-decoration: none;
+    color: rgba(86, 85, 85, 0.882);
+}
+
+.nav-links {
+    list-style-type: none;
+    transition: var(--mainTransition);
+    height: 0;
+    overflow: hidden;
+}
+
+.show-nav {
+    height: 216px;
+}
+
+.nav_list {
+    text-decoration: none;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 30%;
+    text-align: left;
+}

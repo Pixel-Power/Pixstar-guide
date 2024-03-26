@@ -1,0 +1,93 @@
+.resImages {
+    display: flex;
+    /* position: absolute; */
+    height: 400px;
+    object-fit: cover;
+    /* border: 1px solid greenyellow; */
+}
+
+.resImage {
+    left: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.resInfo {
+    margin-left: 1%;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+}
+
+.pixStar {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.nameCategoryBox {
+    display: flex;
+}
+
+.category {
+    margin-left: 1.5%;
+    background-color: #f0f0f0;
+    border-radius: 20%;
+}
+
+.resInfoBox {
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.iconSize {
+    block-size: 25px;
+}
+
+.resInfoTextBox {
+    border: 1px solid rgb(190, 190, 190);
+    block-size: 100%;
+    margin-bottom: 1%;
+    height: 100%;
+    width: 100%;
+}
+
+.reservationDateTimeText {
+    margin-left: 2%;
+}
+
+.map {
+    block-size: 100%;
+    height: 500px;
+    border: 1px solid rgb(190, 190, 190);
+    margin-bottom: 1%;
+}
+
+.preferResBox {
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
+
+.preferRes {
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    margin: 1%;
+    display: block;
+}
+
+.mapButton {
+    margin-top: -1.5%;
+    cursor: pointer;
+    border: 0;
+    text-decoration: underline;
+    float: right;
+    color: rgb(251, 75, 85);
+    font-weight: bolder;
+    border-radius: 5%;
+}
+
+.mapButton:hover {
+    background: rgb(255, 209, 45, 0.7);
+}
