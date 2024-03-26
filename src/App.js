@@ -10,6 +10,7 @@ import ReservationDetail from './Pages/MyPage-reservation-detail';
 import Reservation from './Pages/MyPage-reservation';
 import Layout2 from './Layouts/Layout2';
 import Logout from './Pages/Logout';
+import Layout3 from './Layouts/Layout3';
 
 function App() {
   return (
@@ -17,18 +18,27 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Layout1/>}>
+            <Route index element={<Main/>}/>
+            <Route path="main" element={<Main/>}/>
+            <Route path="restaurantsearchresult" element={<RestaurantSearchResult/>}/>
             <Route path='/login' element={<Login/>}/>
-            <Route path="restaurant-search-result" element={<RestaurantSearchResult/>}/>
             <Route path='/signup' element={<SignUp/>}/>
-            <Route path='/myPage' element={<MyPage/>}/>
           </Route>
 
 
           <Route path="/" element={<Layout2/>}>
-          <Route index element={<Main/>}/>
-          <Route path="/main" element={<Main/>}/>
-         <Route path="/logout" element={<Logout/>}/>
-          <Route path="/restaurant-detail" element={<RestaurantDetail/>}/>
+           <Route index element={<Main/>}/>
+           <Route path="/main" element={<Main/>}/>
+           <Route path="/logout" element={<Logout/>}/>
+           <Route path="/restaurant-detail" element={<RestaurantDetail/>}/>
+          </Route>
+
+          <Route path="/" element={<Layout3/>}>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/restaurantdetail" element={<RestaurantDetail/>}/>
+            <Route path='reservationdetail' element={<ReservationDetail/>}/>
+            <Route path='/mypage' element={<MyPage/>}/>
+            <Route path='reservation' element={<Reservation/>}/>
           </Route>
 
         </Routes>

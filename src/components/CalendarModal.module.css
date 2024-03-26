@@ -189,6 +189,11 @@
     height: 30px;
 }
 
+.timeButton:hover {
+    background-color: gray;
+    color: white;
+}
+
 .timeItem1:hover {
     background-color: gray;
     color: white;
