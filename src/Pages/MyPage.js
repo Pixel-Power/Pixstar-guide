@@ -1,7 +1,7 @@
 import { Link, NavLink, useParams } from 'react-router-dom';
 import styles from './MyPage.module.css';
 import { useEffect, useState } from 'react';
-import { usersData } from '../apis/MemAPI'
+import { usersDataList } from '../apis/MemAPI'
 
 function MyPage(){
 
@@ -17,7 +17,7 @@ function MyPage(){
 
     useEffect(
         () => {
-            setUser(usersData(userCode))
+            setUser(usersDataList(userCode))
         },
         []
     );

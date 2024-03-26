@@ -17,7 +17,9 @@ function Header2(){
             <Link to={'/logout'}>
                 <img src="/images/header-images/Logout Rounded.png" alt="Logout"/>
             </Link>
+            <Link to={'/mypage'}>
                 <img src="/images/header-images/Home.png" alt="Home"/>
+            </Link>
             </div>
         </header>
 
