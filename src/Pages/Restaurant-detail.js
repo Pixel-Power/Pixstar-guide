@@ -20,6 +20,7 @@ function RestaurantDetail(){
         price: '',
         time: '',
         pixStar: '',
+        description: '',
         image: ''
     });
 
@@ -75,7 +76,7 @@ function RestaurantDetail(){
                 </div>
                 <div className={styles.resInfoBox}>
                     <div>
-                        <img className={styles.pixStar} src="/images/restaurant-detail/pixstar.png"></img>
+                        <img className={styles.pixStar} src={restaurant.pixStar}></img>
                         <h2>{restaurant.name}</h2>
                     </div>
                     <hr/>
@@ -107,10 +108,10 @@ function RestaurantDetail(){
                             <p>{restaurant.price}</p>
                         </div>
                         <div className={styles.resInfo}>
-                            <img className={styles.iconSize} src="/images/restaurant-detail/bulleted-list.png"></img>
-                            <p>&nbsp;&nbsp;&nbsp;</p>
-                            <p>카테고리&nbsp;&nbsp;&nbsp;</p>
-                            <p>{restaurant.category}</p>
+                            {/* <img className={styles.iconSize} src="/images/restaurant-detail/bulleted-list.png"></img>
+                            <p>&nbsp;&nbsp;&nbsp;</p> */}
+                            {/* <p>설명&nbsp;&nbsp;&nbsp;</p> */}
+                            <p>{restaurant.description}</p>
                         </div>
                     </div>
                     <div>
