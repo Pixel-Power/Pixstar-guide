@@ -1,6 +1,10 @@
 function Error() {
+
     return(
-        <h1>에러 화면</h1>
+        <div>
+        <img className="Error" src="/images/errorPage-images/image.png" alt="에러페이지" />
+        </div>
+        
     );
 }
 

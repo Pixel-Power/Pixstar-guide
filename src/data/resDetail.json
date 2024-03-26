@@ -8,7 +8,7 @@
         "phone": "02-567-1234",
         "category": "창작",
         "price": "120,000 - 230,000",
-        "img": "images/restaurant-detail/img1.jpg",
+        "img": "images/food/koreanfood/koreanfood (16).png",
         "description": "로컬 식재료를 현대적인 재해석을 통해 지금 시점에서 그 이상 그 이하(No more,No less)도 아닌 식재료의 본질의 맛을 가장 잘 살릴수있는 조리법으로 결과물을 만들어 내고 있습니다.",
         "time": "12:00 - 22:30",
         "pixstar":"images/restaurant-detail/pixstar3.png"
@@ -36,7 +36,7 @@
         "phone": "02-1111-2222",
         "category": "일식",
         "price": "110,000 - 130,000",
-        "img": "images/restaurant-detail/img3.jpg",
+        "img": "images/food/japanesefood/japanesefood (7).jpg",
         "description":"미토우는 제철 식재료를 이용해 자신들만의 방식으로 일본 전통 요리를 표현하는 권영운, 김보미 셰프의 재능이 돋보이는 공간이다. ",
         "time": "18:00 - 22:00",
         "pixstar":"images/restaurant-detail/pixstar1.png"
@@ -50,7 +50,7 @@
         "phone": "02-658-5311",
         "category": "쿠시아게",
         "price": "80,000 - 100,000",
-        "img": "images/restaurant-detail/img4.jpg",
+        "img": "images/food/japanesefood/japanesefood (5).jpg",
         "description":"'쿠시카와'는 일본의 대표적인 대중 음식 중 하나인 꼬치 튀김(쿠시카츠)을 전문으로 하는 곳이다.",
         "time": "12:00 - 22:00",
         "pixstar":"images/restaurant-detail/pixstar1.png"
@@ -64,7 +64,7 @@
         "phone": "02-654-3151",
         "category": "창작",
         "price": "65,000 - 180,000",
-        "img": "images/restaurant-detail/img5.jpg",
+        "img": "images/food/steak/steak (5).jpg",
         "description":"호주 출신 셰프 Joseph Lidgerwood이 운영하는 레스토랑.",
         "time": "17:30 - 22:30",
         "pixstar":"images/restaurant-detail/pixstar1.png"
@@ -78,7 +78,7 @@
         "phone": "02-654-1452",
         "category": "한식",
         "price": "10,000 - 86,000",
-        "img": "images/restaurant-detail/img6.jpg",
+        "img": "images/food/koreanfood/koreanfood (15).jpg",
         "description":"전복 돌솥밥과 소라성게돌솥밥,순살갈치돌솥밥, 옥돔구이 등을 주메뉴로 하고 있으며, 해물뚝배기, 성게미역국 등 다양한 메뉴 구성과 신선한 재료로 만족스러운 식사를 하실 수 있도록 준비하고 있습니다.",
         "time": "10:00 - 21:00",
         "pixstar":"images/restaurant-detail/pixstar2.png"
@@ -260,7 +260,7 @@
         "phone": "02-511-2414",
         "category": "카페",
         "price": "6,000 - 12,000",
-        "img": "",
+        "img": "images/food/beverage/beverage (18).jpg",
         "description":"청담공원 바로 옆에 위치한 도심 속 자연을 느낄 수 있는 공간입니다.",
         "time": "10:00 - 21:00",
         "pixstar":"images/restaurant-detail/pixstar2.png"
@@ -268,10 +268,11 @@
     {
         "code": 20,
         "name": "프렌치에그베이커리",
-        "address": "서울특별시 강남구",
+        "address": "서울특별시 강남구 도산대로 256",
+        "phone": "02-511-2564",
         "category": "도넛",
         "price": "2,000 - 4,000",
-        "img": "",
+        "img": "images/food/beverage/beverage (19).jpg",
         "description":"2016년부터 시작하여 한국의 도넛 유행을 선도하고 있는 1세대 도넛 브랜드입니다.",
         "time": "11:00 - 21:00",
         "pixstar":"images/restaurant-detail/pixstar2.png"
@@ -285,7 +286,7 @@
         "phone": "02-540-3112",
         "category": "베이글",
         "price": "3,000 - 5,000",
-        "img": "",
+        "img": "images/food/beverage/beverage (20).jpg",
         "description":"직접 만든 유기농베이글과 커피를 들고 피크닉가기 좋은 예쁜 공간입니다. 신선하고 좋은 재료만 사용하고있습니다.",
         "time": "09:00 - 18:00",
         "pixstar":"images/restaurant-detail/pixstar3.png"
@@ -299,7 +300,7 @@
         "phone": "02-3443-0805",
         "category": "베이커리",
         "price": "4,000 - 8,000",
-        "img": "",
+        "img": "images/food/beverage/beverage (21).jpg",
         "description":"프렌치 구움과자 전문 도미니크앤존 입니다.",
         "time": "12:30 - 21:00",
         "pixstar":"images/restaurant-detail/pixstar2.png"
@@ -313,7 +314,7 @@
         "phone": "02-511-2672",
         "category": "서양식",
         "price": "15,000 - 30,000",
-        "img": "",
+        "img": "images/food/beverage/beverage (22).jpg",
         "description":"다양한 유러피언 음식과 와인을 쾌적하고 감각적인 공간에서 합리적인 가격에 즐길 수 있는 파인캐주얼 레스토랑입니다.",
         "time": "17:00 - 22:00",
         "pixstar":"images/restaurant-detail/pixstar3.png"
@@ -327,7 +328,7 @@
         "phone": "02-540-2102",
         "category": "카페",
         "price": "6,000 - 10,000",
-        "img": "",
+        "img": "images/food/beverage/beverage (23).jpg",
         "description":"2014년도부터 지금까지 오랫동안 사랑받고 있는 스페셜티 커피 전문 로스터스입니다.",
         "time": "10:00 - 21:00",
         "pixstar":"images/restaurant-detail/pixstar3.png"
@@ -341,7 +342,7 @@
         "phone": "02-511-2680",
         "category": "한식",
         "price": "20,000 - 40,000",
-        "img": "",
+        "img": "images/food/koreanfood/koreanfood (1).jpg",
         "description":"음식으로 저희의 마음을 전하는 소중한 공간으로, 순대국으로 경험할수 있는 최상의 가치를 드리겠습니다.",
         "time": "08:00 - 22:00",
         "pixstar":"images/restaurant-detail/pixstar2.png"
@@ -355,7 +356,7 @@
         "phone": "02-540-3696",
         "category": "아시아음식",
         "price": "12,000 - 20,000",
-        "img": "",
+        "img": "images/food/chinesefood/chinesefood (12).jpg",
         "description":"본매장 라이라이는 최상품의 식재료만을 직구매하여 40년 경력의 화교 주방장이 직업 음식을 조리해 고객님들께 해드리고 있습니다.",
         "time": "11:00 - 21:30",
         "pixstar":"images/restaurant-detail/pixstar2.png"
@@ -369,7 +370,7 @@
         "phone": "02-511-2420",
         "category": "일식",
         "price": "15,000 - 30,000",
-        "img": "",
+        "img": "images/food/japanesefood/japanesefood (12).jpg",
         "description":"요리에 어울리는 와인 사케 위스키 소츄 등을 마리아쥬하여 즐기실 수 있도록 가성비 있는 구성으로 준비했습니다.",
         "time": "18:00 - 22:00",
         "pixstar":"images/restaurant-detail/pixstar1.png"
@@ -383,7 +384,7 @@
         "phone": "02-540-3478",
         "category": "패스트푸드",
         "price": "5,000 - 10,000",
-        "img": "",
+        "img": "images/food/hamburger/hamburger (2).jpg",
         "description":"미국에서 2021년부터 시작된 핫치킨&버거브랜드입니다.",
         "time": "11:00 - 21:00",
         "pixstar":"images/restaurant-detail/pixstar1.png"
@@ -397,7 +398,7 @@
         "phone": "02-511-2422",
         "category": "한식",
         "price": "20,000 - 40,000",
-        "img": "",
+        "img": "images/food/koreanfood/koreanfood (1).jpg",
         "description":"부드러운 계란이 올라간 구름계란덮밥 입니다.",
         "time": "10:30 - 21:30",
         "pixstar":"images/restaurant-detail/pixstar1.png"
