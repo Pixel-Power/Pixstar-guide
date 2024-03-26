@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import usersData from '../data/memDetail.json'
 import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
 
 
 function Login() {
@@ -8,33 +10,40 @@ function Login() {
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const [users, setUsers] = useState([]);
-
+  const {userCode}=useParams();
+  
 
 
   const navigate=useNavigate();
 
   
   useEffect(() => {
-    setUsers(usersData); 
+    setUsers(usersData);
+
   }, []);
 
   
   const handleLogin = () => {
     let userFound = false;
-    for (let i = 0; i < users.length; i++) {
+       for (let i = 0; i < users.length; i++) {
       const user = users[i];
       if (user.userId === id && user.userPw === password) {
         userFound = true;
         break;
       }
+      
     }
+    
+   
     if (userFound) {
       setIsLoggedIn(true);
       alert('로그인 되었습니다')
-      navigate('/main')
+      navigate(`/main`)
+
     } else {
       alert('아이디 또는 비밀번호가 잘못되었습니다');
     }
+    
   };
 
 
@@ -45,9 +54,13 @@ function Login() {
   return (
     <div>
       {isLoggedIn ? (
+        
         <div>
+          
           <p>반갑습니다, {id}님!</p>
+
         </div>
+       
       ) : (
         <div style={{
             display: 'flex', justifyContent: 'center', alignItems: 'center',
@@ -69,11 +82,15 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <button onClick={handleLogin}>로그인</button>
+          
           <button onClick={onClickHandler}>회원가입</button>
           </form>
         </div>
+        
       )}
     </div>
+   
+    
   );
 };
 

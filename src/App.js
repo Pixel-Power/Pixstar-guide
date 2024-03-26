@@ -21,9 +21,16 @@ function App() {
             <Route index element={<Main/>}/>
             <Route path="main" element={<Main/>}/>
             <Route path="restaurantsearchresult" element={<RestaurantSearchResult/>}/>
-            <Route path='/login' element={<Login/>}/>
+            <Route path="/login/:userCode" element={<Login />} />
             <Route path='/signup' element={<SignUp/>}/>
           </Route>
+
+
+          <Route path="/">
+            <Route index element={<Main/>}/>
+            <Route path=":userCode" element={<Login/>}/>
+           </Route>
+         
 
 
           <Route path="/" element={<Layout2/>}>
