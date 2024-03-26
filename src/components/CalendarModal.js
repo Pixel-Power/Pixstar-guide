@@ -1,13 +1,19 @@
 
 import { useState, useEffect } from 'react'
 import Calendar from 'react-calendar';
-import * as moment from 'moment-timezone';
 import 'react-calendar/dist/Calendar.css'   // css import
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import styles from './CalendarModal.module.css';
+import { useNavigate, useParams } from 'react-router-dom';
 
 function CalendarModal () {
+
+    const {code} = useParams();
+
+    const {userCode} = useParams();
+
+    const navigate = useNavigate();
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -25,12 +31,6 @@ function CalendarModal () {
     const [bookTime, setBookTime] = useState('');
     const timeList = ['오후 6:00', '오후 6:30', '오후 7:00', '오후 7:30', '오후 8:00'];
     const [reservation, setReservation] = useState(`오늘(${dayList[date.getDay()]}) / 2명`);
-
-    useEffect(() => {
-        return () => {
-            console.log('clean-up...')
-        }
-    })
 
     const onClickPlus = () => {
         setCount(count + 1);
@@ -52,6 +52,12 @@ function CalendarModal () {
         setReservation(text);
         setIsOpen(false)
     }; 
+
+    const onClickRealReservation = () => {
+
+        navigate("/reservationdetail", {state: {reservation}});
+    };
+
     return (
         <>
             <div>
@@ -67,7 +73,8 @@ function CalendarModal () {
                     <Modal.Body>
                     <div className={styles.calendarBox}>
                         <Calendar className={styles.calendar} onChange={setDate} value={date} 
-                            formatDay={(locale, date) => moment(date).format("DD")} 
+                            // formatDay={(locale, date) => moment(date).format("DD")} 
+                            formatDay={(locale, date) => date.getDate()} 
                             calendarType='gregory' prev2Label={null} next2Label={null}
                             showNeighboringMonth={false}/>
                         <div className={styles.line}>
@@ -99,14 +106,14 @@ function CalendarModal () {
                     </Modal.Footer>
                 </Modal>
                 <div className={styles.timeBox1}>
-                    <input className={styles.timeItem1} type="button" value={timeList[0]} onClick={e => {const text = `${formattedDate} ${bookTime} / ${count}명`;
+                    {/* <input className={styles.timeItem1} type="button" value={timeList[0]} onClick={e => {const text = `${formattedDate} ${bookTime} / ${count}명`;
         setReservation(text);}}/>
                     <input className={styles.timeItem1} type="button" value={timeList[1]} onClick={onClickTime}/>
                     <input className={styles.timeItem1} type="button" value={timeList[2]} onClick={onClickTime}/>
                     <input className={styles.timeItem1} type="button" value={timeList[3]} onClick={onClickTime}/>
-                    <input className={styles.timeItem1} type="button" value={timeList[4]} onClick={onClickTime}/>
+                    <input className={styles.timeItem1} type="button" value={timeList[4]} onClick={onClickTime}/> */}
                 </div>
-                <button className={styles.reservationButton}>예약하기</button>
+                <button className={styles.reservationButton} onClick={onClickRealReservation}>예약하기</button>
             </div>
         </>
     );

@@ -1,10 +1,15 @@
 import styles from "./MyPage-reservation-detail.module.css";
 import { useEffect, useState } from "react";
 import { getResDetail } from "../apis/RestaurantAPI";
+import { useLocation } from "react-router-dom";
 
 const { kakao } =  window;
 
 function  ReservationDetail(){
+
+    const location = useLocation();
+    console.log(`나는 예약내역 => ${location.state.reservation}`);
+
     const [kakaoMap, setKakaoMap] = useState(null);
         // const {code} = useParams();
         const code = 1;
