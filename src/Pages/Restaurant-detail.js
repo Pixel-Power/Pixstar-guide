@@ -19,12 +19,10 @@ function RestaurantDetail(){
         category: '',
         price: '',
         time: '',
-        pixStar: '',
+        pixstar: '',
         description: '',
-        image: ''
+        img: ''
     });
-
-    const [calendarModal, setCalendarModal] = useState(false);
 
     const [kakaoMap, setKakaoMap] = useState(null);
 
@@ -33,13 +31,11 @@ function RestaurantDetail(){
             setRestaurant(getResDetail(code));
             console.log(restaurant);
             const latitude = restaurant.latitude;
-            // const latitude = 37.520715;
             const longitude = restaurant.longitude;
-            // const longitude = 127.021599;
             const container = document.getElementById('map');           // 지도를 담을 영역의 DOM 레퍼런스
             const options = {
                 center : new kakao.maps.LatLng(latitude, longitude),  // 지도의 중심좌표.
-                level : 3                                               
+                level : 2                                               
             };
             const map = new kakao.maps.Map(container, options);         // 지도 생성 및 객체 리턴
             setKakaoMap(map);
@@ -65,19 +61,30 @@ function RestaurantDetail(){
         []
     )
 
+    const onClickPanTo = () => {
+        // 이동할 위도 경도 위치를 생성
+        const moveLatLng = new kakao.maps.LatLng(restaurant.latitude, restaurant.longitude);
+        // 지도 중심을 부드럽게 이동시킴
+        // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동
+        kakaoMap.panTo(moveLatLng);
+    };
+
     return (
 
         <>
             <div>
                 <div className={styles.resImages}>
-                    <img className={styles.resImage} src="/images/restaurant-detail/img1.jpg"></img>
-                    <img className={styles.resImage} src="/images/restaurant-detail/img2.jpg"></img>
-                    <img className={styles.resImage} src="/images/restaurant-detail/img3.jpg"></img>
+                    <img className={styles.resImage} src="/images/food/salad/salad (4).jpg"></img>
+                    <img className={styles.resImage} src={restaurant.img}></img>
+                    <img className={styles.resImage} src="/images/food/pasta/pasta (5).jpg"></img>
                 </div>
                 <div className={styles.resInfoBox}>
                     <div>
-                        <img className={styles.pixStar} src={restaurant.pixStar}></img>
-                        <h2>{restaurant.name}</h2>
+                        <img className={styles.pixStar} src={restaurant.pixstar}></img>
+                        <div className={styles.nameCategoryBox}>
+                            <h1>{restaurant.name}</h1>
+                            <h3 className={styles.category}>#{restaurant.category}</h3>
+                        </div>
                     </div>
                     <hr/>
                     <div className={styles.resInfoTextBox}>
@@ -115,20 +122,23 @@ function RestaurantDetail(){
                         </div>
                     </div>
                     <div>
-                        <h3>예약하기</h3>
+                        <h2>예약하기</h2>
                         <div className={styles.resInfoTextBox}>
                             <h4 className={styles.reservationDateTimeText}>예약 일시</h4>
                             <CalendarModal/>
                         </div>
                     </div>
                     <div>
-                        <h3>매장위치</h3>
+                        <div>
+                            <h2>매장위치</h2>
+                            <button className={styles.mapButton} onClick={onClickPanTo}>매장 위치로 돌아가기</button>
+                        </div>
                         <div className={styles.map}>
                             <div id="map" style={{width: '100%', height: '100%'}}>실제지도</div>
                         </div>
                     </div>
                     <div>
-                        <h3>픽스타 추천 레스토랑</h3>
+                        <h2>픽스타 추천 레스토랑</h2>
                         <div className={styles.preferResBox}>
                             <div className={styles.preferRes}>
                                 <img src="/images/restaurant-detail/prefer1.png"></img>

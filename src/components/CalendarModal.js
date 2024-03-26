@@ -23,6 +23,8 @@ function CalendarModal () {
 
     const [date, setDate] = useState(new Date());
 
+    const [num, setNum] =useState("");
+
     const dayList = ['일', '월', '화', '수', '목', '금', '토'];
     console.log(`Date : ${date}`);
     const formattedDate = `${date.getFullYear()}년 ${date.getMonth()+1}월 ${date.getDate()}일 (${dayList[date.getDay()]})`;
@@ -31,6 +33,10 @@ function CalendarModal () {
     const [bookTime, setBookTime] = useState('');
     const timeList = ['오후 6:00', '오후 6:30', '오후 7:00', '오후 7:30', '오후 8:00'];
     const [reservation, setReservation] = useState(`오늘(${dayList[date.getDay()]}) / 2명`);
+
+    const [btnActive, setBtnActive] = useState("");
+
+    const [btn, setBtn] = useState('오후 6:00');
 
     const onClickPlus = () => {
         setCount(count + 1);
@@ -45,6 +51,8 @@ function CalendarModal () {
     const onClickTime = e => {
         setBookTime(e.target.value);
         console.log(bookTime);
+        setBtnActive(e.target.value);
+        console.log(btnActive);
     };
 
     const onClickReservation = () => {
@@ -91,11 +99,11 @@ function CalendarModal () {
                             <button id={styles.countButton} onClick={onClickPlus}>+</button>
                         </div>
                         <div className={styles.timeBox}>
-                            <input className={styles.timeButton} type="button" value={timeList[0]} onClick={onClickTime}/>
-                            <input className={styles.timeButton} type="button" value={timeList[1]} onClick={onClickTime}/>
-                            <input className={styles.timeButton} type="button" value={timeList[2]} onClick={onClickTime}/>
-                            <input className={styles.timeButton} type="button" value={timeList[3]} onClick={onClickTime}/>
-                            <input className={styles.timeButton} type="button" value={timeList[4]} onClick={onClickTime}/>
+                            <input className={styles.timeButton} type="button" value={timeList[0]} onClick={onClickTime} style={{backgroundColor: (btnActive === timeList[0])? "rgb(251, 75, 85)":"gray"}}/>
+                            <input className={styles.timeButton} type="button" value={timeList[1]} onClick={onClickTime} style={{backgroundColor: (btnActive === timeList[1])? "rgb(251, 75, 85)":"gray"}}/>
+                            <input className={styles.timeButton} type="button" value={timeList[2]} onClick={onClickTime} style={{backgroundColor: (btnActive === timeList[2])? "rgb(251, 75, 85)":"gray"}}/>
+                            <input className={styles.timeButton} type="button" value={timeList[3]} onClick={onClickTime} style={{backgroundColor: (btnActive === timeList[3])? "rgb(251, 75, 85)":"gray"}}/>
+                            <input className={styles.timeButton} type="button" value={timeList[4]} onClick={onClickTime} style={{backgroundColor: (btnActive === timeList[4])? "rgb(251, 75, 85)":"gray"}}/>
                         </div>
                     </div>
                     </Modal.Body>
