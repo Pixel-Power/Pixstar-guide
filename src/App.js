@@ -2,7 +2,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Layout1 from './Layouts/Layout1';
 import Layout3 from './Layouts/Layout3';
 import Main from './Pages/Main';
-import RestaurantSearchDetail from "./Pages/Restaurant-search-result";
+import RestaurantSearchResult from "./Pages/Restaurant-search-result";
 import Login from './Pages/Login';
 
 function App() {
@@ -15,7 +15,8 @@ function App() {
             <Route path="restaurantsearchresult" element={<RestaurantSearchResult/>}/>
           </Route>
           <Route path="/" element={<Layout3/>}>
-            <Route path="/login" element={<Login/>}/>  
+            <Route path="/login" element={<Login/>}/>
+            <Route path="main" element={<Main/>}/>  
           </Route>
         </Routes>
       </BrowserRouter>
