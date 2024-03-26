@@ -12,6 +12,7 @@ import Layout2 from './Layouts/Layout2';
 import Logout from './Pages/Logout';
 import Layout3 from './Layouts/Layout3';
 import Error from './Pages/Error';
+import UseTerms from './Pages/UseTerms';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="restaurantsearchresult" element={<RestaurantSearchResult />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
+          <Route path='/useterms' element={<UseTerms />} />
         </Route>
 
           <Route path="/">
