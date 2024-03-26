@@ -2,7 +2,7 @@
     position: absolute;
     border: 2px solid #f65f67;
     background-color: rgb(255, 255, 255);
-    margin-top: -72.5%;
+    margin-top: -85%;
     margin-left: 6.5%;
     margin-right: 68%;
     border-radius: 3%;
@@ -11,7 +11,7 @@
 }
 
 .reservationText {
-    width: 300px;
+    width: 330px;
     margin-left: 2%;
     
 }
@@ -31,7 +31,7 @@
 .calendarIconTextBox {
     display: flex;
     margin-left: 3%;
-    width: 300px;
+    width: 330px;
     /* background: gold; */
 }
 
@@ -52,7 +52,9 @@
 }
 
 .vIcon:hover {
-    border: 1px solid rgb(251, 75, 85);
+    /* border: 1px solid rgb(251, 75, 85); */
+    font-weight: bolder;
+    text-decoration: underline;
 }
 
 
@@ -190,7 +192,7 @@
 }
 
 .timeButton:hover {
-    background-color: gray;
+    background-color: rgb(251, 75, 85);
     color: white;
 }
 
@@ -201,4 +203,5 @@
 
 .reservationButton:hover {
     border: 3px solid rgb(251, 75, 85);
+    font-weight: bolder;
 }

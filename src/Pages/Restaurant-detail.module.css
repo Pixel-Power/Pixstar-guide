@@ -24,6 +24,16 @@
     margin-bottom: 1%;
 }
 
+.nameCategoryBox {
+    display: flex;
+}
+
+.category {
+    margin-left: 1.5%;
+    background-color: #f0f0f0;
+    border-radius: 20%;
+}
+
 .resInfoBox {
     margin-left: 5%;
     margin-right: 5%;
@@ -67,6 +77,17 @@
     display: block;
 }
 
-.preferResText {
-    /* text-align: center; */
+.mapButton {
+    margin-top: -1.5%;
+    cursor: pointer;
+    border: 0;
+    text-decoration: underline;
+    float: right;
+    color: rgb(251, 75, 85);
+    font-weight: bolder;
+    border-radius: 5%;
+}
+
+.mapButton:hover {
+    background: rgb(255, 209, 45, 0.7);
 }
