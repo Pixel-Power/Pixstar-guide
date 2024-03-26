@@ -15,24 +15,8 @@ import Error from './Pages/Error';
 
 function App() {
   return (
-<<<<<<< HEAD
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout1/>}>
-            <Route index element={<Main/>}/>
-            <Route path="main" element={<Main/>}/>
-            <Route path="restaurantsearchresult" element={<RestaurantSearchResult/>}/>
-          </Route>
-          <Route path="/" element={<Layout3/>}>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="main" element={<Main/>}/>  
-          </Route>
-        </Routes>
-      </BrowserRouter>
-=======
     <BrowserRouter>
       <Routes>
->>>>>>> bf85dc6cb79b73b38381ff98d3581e8ac9bf1713
 
         <Route path="/" element={<Layout1 />}>
           <Route index element={<Main />} />

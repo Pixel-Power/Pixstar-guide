@@ -2,7 +2,7 @@ import styles from "./MyPage-reservation-detail.module.css";
 import { useEffect, useState } from "react";
 import { getResDetail } from "../apis/RestaurantAPI";
 import { useLocation, useParams } from "react-router-dom";
-import { usersData } from '../apis/MemAPI'
+import { getUserDetail } from '../apis/MemAPI'
 
 const { kakao } =  window;
 
@@ -74,7 +74,7 @@ function  ReservationDetail(){
 
     useEffect(
         () => {
-            setUser(usersData(userCode))
+            setUser(getUserDetail(userCode))
         },
         []
     );
