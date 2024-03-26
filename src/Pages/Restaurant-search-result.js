@@ -33,13 +33,19 @@ function RestaurantSearchDetail(){
                         currentItems.map((restaurant, index) => (
                     <div key={index} className={ResDetailStyle.RestaurantBox1}>
                         <div className={ResDetailStyle.ResTitle}>
+
+                            <div className={ResDetailStyle.pixpic}>
                             <img src={restaurant.img} alt="식당" className={ResDetailStyle.imgRes}></img><br/>
+                            </div>
+
+                            <div className={ResDetailStyle.pixbox}>
                             <img src={restaurant.pixstar} className={ResDetailStyle.pixstar} alt="픽스타"></img><br/>
+                            </div>
                             <span className={ResDetailStyle.ResName}>{restaurant.name}</span>
                             <span className={ResDetailStyle.ResCategory}>#{restaurant.category}</span>
                         </div>
                         <div className={ResDetailStyle.ResDetail}>
-                            <img src="images/restaurant-detail/location-pin.png" alt='장소' className={ResDetailStyle.address}></img>{restaurant.address}<br/>
+                            <img src="images/restaurant-detail/location-pin.png" alt='주소' className={ResDetailStyle.address}></img>{restaurant.address}<br/>
                             <img src="images/restaurant-detail/phone.png" alt='전화' className={ResDetailStyle.phone}></img>{restaurant.phone}
                             <div className={ResDetailStyle.description}>{restaurant.description}</div>
                         </div>
@@ -47,7 +53,7 @@ function RestaurantSearchDetail(){
 
                     ))
                     ) : (
-                        <div className={ResDetailStyle.noResult}> </div>
+                        <div className={ResDetailStyle.noResult}>맛집 검색 결과가없습니다.</div>
                     )}
                 </div>
 

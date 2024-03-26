@@ -31,16 +31,16 @@ function App() {
           <Route index element={<Main />} />
           <Route path="/main" element={<Main />} />
           <Route path="/logout" element={<Logout />} />
-          <Route path="/restaurant-detail" element={<RestaurantDetail />} />
+          <Route path="/restaurantdetail" element={<RestaurantDetail />} />
         </Route>
 
-        <Route path="/" element={<Layout3 />}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/restaurantdetail" element={<RestaurantDetail />} />
-          <Route path='reservationdetail' element={<ReservationDetail />} />
-          <Route path='/mypage' element={<MyPage />} />
-          <Route path='reservation' element={<Reservation />} />
-        </Route>
+          <Route path="/" element={<Layout3/>}>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/restaurantdetail" element={<RestaurantDetail/>}/>
+            <Route path='/reservationdetail' element={<ReservationDetail/>}/>
+            <Route path='/mypage/:userCode' element={<MyPage/>}/>
+            <Route path='reservation/:userCode' element={<Reservation/>}/>
+          </Route>
 
         <Route path="/" element={<Layout3/>}>
           <Route path="*" element={<Error/>} />
