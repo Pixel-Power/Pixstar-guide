@@ -1,14 +1,10 @@
-.Footer {
-        width: 100%;
-        height: 150px;
-        position : relative;
-        transform : translateY(0%);
-        border-top: 1px solid #248efe;
-
-
-        display:block;
+footer {
+        position: relative;
+        margin: 20px auto 0px auto;
+        padding: 30px;
+        background-color: yellow;
+        border-top: 1px solid rgb(242, 243, 176);
         text-align: center;
         justify-content: center;
-        background-color: yellow;
+        white-space: nowrap;
 }
-
