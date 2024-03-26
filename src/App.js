@@ -26,10 +26,10 @@ function App() {
           <Route path='/signup' element={<SignUp />} />
         </Route>
 
-          <Route path="/">
-            <Route index element={<Main/>}/>
-            <Route path=":userCode" element={<Login/>}/>
-           </Route>
+        <Route path="/" element={<Layout2 />}>
+        <Route index element={<Main />} />
+        <Route path="main/:userCode" element={<Main />} />
+        </Route>
          
         <Route path="/" element={<Layout2 />}>
           <Route index element={<Main />} />
