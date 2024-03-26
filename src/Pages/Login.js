@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import usersData from '../data/memDetail.json'; 
+import usersData from '../data/memDetail.json'
 import { useNavigate } from 'react-router-dom';
+
+
 function Login() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const [users, setUsers] = useState([]);
 
+
+
   const navigate=useNavigate();
 
+  
   useEffect(() => {
     setUsers(usersData); 
   }, []);
@@ -32,11 +37,6 @@ function Login() {
     }
   };
 
-  // 로그아웃 처리 함수
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-    localStorage.removeItem('isLoggedIn');
-  };
 
   const onClickHandler=()=>{
     navigate('/signup')
@@ -47,7 +47,6 @@ function Login() {
       {isLoggedIn ? (
         <div>
           <p>반갑습니다, {id}님!</p>
-          <button onClick={handleLogout}>Logout</button>
         </div>
       ) : (
         <div style={{
