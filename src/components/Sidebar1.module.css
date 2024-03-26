@@ -1,56 +1,28 @@
 /* GOOGLE FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
-/* VARIABLES CSS */
-:root {
-    --nav--width: 20%;
-
-    /* Colores */
-    --first-color: rgb(255, 209, 45, 0.7);
-    --bg-color: rgb(255, 209, 45, 0.7);
-    --sub-color: #b6cefc;
-    --white-color: #fff;
-
-    /* Fuente y tipografia */
-    --body-font: 'Poppins', sans-serif;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-
-    /* z index */
-    --z-fixed: 100;
-}
-
-/* BASE */
-*, ::before, ::after {
-    box-sizing: border-box;
-}
-
-body {
-    position: relative;
-    margin: 0;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    transition: .5s;
-}
-
-h1 {
-    margin: 0;
-}
 
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    text-align: center;
+    font-size: 10pt;
 }
 
-/* l NAV */
+/* BASE */
+ ::before, ::after {
+    box-sizing: border-box;
+}
+
 .navBox{
-    background-color:rgb(255, 209, 45, 0.8) ;
-    border-radius: 5%;
-    max-width: 20%;
+    border-right: 2px solid rgba(177, 177, 177, 0.315);
+    width: 10%;
     height: 100%;
     position: fixed;
+    left: 0;
 }
+
 .l-navbar {
     position: fixed;
     top: 0;
@@ -64,21 +36,22 @@ ul {
     z-index: var(--z-fixed);
 }
 
-/* NAV */
 .nav {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     overflow: hidden;
 }
 
-.nav__brand {
-    display: grid;
-    grid-template-columns: max-content max-content;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
+.nav__linkActive {
+    display: inline-block;
+    margin-top: 10%;
+    padding: 0;
+    list-style: none;
+    font-size: 11pt;
+    font-weight: 500;
+    color: rgb(14, 14, 14);
+    cursor: pointer;
 }
 
 .nav__toggle {
@@ -116,56 +89,7 @@ ul {
 .nav_name {
     font-size: var(--small-font-size);
     text-decoration: none;
-}
-
-/* Expander menu */
-.expander {
-    width: calc(var(--nav--width) + 9.25rem);
-}
-
-/* Add padding body*/
-.body-pd {
-    padding: 2rem 0 0 16rem;
-}
-
-/* Active links menu */
-.active {
-    background-color: var(--first-color);
-}
-
-/* COLLAPSE */
-.collapse {
-    grid-template-columns: 20px max-content 1fr;
-}
-
-.collapse__link {
-    justify-self: flex-end;
-    transition: .5;
-}
-
-.collapse__menu {
-    display: none;
-    padding: .75rem 2.25rem;
-}
-
-.collapse__sublink {
-    color: var(--sub-color);
-    font-size: var(--small-font-size);
-}
-
-.collapse__sublink:hover {
-    color: var(--white-color);
-}
-
-/* Show collapse */
-.showCollapse {
-    display: block;
-}
-
-/* Rotate icon */
-.rotate {
-    transform: rotate(180deg);
-    transition: .5s;
+    color: rgba(86, 85, 85, 0.882);
 }
 
 .nav-links {
@@ -173,7 +97,16 @@ ul {
     transition: var(--mainTransition);
     height: 0;
     overflow: hidden;
-  }
-  .show-nav {
+}
+
+.show-nav {
     height: 216px;
-  }
+}
+
+.nav_list {
+    text-decoration: none;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 30%;
+    text-align: left;
+}
