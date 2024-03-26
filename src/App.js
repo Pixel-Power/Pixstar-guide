@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout1 from './Layouts/Layout1';
 import Main from './Pages/Main';
 import RestaurantSearchResult from "./Pages/Restaurant-search-result";
@@ -14,35 +14,38 @@ import Layout3 from './Layouts/Layout3';
 
 function App() {
   return (
-      <BrowserRouter>
-        <Routes>
+    <BrowserRouter>
+      <Routes>
 
-          <Route path="/" element={<Layout1/>}>
-            <Route index element={<Main/>}/>
-            <Route path="main" element={<Main/>}/>
-            <Route path="restaurantsearchresult" element={<RestaurantSearchResult/>}/>
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/signup' element={<SignUp/>}/>
-          </Route>
+        <Route path="/" element={<Layout1 />}>
+          <Route index element={<Main />} />
+          <Route path="main" element={<Main />} />
+          <Route path="restaurantsearchresult" element={<RestaurantSearchResult />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<SignUp />} />
+        </Route>
 
 
-          <Route path="/" element={<Layout2/>}>
-           <Route index element={<Main/>}/>
-           <Route path="/main" element={<Main/>}/>
-           <Route path="/logout" element={<Logout/>}/>
-           <Route path="/restaurant-detail" element={<RestaurantDetail/>}/>
-          </Route>
+        <Route path="/" element={<Layout2 />}>
+          <Route index element={<Main />} />
+          <Route path="/main" element={<Main />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/restaurant-detail" element={<RestaurantDetail />} />
+        </Route>
 
-          <Route path="/" element={<Layout3/>}>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/restaurantdetail" element={<RestaurantDetail/>}/>
-            <Route path='reservationdetail' element={<ReservationDetail/>}/>
-            <Route path='/mypage' element={<MyPage/>}/>
-            <Route path='reservation' element={<Reservation/>}/>
-          </Route>
+        <Route path="/" element={<Layout3 />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/restaurantdetail" element={<RestaurantDetail />} />
+          <Route path='reservationdetail' element={<ReservationDetail />} />
+          <Route path='/mypage' element={<MyPage />} />
+          <Route path='reservation' element={<Reservation />} />
+        </Route>
 
-        </Routes>
-      </BrowserRouter>
+        <Route path="/" element={<Layout3/>}>
+          <Route path="*" element={<Error/>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
