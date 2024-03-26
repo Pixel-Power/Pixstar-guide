@@ -1,13 +1,32 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useParams } from 'react-router-dom';
 import styles from './MyPage.module.css';
+import { useEffect, useState } from 'react';
+import {getUserDetail} from '../apis/MemAPI'
 function MyPage(){
 
+    const {userCode} = useParams();
+
+    const [user, setUser] = useState({
+        userName: '',
+        userId: '',
+        userPw: '',
+        userEmail: '',
+        userPhone: ''
+    });
+
+    useEffect(
+        () => {
+            setUser(getUserDetail(userCode))
+        },
+        []
+    );
+    
     return(
         <div className={styles.MyPage1}>
             <div className={styles.UserBox}>
                 <img className={styles.UserImg} src="/images/myPage-images/memberImg.png" alt="UserImg"/>
                 <div className={styles.UserNameBox}>
-                    <p className={styles.UserName}>송강</p>님
+                    <p className={styles.UserName}>{user.userName}</p>님
                     <p className={styles.UserIntroduce}>주요 활동 지역 :</p>
                 </div>
                 <Link to="/mypagememberout">
@@ -16,9 +35,9 @@ function MyPage(){
             </div>
             <div>
                 <button className={styles.Button1}>리뷰</button>
-                <Link to="/reservation">
+                <NavLink to={`/reservation/${user.userCode}`}>
                     <button className={styles.Button2}>예약</button>
-                </Link>
+                </NavLink>
             </div>
             <div>
                 <div>

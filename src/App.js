@@ -26,8 +26,8 @@ function App() {
             <Route path="/login" element={<Login/>}/>
             <Route path="/restaurantdetail" element={<RestaurantDetail/>}/>
             <Route path='reservationdetail' element={<ReservationDetail/>}/>
-            <Route path='/mypage' element={<MyPage/>}/>
-            <Route path='reservation' element={<Reservation/>}/>
+            <Route path='mypage/:userCode' element={<MyPage/>}/>
+            <Route path='reservation/:userCode' element={<Reservation/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
