@@ -11,6 +11,7 @@ import Reservation from './Pages/MyPage-reservation';
 import Layout2 from './Layouts/Layout2';
 import Logout from './Pages/Logout';
 import Layout3 from './Layouts/Layout3';
+import Error from './Pages/Error';
 
 function App() {
   return (
