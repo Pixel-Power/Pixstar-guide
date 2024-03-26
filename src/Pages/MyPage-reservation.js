@@ -1,11 +1,11 @@
 import { Link, NavLink, useParams } from 'react-router-dom';
 import styles from './MyPage-reservation.module.css';
 import { useEffect, useState } from 'react';
-import {getUserDetail} from '../apis/MemAPI'
+import { usersData } from '../apis/MemAPI'
 
 function Reservation(){
 
-    const {userCode} = useParams();
+    const { userCode } = useParams();
 
     const [user, setUser] = useState({
         userName: '',
@@ -17,7 +17,7 @@ function Reservation(){
 
     useEffect(
         () => {
-            setUser(getUserDetail(userCode))
+            setUser(usersData(userCode))
         },
         []
     );

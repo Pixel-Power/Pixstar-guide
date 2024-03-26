@@ -1,7 +1,8 @@
 import { Link, NavLink, useParams } from 'react-router-dom';
 import styles from './MyPage.module.css';
 import { useEffect, useState } from 'react';
-import {getUserDetail} from '../apis/MemAPI'
+import { usersData } from '../apis/MemAPI'
+
 function MyPage(){
 
     const {userCode} = useParams();
@@ -16,7 +17,7 @@ function MyPage(){
 
     useEffect(
         () => {
-            setUser(getUserDetail(userCode))
+            setUser(usersData(userCode))
         },
         []
     );

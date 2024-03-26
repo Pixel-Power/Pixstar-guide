@@ -1,7 +1,8 @@
 import styles from "./MyPage-reservation-detail.module.css";
 import { useEffect, useState } from "react";
 import { getResDetail } from "../apis/RestaurantAPI";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
+import { usersData } from '../apis/MemAPI'
 
 const { kakao } =  window;
 
@@ -9,6 +10,7 @@ function  ReservationDetail(){
 
     const location = useLocation();
     console.log(`나는 예약내역 => ${location.state.reservation}`);
+    const info = location.state.reservation.split('/',2);
 
     const [kakaoMap, setKakaoMap] = useState(null);
         // const {code} = useParams();
@@ -57,10 +59,29 @@ function  ReservationDetail(){
             } );
         },
         []
-    )
+    );
+
+    // const {userCode} = useParams();
+    const userCode = 1;
+
+    const [user, setUser] = useState({
+        userName: '',
+        userId: '',
+        userPw: '',
+        userEmail: '',
+        userPhone: ''
+    });
+
+    useEffect(
+        () => {
+            setUser(usersData(userCode))
+        },
+        []
+    );
+
     return(
         <div>
-            <h2 className={styles.RestaurantName}>양귀족 양꼬치 양갈비</h2>
+            <h2 className={styles.RestaurantName}>{restaurant.name}</h2>
             <div className={styles.Box}>
                 <h3 className={styles.BoxList}>예약내용</h3>
                 <div className={styles.ListInfoBox}>
@@ -70,8 +91,8 @@ function  ReservationDetail(){
                         <p>안내사항</p>
                     </div>
                     <div className={styles.ListInfo}>
-                        <p>2024.2.24(금) 오후 6:30</p>
-                        <p>6명(성인 6)</p>
+                        <p>{info[0]}</p>
+                        <p>{info[1]}</p>
                         <p>예약 시간보다 5분 일찍 오시기 바랍니다.</p>
                     </div>
                 </div>
@@ -85,8 +106,8 @@ function  ReservationDetail(){
                         <p>안내사항</p>
                     </div>
                     <div className={styles.ListInfo}>
-                        <p>서울특별시 강남구 역삼동 815-5, 1층</p>
-                        <p>0507-1332-9599</p>
+                        <p>{restaurant.address}</p>
+                        <p>{restaurant.phone}</p>
                         <p></p>
                     </div>
                 </div>
@@ -100,9 +121,9 @@ function  ReservationDetail(){
                         <p>이메일</p>
                     </div>
                     <div className={styles.ListInfo}>
-                        <p>송강</p>
-                        <p>010-1234-5678</p>
-                        <p>songriver@google.com</p>
+                        <p>{user.userName}</p>
+                        <p>{user.userPhone}</p>
+                        <p>{user.userEmail}</p>
                     </div>
                 </div>
             </div>
