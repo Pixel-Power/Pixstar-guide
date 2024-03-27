@@ -1,7 +1,8 @@
 header{
-    position: relative;
     display: flex;
+    position: fixed;
     width: 1100px;
+    background-color: white;
     border-bottom: 1px solid rgba(155, 155, 155, 0.541);
     height: 80px;
     margin: 20px auto;

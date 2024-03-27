@@ -1,20 +1,22 @@
 header{
-    position: relative;
+    position: fixed;
     display: flex;
-    width: 1100px;
+    width: 100%;
+    background-color: white;
     border-bottom: 1px solid rgba(155, 155, 155, 0.541);
-    height: 80px;
-    margin: 20px auto;
+    padding: 20px 20%;
+    margin: 0px;
 }
 
 .logoImg {
     position: absolute;
     height: 70px;
-    margin-left: 475px;
+    width:300px;
+    margin: 0 auto;
 }
 
 .headerMenu{
-    position: absolute;
+    position: relative;
     width: 200px;
     margin-left: 950px;
     margin-top: 23px;

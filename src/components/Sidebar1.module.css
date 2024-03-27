@@ -16,10 +16,12 @@ ul {
 }
 
 .navBox{
+    background-color: white;
     border-right: 2px solid rgba(177, 177, 177, 0.315);
     width: 10%;
     height: 100%;
     position: fixed;
+    margin-top: 120px;
     left: 0;
 }
 
