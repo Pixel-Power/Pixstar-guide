@@ -73,8 +73,8 @@ function CalendarModal () {
                     <div className={styles.calendarIconTextBox}>
                         <img className={styles.calendarIcon} src="/images/restaurant-detail/calendar.png"></img>
                         <div className={styles.reservationText}>{reservation}</div>
+                        <Button className={styles.vIcon} variant="light" onClick={openHandler}>V</Button>
                     </div>
-                <Button className={styles.vIcon} variant="light" onClick={openHandler}>V</Button>
                 </div>
                 <Modal className={styles.calendarBoxModal} show={isOpen} onHide={closeHandler}>
 

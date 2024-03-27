@@ -22,10 +22,10 @@ function App() {
         <Route path="/" element={<Layout1 />}>
           <Route index element={<Main />} />
           <Route path="main" element={<Main />} />
-          <Route path="restaurantsearchresult" element={<RestaurantSearchResult />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/useterms' element={<UseTerms />} />
+          
         </Route>
 
         <Route path="/" element={<Layout2 />}>
@@ -37,20 +37,19 @@ function App() {
           <Route index element={<Main />} />
           <Route path="/main" element={<Main />} />
           <Route path="/logout" element={<Logout />} />
-          <Route path="/restaurantdetail" element={<RestaurantDetail />} />
         </Route>
 
-          <Route path="/" element={<Layout3/>}>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/restaurantdetail" element={<RestaurantDetail/>}/>
-            <Route path='/reservationdetail' element={<ReservationDetail/>}/>
-            <Route path='/mypage/:userCode' element={<MyPage/>}/>
-            <Route path='reservation/:userCode' element={<Reservation/>}/>
-          </Route>
+         <Route path="/" element={<Layout3/>}>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/restaurantsearchresult" element={<RestaurantSearchResult />} />
+          <Route path="/restaurantdetail/:code" element={<RestaurantDetail />} />
+          <Route path='/mypage/:userCode' element={<MyPage/>}/>
+          <Route path='reservation/:userCode' element={<Reservation/>}/>
+        </Route> 
 
-        <Route path="/" element={<Layout3/>}>
-          <Route path="*" element={<Error/>} />
-        </Route>
+
+          {/* <Route path="*" element={<Error/>} /> */}
+       
       </Routes>
     </BrowserRouter>
   );
