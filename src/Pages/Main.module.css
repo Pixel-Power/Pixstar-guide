@@ -1,37 +1,95 @@
 .allmainPageBody {
-  width: 600px;
-  max-width: 1100px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .searchbox {
-  width: 1100px;
-  height: 300px;
-  margin: 0px auto;
+  width: 1470px;
+  height: 250px;
+  position: relative;
+
+  >img {
+    width:100%;
+    height:100%;
+  }
 }
 
-#searchBg {
+.searchBg {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  vertical-align: middle;
+}
+
+.searchinputbox {
   position: absolute;
+  top: 70%;
+  left: 36%;
   width: 100%;
-  height: 100%;
 }
 
-#searchImput {
-  position: absolute;
-  
+.searchInput {
+  width: 400px;
+  height: 25px;
+}
+
+.searchButton {
+  width: 30px;
+  vertical-align: middle;
+  margin-left: 10px;
 }
 
 .bodyBox {
+  display: flex;
+  justify-content: center;
 }
 
-.row {
-  display: flex;
+.row1 {
   margin:30px 0px;
   gap: 100px;
 }
 
+.row2 {
+  margin:30px 0px;
+  gap: 51px;
+}
+
 .box1 {
+  display: flex;
+}
+
+.box1 article {
   width: 250px;
   height: 250px;
+  float: left;
+  margin-left: 16%;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.box img {
+  width: 100px;
+  height: auto;
+}
+
+.overlayText {
+  position: absolute;
+  top: 455px;
+  font-size: 18px;
+  font-weight: 900;
 }
 
 .box2 {
@@ -42,30 +100,6 @@
 .menuImage {
   width: 100%;
   height: 100%;
-}
-
-.imageOverlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* 어두운 배경 */
-  opacity: 0;
-  /* 초기에 투명하게 설정 */
-  transition: opacity 0.6s ease;
-  /* 투명도 변화에 대한 전환 효과 */
-}
-
-.overlayText {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  /* 흰색 텍스트 */
-}
-
-.menuImage:hover .imageOverlay {
-  opacity: 1;
-  /* 커서를 가져갔을 때 투명도를 1로 변경하여 어두운 배경을 보이게 함 */
+  cursor: pointer;
+  display: block;
 }
