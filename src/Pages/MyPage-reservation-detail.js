@@ -3,28 +3,63 @@ import { useEffect, useState } from "react";
 import { getResDetail } from "../apis/RestaurantAPI";
 import { useLocation, useParams } from "react-router-dom";
 import { getUserDetail } from '../apis/MemAPI'
+import { getRSVDetail } from "../apis/RSVAPI";
 
-const { kakao } =  window;
+const { kakao } = window;
 
-function  ReservationDetail(){
+function ReservationDetail() {
+
+    // const {code} = useParams();
+    // const code = 1;
+    const [restaurant, setRestaurant] = useState({
+        code: 0,
+        name: '',
+        address: '',
+        longitude: 0,
+        latitude: 0,
+        phone: '',
+        description: ''
+    });
+
+    const [reservation, setReservation] = useState({
+        restaurantCode: 0,
+        RSVDate: "",
+        RSVTime: "",
+        headcount: "",
+        avail: ""
+    });
 
     const location = useLocation();
+    // // const restaurantCode = 0;
+    // const info = isNaN(location.state) != true? location.state : location.state.reservation.split('/', 4);
+    // console.log(`info : ${info}`);
+    
+
+    // const restaurantCode = location.state;
+    // console.log(`reservationCode : ${location.state}`);
+    // // console.log(`나는 예약코드 : ${typeof restaurantCode}`);
+    // const code = restaurantCode;
+    // code = parseInt(reservationCode);
+
+    // if (location.state) {
+
+    // }
+
     console.log(`나는 예약내역 => ${location.state.reservation}`);
-    const info = location.state.reservation.split('/',2);
+    const info = location.state.reservation.split('/', 3);
+    reservation.restaurantCode = info[0];
+    const code = 1;
+    console.log(`code : ${code}`);
+    const restaurantCode = 1;
+    console.log(`restaurantCode : ${restaurantCode}`);
+    reservation.RSVDate = info[1];
+    reservation.RSVTime = info[2];
+    reservation.headcount = info[3];
 
     const [kakaoMap, setKakaoMap] = useState(null);
-        // const {code} = useParams();
-        const code = 1;
-        const [restaurant, setRestaurant] = useState({
-            name: '',
-            address: '',
-            longitude: 0,
-            latitude: 0,
-            phone: '',
-            category: '',
-            price: '',
-            image: ''
-        });
+    
+
+
 
     useEffect(
         () => {
@@ -34,8 +69,8 @@ function  ReservationDetail(){
             const longitude = restaurant.longitude;
             const container = document.getElementById('map');
             const options = {
-                center : new kakao.maps.LatLng(latitude, longitude),
-                level : 3                                               
+                center: new kakao.maps.LatLng(latitude, longitude),
+                level: 3
             };
             const map = new kakao.maps.Map(container, options);
             setKakaoMap(map);
@@ -51,18 +86,19 @@ function  ReservationDetail(){
             const infowindow = new kakao.maps.InfoWindow({
                 // position : iwPosition,
                 // content : iwContent
-                content : iwContent,
-                removable : iwRemoveable
+                content: iwContent,
+                removable: iwRemoveable
             });
-            kakao.maps.event.addListener(marker, 'click', function() {
+            kakao.maps.event.addListener(marker, 'click', function () {
                 infowindow.open(map, marker);
-            } );
+            });
         },
         []
     );
 
-    // const {userCode} = useParams();
-    const userCode = 1;
+    const {userCode} = useParams();
+    console.log(`userCode : ${userCode}`);
+    // const userCode = 1;
 
     const [user, setUser] = useState({
         userName: '',
@@ -74,12 +110,16 @@ function  ReservationDetail(){
 
     useEffect(
         () => {
-            setUser(getUserDetail(userCode))
+            setUser(getUserDetail(userCode));
+            setReservation(getRSVDetail(restaurantCode));
         },
         []
     );
+    
+    console.log(`사용자 : ${user}`);
+    console.log(`나는 예약정보 : ${reservation}`);
 
-    return(
+    return (
         <div>
             <h2 className={styles.RestaurantName}>{restaurant.name}</h2>
             <div className={styles.Box}>
@@ -91,8 +131,8 @@ function  ReservationDetail(){
                         <p>안내사항</p>
                     </div>
                     <div className={styles.ListInfo}>
-                        <p>{info[0]}</p>
-                        <p>{info[1]}</p>
+                        <p>{reservation.RSVDate}</p>
+                        <p>{reservation.headcount}</p>
                         <p>예약 시간보다 5분 일찍 오시기 바랍니다.</p>
                     </div>
                 </div>
@@ -103,7 +143,7 @@ function  ReservationDetail(){
                     <div className={styles.ListName}>
                         <p>주소</p>
                         <p>연락처</p>
-                        <p>안내사항</p>
+                        <p></p>
                     </div>
                     <div className={styles.ListInfo}>
                         <p>{restaurant.address}</p>
@@ -127,12 +167,12 @@ function  ReservationDetail(){
                     </div>
                 </div>
             </div>
-            <hr className={styles.Hr}/>
+            <hr className={styles.Hr} />
             <div className={styles.map}>
-                <div id="map" style={{width: '80%', height: '500px'}}>실제지도</div>
+                <div id="map" style={{ width: '80%', height: '500px' }}>실제지도</div>
             </div>
         </div>
-        
+
     );
 }
 

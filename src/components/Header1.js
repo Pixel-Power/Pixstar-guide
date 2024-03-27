@@ -21,8 +21,8 @@ function Header1(){
                 <Link to={'/signup'}>
                     <img src="/images/header-images/Add User Male.png" alt="Sign Up"/>
                 </Link>
-
-                <Link to={'/mypage'}>
+                
+                <Link to={'/login'}>
                     <img src="/images/header-images/Home.png" alt="MyPage"/>
                 </Link>
             </div>

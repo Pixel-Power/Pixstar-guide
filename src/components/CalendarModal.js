@@ -9,9 +9,11 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 function CalendarModal () {
 
-    const {code} = useParams();
+    // const {code} = useParams();
 
-    const {userCode} = useParams();
+    // const {userCode} = useParams();
+    const code = 1;
+    const userCode = 1;
 
     const navigate = useNavigate();
 
@@ -56,14 +58,14 @@ function CalendarModal () {
     };
 
     const onClickReservation = () => {
-        const text = `${formattedDate} ${bookTime} / ${count}명`;
+        const text = `${code} / ${formattedDate} / ${bookTime} / ${count}명`;
         setReservation(text);
         setIsOpen(false)
     }; 
 
     const onClickRealReservation = () => {
 
-        navigate("/reservationdetail", {state: {reservation}});
+        navigate(`/reservationdetail/${userCode}`, {state: {reservation}});
     };
 
     return (
