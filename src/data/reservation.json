@@ -1,0 +1,44 @@
+[
+    {
+        "restaurantCode": 1,
+        "RSVDate":"2024.04.01",
+        "RSVTime":"6:30",
+        "headcount": 3,
+        "avail":"이용 전"
+    },
+    {
+        "restaurantCode": 23,
+        "RSVDate":"2024.05.05",
+        "RSVTime":"7:30",
+        "headcount": 9,
+        "avail":"이용 전"
+    },
+    {
+        "restaurantCode": 15,
+        "RSVDate":"2024.03.07",
+        "RSVTime":"6:30",
+        "headcount": 7,
+        "avail":"이용 완료"
+    },
+    {
+        "restaurantCode": 30,
+        "RSVDate":"2024.04.12",
+        "RSVTime":"6:00",
+        "headcount": 2,
+        "avail":"이용 전"
+    },
+    {
+        "restaurantCode": 7,
+        "RSVDate":"2024.02.27",
+        "RSVTime":"8:00",
+        "headcount": 5,
+        "avail":"이용 완료"
+    },
+    {
+        "restaurantCode": 26,
+        "RSVDate":"2024.01.20",
+        "RSVTime":"8:00",
+        "headcount": 3,
+        "avail":"이용 완료"
+    }
+]
