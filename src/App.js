@@ -13,6 +13,8 @@ import Logout from './Pages/Logout';
 import Layout3 from './Layouts/Layout3';
 import Error from './Pages/Error';
 import UseTerms from './Pages/UseTerms';
+import Privacy from './Pages/Privacy';
+import SiteMap from './Pages/SiteMap';
 import Layout4 from './Layouts/Layout4';
 
 function App() {
@@ -26,27 +28,30 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/useterms' element={<UseTerms />} />
-          
+          <Route path='/privacy' element={<Privacy />} />
+          <Route path='/sitemap' element={<SiteMap />} />
+
+        
         </Route>
 
         <Route path="/" element={<Layout2 />}>
           <Route index element={<Main />} />
           <Route path="main/:userCode" element={<Main />} />
-        </Route>
-         
-        <Route path="/" element={<Layout2 />}>
-          <Route index element={<Main />} />
-          <Route path="/main" element={<Main />} />
           <Route path="/logout" element={<Logout />} />
+          <Route path='/useterms' element={<UseTerms />} />
+          <Route path='/privacy' element={<Privacy />} />
+          <Route path='/sitemap' element={<SiteMap />} />
+        </Route>
+
+        <Route path="/" element={<Layout3 />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/restaurantsearchresult" element={<RestaurantSearchResult />} />
+          <Route path="/restaurantdetail/:code" element={<RestaurantDetail />} />
+          <Route path='/mypage/:userCode' element={<MyPage />} />
+          <Route path='reservation/:userCode' element={<Reservation />} />
+        </Route>
 
           {/* <Route path="/restaurantdetail" element={<RestaurantDetail />} /> */}
-        </Route>
-
-          <Route path="/" element={<Layout3/>}>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/restaurantsearchresult" element={<RestaurantSearchResult />} />
-             <Route path="/restaurantdetail/:code" element={<RestaurantDetail />} />
-          </Route>
 
         <Route path="/" element={<Layout4/>}>
           <Route path='/mypage/:userCode' element={<MyPage/>}/>
