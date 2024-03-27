@@ -5,7 +5,8 @@ export function getUserList() {
 }
 
 export function getUserDetail(userCode) {
-    console.log(typeof userCode);
-    return users.filter(user=> user.userCode===parseInt(userCode))[0];
-
+    const user = users.filter(user => user.userCode === parseInt(userCode))[0];
+    return users? user : null;
+    // console.log(typeof userCode);
+    // return users.filter(user => user.userCode === parseInt(userCode))[0];
 }
