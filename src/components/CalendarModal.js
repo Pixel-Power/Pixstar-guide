@@ -49,12 +49,13 @@ function CalendarModal ({ code, userCode}) {
     };
 
     const onClickReservation = () => {
-        const text = `${formattedDate} ${bookTime} / ${count}명`;
+        const text = `${code} / ${formattedDate} / ${bookTime} / ${count}명`;
         setReservation(text);
         setIsOpen(false)
     }; 
 
     const onClickRealReservation = () => {
+
         if (userCode != 0) {
             navigate(`/reservationdetail/${userCode}_${code}`, {state: {reservation}});
         }

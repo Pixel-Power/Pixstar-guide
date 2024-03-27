@@ -15,7 +15,6 @@ import Error from './Pages/Error';
 import UseTerms from './Pages/UseTerms';
 import Layout4 from './Layouts/Layout4';
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -42,19 +41,16 @@ function App() {
           {/* <Route path="/restaurantdetail" element={<RestaurantDetail />} /> */}
         </Route>
 
-        <Route path="/" element={<Layout3/>}>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/restaurantdetail" element={<RestaurantDetail/>}/>
-          {/* <Route path='/reservationdetail' element={<ReservationDetail/>}/> */}
-          <Route path='reservationdetail/:userCode' element={<ReservationDetail/>}/>
-          <Route path='/mypage/:userCode' element={<MyPage/>}/>
-        </Route>
+          <Route path="/" element={<Layout3/>}>
+            <Route path="/login" element={<Login/>}/>
+             <Route path="/restaurantdetail" element={<RestaurantDetail/>}/>
+          </Route>
 
-        <Route path="/" element={<Layout4 />}>
-        <Route index element={<Main />} />
-        <Route path="main/:userCode" element={<Main />} />
-        <Route path='restaurantdetail/:userCode' element={<RestaurantDetail/>}/>
-        <Route path='reservationdetail/:userCode' element={<ReservationDetail/>}/>
+        <Route path="/" element={<Layout4/>}>
+          <Route path='/mypage/:userCode' element={<MyPage/>}/>
+          <Route path='reservation/:userCode' element={<Reservation/>}/>
+          <Route path="/restaurantdetail" element={<RestaurantDetail/>}/>
+          <Route path='/reservationdetail/:userCode' element={<ReservationDetail/>}/>
         </Route>
 
         <Route path="*" element={<Error/>} />

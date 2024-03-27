@@ -1,4 +1,5 @@
 import users from "../data/memDetail.json";
+import userId from "../data/memDetail.json";
 
 export function getUserList() {
     return users;
