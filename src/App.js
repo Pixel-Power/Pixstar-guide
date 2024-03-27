@@ -30,19 +30,20 @@ function App() {
         </Route>
 
         <Route path="/" element={<Layout2 />}>
-        <Route index element={<Main />} />
-        <Route path="main/:userCode" element={<Main />} />
+          <Route index element={<Main />} />
+          <Route path="main/:userCode" element={<Main />} />
         </Route>
          
         <Route path="/" element={<Layout2 />}>
           <Route index element={<Main />} />
           <Route path="/main" element={<Main />} />
           <Route path="/logout" element={<Logout />} />
-          <Route path="/restaurantdetail" element={<RestaurantDetail />} />
+          {/* <Route path="/restaurantdetail" element={<RestaurantDetail />} /> */}
         </Route>
 
           <Route path="/" element={<Layout3/>}>
             <Route path="/login" element={<Login/>}/>
+             <Route path="/restaurantdetail" element={<RestaurantDetail/>}/>
           </Route>
 
         <Route path="/" element={<Layout4/>}>

@@ -8,10 +8,10 @@
         "phone": "02-567-1234",
         "category": "창작",
         "price": "120,000 - 230,000",
-        "img": "images/food/koreanfood/koreanfood (16).png",
+        "img": "/images/food/koreanfood/koreanfood (16).png",
         "description": "로컬 식재료를 현대적인 재해석을 통해 지금 시점에서 그 이상 그 이하(No more,No less)도 아닌 식재료의 본질의 맛을 가장 잘 살릴수있는 조리법으로 결과물을 만들어 내고 있습니다.",
         "time": "12:00 - 22:30",
-        "pixstar":"images/restaurant-detail/pixstar3.png"
+        "pixstar":"/images/restaurant-detail/pixstar3.png"
     },
     {
         "code": 2,
