@@ -1,7 +1,10 @@
 function CompanyInfo() {
     return(
-        <h1>회사 정보</h1>
+        <>
+        <img src="./imges/company-info/companyinfoImg.png" alt="회사소개"></img>
+        </>
     );
+
 }
 
 export default CompanyInfo;
