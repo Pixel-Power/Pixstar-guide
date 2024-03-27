@@ -9,11 +9,12 @@ const { kakao } =  window;
 function RestaurantDetail(){
 
     // const {code} = useParams();
-    // const location = useLocation();
+    const location = useLocation();
     // console.log(`나는 식당코드 => ${location.state.code}`);
-    // const code = location.state.code;
-    const code = 1;
-    const userCode = 0;
+    const code = location.state.code;
+    // const code = 1;
+    const {userCode} = useParams();
+    // const userCode = 0;
     const [restaurant, setRestaurant] = useState({
         name: '',
         address: '',

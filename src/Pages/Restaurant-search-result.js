@@ -22,7 +22,7 @@ function RestaurantSearchDetail(){
     );
 
     const onClickHanlder = (code) => {
-        navigate(`/restaurantdetail/${code}`);
+        navigate(`/restaurantdetail/${restaurantList.code}`, {state : {code}});
     }
 
 

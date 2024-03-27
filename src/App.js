@@ -37,6 +37,7 @@ function App() {
         <Route path="/" element={<Layout2 />}>
           <Route index element={<Main />} />
           <Route path="main/:userCode" element={<Main />} />
+          <Route path="/restaurantsearchresult/:userCode" element={<RestaurantSearchResult />} />
           <Route path="/logout" element={<Logout />} />
           <Route path='/useterms' element={<UseTerms />} />
           <Route path='/privacy' element={<Privacy />} />
@@ -46,7 +47,7 @@ function App() {
         <Route path="/" element={<Layout3 />}>
           <Route path="/login" element={<Login />} />
           <Route path="/restaurantsearchresult" element={<RestaurantSearchResult />} />
-          <Route path="/restaurantdetail/:code" element={<RestaurantDetail />} />
+          <Route path="/restaurantdetail" element={<RestaurantDetail />} />
           <Route path='/mypage/:userCode' element={<MyPage />} />
           <Route path='reservation/:userCode' element={<Reservation />} />
         </Route>
@@ -56,7 +57,7 @@ function App() {
         <Route path="/" element={<Layout4/>}>
           <Route path='/mypage/:userCode' element={<MyPage/>}/>
           <Route path='reservation/:userCode' element={<Reservation/>}/>
-          <Route path="/restaurantdetail" element={<RestaurantDetail/>}/>
+          <Route path="/restaurantdetail/:userCode" element={<RestaurantDetail/>}/>
           <Route path='/reservationdetail/:userCode' element={<ReservationDetail/>}/>
         </Route>
 
