@@ -44,7 +44,7 @@ function Reservation(){
             </div>
             <div>
                 <div>
-                    <Link to='reservationdetailfake'>
+                    <Link to={`/reservationdetailfake/${user.userCode}`}>
                         <div className={styles.ReservationBox}> 
                             <img className={styles.ReservationImgs} src="/images/food/pasta/pasta (6).jpg" alt='reviewImg1'/>
                             <div className={styles.ReservationText}>

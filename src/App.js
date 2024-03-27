@@ -60,7 +60,7 @@ function App() {
           <Route path='reservation/:userCode' element={<Reservation/>}/>
           <Route path="/restaurantdetail/:userCode" element={<RestaurantDetail/>}/>
           <Route path='/reservationdetail/:userCode' element={<ReservationDetail/>}/>
-          <Route path='/reservationdetailfake' element={<ReservationDetailFake/>}/>
+          <Route path='/reservationdetailfake/:userCode' element={<ReservationDetailFake/>}/>
         </Route>
 
         <Route path="*" element={<Error/>} />

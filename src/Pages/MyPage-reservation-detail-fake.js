@@ -1,16 +1,14 @@
 import styles from "./MyPage-reservation-detail.module.css";
 import { useEffect, useState } from "react";
 import { getResDetail } from "../apis/RestaurantAPI";
-import { useLocation, useParams } from "react-router-dom";
-import { getUserDetail } from '../apis/MemAPI'
-import { getRSVDetail } from "../apis/RSVAPI";
+import { useParams } from "react-router-dom";
 
 const { kakao } = window;
 
 function ReservationDetailFake() {
 
-    const {code} = useParams();
-    // const code = 1;
+
+    const code = 1;
     const [restaurant, setRestaurant] = useState({
         code: 0,
         name: '',
@@ -21,46 +19,8 @@ function ReservationDetailFake() {
         description: ''
     });
 
-    const [reservation, setReservation] = useState({
-        restaurantCode: 0,
-        RSVDate: "",
-        RSVTime: "",
-        headcount: "",
-        avail: ""
-    });
-
-    const location = useLocation();
-    // // const restaurantCode = 0;
-    // const info = isNaN(location.state) != true? location.state : location.state.reservation.split('/', 4);
-    // console.log(`info : ${info}`);
-    
-
-    // const restaurantCode = location.state;
-    // console.log(`reservationCode : ${location.state}`);
-    // // console.log(`나는 예약코드 : ${typeof restaurantCode}`);
-    // const code = restaurantCode;
-    // code = parseInt(reservationCode);
-
-    // if (location.state) {
-
-    // }
-
-    console.log(`나는 예약내역 => ${location.state.reservation}`);
-    const info = location.state.reservation.split('/', 3);
-    reservation.restaurantCode = info[0];
-    // const code = 1;
-    console.log(`code : ${code}`);
-    const restaurantCode = 1;
-    console.log(`restaurantCode : ${restaurantCode}`);
-    reservation.RSVDate = info[1];
-    reservation.RSVTime = info[2];
-    reservation.headcount = info[3];
-
     const [kakaoMap, setKakaoMap] = useState(null);
     
-
-
-
     useEffect(
         () => {
             setRestaurant(getResDetail(code));
@@ -95,30 +55,7 @@ function ReservationDetailFake() {
         },
         []
     );
-
-    const {userCode} = useParams();
-    console.log(`userCode : ${userCode}`);
-    // const userCode = 1;
-
-    const [user, setUser] = useState({
-        userName: '',
-        userId: '',
-        userPw: '',
-        userEmail: '',
-        userPhone: ''
-    });
-
-    useEffect(
-        () => {
-            setUser(getUserDetail(userCode));
-            setReservation(getRSVDetail(restaurantCode));
-        },
-        []
-    );
     
-    console.log(`사용자 : ${user}`);
-    console.log(`나는 예약정보 : ${reservation}`);
-
     return (
         <div>
             <h2 className={styles.RestaurantName}>{restaurant.name}</h2>
