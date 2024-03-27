@@ -20,7 +20,7 @@ function Login() {
     if (user) {
       setIsLoggedIn(true);
       alert('로그인 되었습니다');
-      navigate(`/main/${user.userId}`);
+      navigate(`/main/${user.userCode}`);
     } else {
       alert('아이디 또는 비밀번호가 잘못되었습니다');
     }

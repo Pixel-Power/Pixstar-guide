@@ -13,6 +13,7 @@ import Logout from './Pages/Logout';
 import Layout3 from './Layouts/Layout3';
 import Error from './Pages/Error';
 import UseTerms from './Pages/UseTerms';
+import Layout4 from './Layouts/Layout4';
 
 function App() {
   return (
@@ -29,27 +30,32 @@ function App() {
         </Route>
 
         <Route path="/" element={<Layout2 />}>
-        <Route index element={<Main />} />
-        <Route path="main/:userCode" element={<Main />} />
+          <Route index element={<Main />} />
+          <Route path="main/:userCode" element={<Main />} />
         </Route>
          
         <Route path="/" element={<Layout2 />}>
           <Route index element={<Main />} />
           <Route path="/main" element={<Main />} />
           <Route path="/logout" element={<Logout />} />
+
+          {/* <Route path="/restaurantdetail" element={<RestaurantDetail />} /> */}
         </Route>
 
-         <Route path="/" element={<Layout3/>}>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/restaurantsearchresult" element={<RestaurantSearchResult />} />
-          <Route path="/restaurantdetail/:code" element={<RestaurantDetail />} />
+          <Route path="/" element={<Layout3/>}>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/restaurantsearchresult" element={<RestaurantSearchResult />} />
+             <Route path="/restaurantdetail/:code" element={<RestaurantDetail />} />
+          </Route>
+
+        <Route path="/" element={<Layout4/>}>
           <Route path='/mypage/:userCode' element={<MyPage/>}/>
           <Route path='reservation/:userCode' element={<Reservation/>}/>
-        </Route> 
+          <Route path="/restaurantdetail" element={<RestaurantDetail/>}/>
+          <Route path='/reservationdetail/:userCode' element={<ReservationDetail/>}/>
+        </Route>
 
-
-          {/* <Route path="*" element={<Error/>} /> */}
-       
+        <Route path="*" element={<Error/>} />
       </Routes>
     </BrowserRouter>
   );

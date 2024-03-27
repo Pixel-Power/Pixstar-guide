@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getResDetail } from "../apis/RestaurantAPI";
 import styles from "./Restaurant-detail.module.css";
@@ -8,9 +8,12 @@ const { kakao } =  window;
 
 function RestaurantDetail(){
 
-    const {code} = useParams();
-    console.log(`code : ${code}`)
-    // const code = 1;
+    // const {code} = useParams();
+    // const location = useLocation();
+    // console.log(`나는 식당코드 => ${location.state.code}`);
+    // const code = location.state.code;
+    const code = 1;
+    const userCode = 0;
     const [restaurant, setRestaurant] = useState({
         name: '',
         address: '',
@@ -126,7 +129,7 @@ function RestaurantDetail(){
                         <h2>예약하기</h2>
                         <div className={styles.resInfoTextBox}>
                             <h4 className={styles.reservationDateTimeText}>예약 일시</h4>
-                            <CalendarModal/>
+                            <CalendarModal code={code} userCode={userCode}/>
                         </div>
                     </div>
                     <div>

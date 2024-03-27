@@ -1,17 +1,14 @@
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css'   // css import
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import styles from './CalendarModal.module.css';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
-function CalendarModal () {
-
-    const {code} = useParams();
-
-    const {userCode} = useParams();
+function CalendarModal ({ code, userCode}) {
 
     const navigate = useNavigate();
 
@@ -23,8 +20,6 @@ function CalendarModal () {
 
     const [date, setDate] = useState(new Date());
 
-    const [num, setNum] =useState("");
-
     const dayList = ['일', '월', '화', '수', '목', '금', '토'];
     console.log(`Date : ${date}`);
     const formattedDate = `${date.getFullYear()}년 ${date.getMonth()+1}월 ${date.getDate()}일 (${dayList[date.getDay()]})`;
@@ -35,8 +30,6 @@ function CalendarModal () {
     const [reservation, setReservation] = useState(`오늘(${dayList[date.getDay()]}) / 2명`);
 
     const [btnActive, setBtnActive] = useState("");
-
-    const [btn, setBtn] = useState('오후 6:00');
 
     const onClickPlus = () => {
         setCount(count + 1);
@@ -56,14 +49,34 @@ function CalendarModal () {
     };
 
     const onClickReservation = () => {
-        const text = `${formattedDate} ${bookTime} / ${count}명`;
+        const text = `${code} / ${formattedDate} / ${bookTime} / ${count}명`;
         setReservation(text);
         setIsOpen(false)
     }; 
 
     const onClickRealReservation = () => {
 
-        navigate("/reservationdetail", {state: {reservation}});
+        if (userCode != 0) {
+            navigate(`/reservationdetail/${userCode}_${code}`, {state: {reservation}});
+        }
+        else {
+            Swal.fire({
+                icon: "warning",
+                title: "회원 전용 서비스 입니다.",
+                text: "로그인 창으로 이동하겠습니까?",
+                showCancelButton: true,
+                confirmButtonText: "예",
+                cancelButtonText: "아니오",
+                confirmButtonColor: '#f65f67', 
+            }).then((res) => {
+                if (res.isConfirmed) {
+                    navigate("/login");
+                }
+                else {}
+            });
+            // alert('회원만 이용가능한 서비스 입니다.');
+            // navigate("/login");
+        }
     };
 
     return (
@@ -113,14 +126,6 @@ function CalendarModal () {
                         </Button>
                     </Modal.Footer>
                 </Modal>
-                <div className={styles.timeBox1}>
-                    {/* <input className={styles.timeItem1} type="button" value={timeList[0]} onClick={e => {const text = `${formattedDate} ${bookTime} / ${count}명`;
-        setReservation(text);}}/>
-                    <input className={styles.timeItem1} type="button" value={timeList[1]} onClick={onClickTime}/>
-                    <input className={styles.timeItem1} type="button" value={timeList[2]} onClick={onClickTime}/>
-                    <input className={styles.timeItem1} type="button" value={timeList[3]} onClick={onClickTime}/>
-                    <input className={styles.timeItem1} type="button" value={timeList[4]} onClick={onClickTime}/> */}
-                </div>
                 <button className={styles.reservationButton} onClick={onClickRealReservation}>예약하기</button>
             </div>
         </>
