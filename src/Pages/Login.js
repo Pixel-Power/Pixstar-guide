@@ -39,7 +39,7 @@ function Login() {
       ) : (
         <div style={{
           display: 'flex', justifyContent: 'center', alignItems: 'center',
-          width: '100%', height: '100vh'
+          width: '100%', height: '100vh', 
         }}>
           <form style={{ display: 'flex', flexDirection: 'column' }}>
             <label>ID</label>
@@ -48,6 +48,7 @@ function Login() {
               placeholder="아이디를 입력해주세요"
               value={id}
               onChange={(e) => setId(e.target.value)}
+              style={{ width: '100%', padding: '12px', marginBottom: '15px' }}
             />
             <label>PASSWORD</label>
             <input
@@ -55,9 +56,13 @@ function Login() {
               placeholder="비밀번호를 입력해주세요"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              style={{ width: '100%', padding: '12px', marginBottom: '15px' }}
             />
-            <button onClick={handleLogin}>로그인</button>
-            <button onClick={onClickHandler}>회원가입</button>
+            <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+              <button onClick={handleLogin} style={{ width: '70%', padding: '3px 5px', marginTop: '15px' }}>로그인</button>
+            <button onClick={onClickHandler} style={{ width: '80%', padding: '3px 5px', marginTop: '15px' }}>회원이 아니신가요?</button>
+            </div>
+            
           </form>
         </div>
       )}

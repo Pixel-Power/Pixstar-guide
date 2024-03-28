@@ -11,9 +11,15 @@ function Main() {
     const [searchTerm, setSearchTerm] = useState('');
 
     const navigate = useNavigate();
+    var option = "width = 500, height = 500, top = 100, left = 200, location=no, toolbar= no, status=no, scrollbars=no, resizable=no"
+
+    useEffect(() => {
+        window.open('/popup', '/popup', option);
+    }, []);
 
     return (
         <>
+
             <div className={mainPageStyles.allmainPageBody}>
                 <div className={mainPageStyles.searchbox}>
                     <img id="searchBg" src="/images/mainPage-images/검색창배경.png" alt="검색창 배경" />
