@@ -44,7 +44,8 @@ function Reservation(){
             </div>
             <div>
                 <div>
-                        <div className={styles.ReservationBox} onClick={() => {navigate(`/reservationdetail/${userCode}`, {state: 1})}}> 
+                    <Link to={`/reservationdetailfake/${user.userCode}`}>
+                        <div className={styles.ReservationBox}> 
                             <img className={styles.ReservationImgs} src="/images/food/pasta/pasta (6).jpg" alt='reviewImg1'/>
                             <div className={styles.ReservationText}>
                                 <h4>류니끄</h4>
@@ -54,6 +55,7 @@ function Reservation(){
                                 <p className={styles.Use}>이용 전</p>
                             </div>
                         </div>
+                    </Link>
                     <div className={styles.ReservationBox}> 
                         <img className={styles.ReservationImgs} src="/images/food/dessert/dessert (3).jpg" alt='reviewImg1'/>
                         <div className={styles.ReservationText}>    

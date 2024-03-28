@@ -7,6 +7,7 @@ import SignUp from './Pages/SignUp';
 import MyPage from './Pages/MyPage';
 import RestaurantDetail from './Pages/Restaurant-detail';
 import ReservationDetail from './Pages/MyPage-reservation-detail';
+import ReservationDetailFake from './Pages/MyPage-reservation-detail-fake';
 import Reservation from './Pages/MyPage-reservation';
 import Layout2 from './Layouts/Layout2';
 import Logout from './Pages/Logout';
@@ -46,7 +47,7 @@ function App() {
 
         <Route path="/" element={<Layout3 />}>
           <Route path="/login" element={<Login />} />
-          <Route path="/restaurantsearchresult" element={<RestaurantSearchResult />} />
+          {/* <Route path="/restaurantsearchresult" element={<RestaurantSearchResult />} /> */}
           <Route path="/restaurantdetail" element={<RestaurantDetail />} />
           <Route path='/mypage/:userCode' element={<MyPage />} />
           <Route path='reservation/:userCode' element={<Reservation />} />
@@ -59,6 +60,7 @@ function App() {
           <Route path='reservation/:userCode' element={<Reservation/>}/>
           <Route path="/restaurantdetail/:userCode" element={<RestaurantDetail/>}/>
           <Route path='/reservationdetail/:userCode' element={<ReservationDetail/>}/>
+          <Route path='/reservationdetailfake/:userCode' element={<ReservationDetailFake/>}/>
         </Route>
 
         <Route path="*" element={<Error/>} />
