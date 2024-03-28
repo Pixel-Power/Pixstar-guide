@@ -1,4 +1,4 @@
-import {NavLink, useNavigate, useSearchParams, useLocation} from 'react-router-dom';
+import {NavLink, useNavigate, useSearchParams, useLocation, useParams} from 'react-router-dom';
 import {useState, useEffect} from 'react';
 import { searchRestaurant } from '../apis/RestaurantAPI';
 import ResDetailStyle from './Restaurant-search-result.module.css';
@@ -8,7 +8,9 @@ import { Link } from 'react-router-dom';
 function RestaurantSearchDetail(){
 
     // const location = useLocation();
-
+    // const userCode = 1;
+    const {userCode} = useParams();
+    console.log(`userCode : ${userCode}`);
     const [restaurantList, setRestaurantList ] = useState([]);
     const [searchParams] = useSearchParams();
     const itemsPerPage = 6;
@@ -25,7 +27,7 @@ function RestaurantSearchDetail(){
     );
 
     const onClickHanlder = (code) => {
-        navigate(`/restaurantdetail/${restaurantList.code}`, {state : {code}});
+        navigate(`/restaurantdetail/${userCode}`, {state : {code}});
     }
 
 

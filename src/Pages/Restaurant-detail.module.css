@@ -4,7 +4,6 @@
     /* position: absolute; */
     height: 400px;
     object-fit: cover;
-    /* border: 1px solid greenyellow; */
     margin-left: 95px;
     margin-right: 85px;
 }
@@ -118,6 +117,34 @@
 
 .reservationDateTimeText {
     margin-left: 2%;
+}
+
+.photoReviewBox {
+    display: flex;
+    margin-top: 40px;
+}
+
+.resReviewBox {
+    border: 1px solid rgb(190, 190, 190);
+    block-size: 100%;
+    margin-bottom: 2%;
+    height: 100%;
+    width: 100%;
+}
+
+.resReviewImages {
+    text-align: center;
+    display: flex;
+    height: 200px;
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+.reviewImage {
+    
+    left: 50%;
+    height: 100%;
+    width: 100%;
 }
 
 .map {

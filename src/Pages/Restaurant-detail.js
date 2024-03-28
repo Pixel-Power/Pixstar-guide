@@ -8,13 +8,13 @@ const { kakao } =  window;
 
 function RestaurantDetail(){
 
-    // const {code} = useParams();
     const location = useLocation();
-    // console.log(`나는 식당코드 => ${location.state.code}`);
+    // 식당 코드
     const code = location.state.code;
-    // const code = 1;
+    // 사용자 코드
     const {userCode} = useParams();
-    // const userCode = 0;
+
+    // 식당 정보 관리
     const [restaurant, setRestaurant] = useState({
         name: '',
         address: '',
@@ -26,23 +26,28 @@ function RestaurantDetail(){
         time: '',
         pixstar: '',
         description: '',
-        img: ''
+        img: '',
+        img1: '',
+        img2: ''
     });
 
+    // 카카오지도 관리
     const [kakaoMap, setKakaoMap] = useState(null);
 
     useEffect(
         () => {
             setRestaurant(getResDetail(code));
-            console.log(restaurant);
             const latitude = restaurant.latitude;
             const longitude = restaurant.longitude;
             const container = document.getElementById('map');           // 지도를 담을 영역의 DOM 레퍼런스
+            console.log(`container ${container}`);
             const options = {
                 center : new kakao.maps.LatLng(latitude, longitude),  // 지도의 중심좌표.
                 level : 2                                               
             };
             const map = new kakao.maps.Map(container, options);         // 지도 생성 및 객체 리턴
+            console.log('지도 불러옴..');
+
             setKakaoMap(map);
             const markerPosition = new kakao.maps.LatLng(latitude, longitude);
             const marker = new kakao.maps.Marker({
@@ -50,12 +55,9 @@ function RestaurantDetail(){
                 clickable: true
             });
             marker.setMap(map);
-            const iwContent = `<div style="padding:5px;"><p>${restaurant.name}</p><br><p>${restaurant.address}</p></div>`;
+            const iwContent = `<div style="padding:5px; width: 300px"><p>${restaurant.name}</p><br><p>${restaurant.address}</p></div>`;
             const iwRemoveable = true;
-            const iwPosition = new kakao.maps.LatLng(latitude, longitude);
             const infowindow = new kakao.maps.InfoWindow({
-                // position : iwPosition,
-                // content : iwContent
                 content : iwContent,
                 removable : iwRemoveable
             });
@@ -64,7 +66,9 @@ function RestaurantDetail(){
             } );
         },
         []
-    )
+    );
+
+    console.log(restaurant);
 
     const onClickPanTo = () => {
         // 이동할 위도 경도 위치를 생성
@@ -134,6 +138,28 @@ function RestaurantDetail(){
                         </div>
                     </div>
                     <div>
+                        <div className={styles.photoReviewBox}>
+                            <h2>사진 / 리뷰</h2>
+                            <p>{`전체보기 >`}</p>
+                        </div>
+                        <div className={styles.resReviewBox}>
+                            <div className={styles.resReviewImages}>
+                                <img className={styles.reviewImage} src="/images/restaurant-detail/review1.jpg"></img>
+                                <img className={styles.reviewImage} src="/images/restaurant-detail/review2.jpg"></img>
+                                <img className={styles.reviewImage} src="/images/restaurant-detail/review3.jpg"></img>
+                                <img className={styles.reviewImage} src="/images/restaurant-detail/review4.jpg"></img>
+                                <img className={styles.reviewImage} src="/images/restaurant-detail/review5.jpg"></img>
+                            </div>
+                            <div>
+                                <img></img>
+                                <span>리뷰</span>
+                                <div>
+                                    <p>나는야 리뷰 내용이지롱 나는야 리뷰 내용이지롱 나는야 리뷰 내용이지롱 나는야 리뷰 내용이지롱 나는야 리뷰 내용이지롱 나는야 리뷰 내용이지롱</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
                         <div>
                             <h2>매장위치</h2>
                             <button className={styles.mapButton} onClick={onClickPanTo}>매장 위치로 돌아가기</button>
@@ -147,17 +173,17 @@ function RestaurantDetail(){
                         <div className={styles.preferResBox}>
                             <div className={styles.preferRes}>
                                 <img src="/images/restaurant-detail/prefer1.png"></img>
-                                <p>육덕등심</p>
+                                <p style={{fontWeight: 'bolder', fontSize: '23px'}}>육덕등심</p>
                                 <p>소고기구이 · 서울시 강남구</p>
                             </div>
                             <div className={styles.preferRes}>
                                 <img src="/images/restaurant-detail/prefer2.png"></img>
-                                <p>FIVE GUYS</p>
+                                <p style={{fontWeight: 'bolder', fontSize: '23px'}}>FIVE GUYS</p>
                                 <p>햄버거 · 서울시 강남구</p>
                             </div>
                             <div className={styles.preferRes}>
                                 <img src="/images/restaurant-detail/prefer3.png"></img>
-                                <p>La brick</p>
+                                <p style={{fontWeight: 'bolder', fontSize: '23px'}}>La brick</p>
                                 <p>양식 · 서울시 강남구</p>
                             </div>
                         </div>
