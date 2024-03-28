@@ -1,10 +1,10 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import mainPageStyles from './Main.module.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Main() {
 
-    const userCode = 1;
+    const {userCode} = useParams();
 
     const onClickHandler = () => { navigate(`/restaurantsearchresult/${userCode}`, { state: { searchTerm } }); }
 
@@ -84,6 +84,8 @@ function Main() {
                             <img className={mainPageStyles.menuImage} type="button" onClick={() => alert("서비스 준비중 입니다.")} src="/images/mainPage-images/오늘의레시피.png" alt="오늘의 레시피" />
                         </div>
                     </div>
+                </div>
+            </div>
         </>
     );
 }

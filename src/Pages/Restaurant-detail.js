@@ -207,6 +207,7 @@ function RestaurantDetail(){
                     </div>
                 </div>
             </div>
+            </div>
         </>
 
     );

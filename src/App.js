@@ -17,8 +17,9 @@ import UseTerms from './Pages/UseTerms';
 import Privacy from './Pages/Privacy';
 import SiteMap from './Pages/SiteMap';
 import Layout4 from './Layouts/Layout4';
-import MD from './Pages/Md';
+import Md from './Pages/Md';
 import CompanyInfo from './Pages/Company-info';
+import CancelMember from './Pages/Mypage-cancelmember';
 
 
 function App() {

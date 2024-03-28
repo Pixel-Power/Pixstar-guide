@@ -11,12 +11,17 @@ function Header2() {
 
 
     const onClickHandler = () => {
+        navigate(`/mypage/${userCode}`)
+    }
+
+    const onClickMain = () => {
         navigate(`/main/${userCode}`)
     }
+
     return (
 
         <header>
-            <div className={styles.logobox} onClick={onClickHandler}>
+            <div className={styles.logobox} onClick={onClickMain}>
                 <img className={styles.logoImg} src="/images/header-images/pixstar-guide-logo.png" alt="PixSTAR Guide Logo" />
             </div>
 

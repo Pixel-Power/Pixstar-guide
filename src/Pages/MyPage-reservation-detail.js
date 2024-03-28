@@ -45,8 +45,8 @@ function ReservationDetail() {
 
     // }
 
-    console.log(`나는 예약내역 => ${location.state.reservation}`);
-    const info = location.state.reservation.split('/', 3);
+    console.log(`나는 예약내역 => ${location.state.textNavigate}`);
+    const info = location.state.textNavigate.split('/', 3);
     reservation.restaurantCode = info[0];
     const code = 1;
     console.log(`code : ${code}`);

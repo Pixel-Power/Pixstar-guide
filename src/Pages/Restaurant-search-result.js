@@ -8,7 +8,7 @@ import ResDetailStyle from './Restaurant-search-result.module.css';
 function RestaurantSearchDetail(){
 
     const location = useLocation();
-
+    const {userCode} = useParams();
     const searchTerm = location.state.searchTerm;
     console.log(searchTerm);
 
