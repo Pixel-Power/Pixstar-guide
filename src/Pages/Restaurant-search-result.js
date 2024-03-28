@@ -9,6 +9,8 @@ function RestaurantSearchDetail(){
 
     // const location = useLocation();
 
+    const userCode=1;
+
     const [restaurantList, setRestaurantList ] = useState([]);
     const [searchParams] = useSearchParams();
     const itemsPerPage = 6;
@@ -25,7 +27,7 @@ function RestaurantSearchDetail(){
     );
 
     const onClickHanlder = (code) => {
-        navigate(`/restaurantdetail/${restaurantList.code}`, {state : {code}});
+        navigate(`/restaurantdetail/${userCode}`, {state : {code}});
     }
 
 
