@@ -1,6 +1,6 @@
 function Md() {
     return(
-        <h1>팝업창</h1>
+        <img src="images/company-info/MD팝업.png" width={'100%'}/>
     );
 }
 

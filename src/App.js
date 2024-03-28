@@ -17,7 +17,7 @@ import UseTerms from './Pages/UseTerms';
 import Privacy from './Pages/Privacy';
 import SiteMap from './Pages/SiteMap';
 import Layout4 from './Layouts/Layout4';
-import CancelMember from './Pages/Mypage-cancelmember';
+import Md from './Pages/Md';
 
 function App() {
   return (
@@ -67,6 +67,7 @@ function App() {
           <Route path='/reservationdetailfake/:userCode' element={<ReservationDetailFake/>}/>
         </Route>
 
+        <Route path="/popup" element={<Md />} />
         <Route path="*" element={<Error/>} />
       </Routes>
     </BrowserRouter>
