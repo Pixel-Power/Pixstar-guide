@@ -11,7 +11,7 @@ header{
 .logoImg {
     position: absolute;
     height: 70px;
-    margin-left: 335px;
+    margin: 0px auto;
 }
 
 .headerMenu{

@@ -1,12 +1,11 @@
 header{
-    display: flex;
     position: fixed;
     width: 100%;
     background-color: white;
     border-bottom: 1px solid rgba(155, 155, 155, 0.541);
     padding: 20px 20%;
-    margin: 0px;
-    top:0;
+    margin-top:0;
+    top: 0;
     left:0;
     
 }
@@ -14,7 +13,7 @@ header{
 .logoImg {
     position: absolute;
     height: 70px;
-    margin-left: 320px;
+    margin-left: 500px;
 }
 
 .headerMenu{

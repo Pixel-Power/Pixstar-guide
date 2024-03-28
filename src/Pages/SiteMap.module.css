@@ -1,11 +1,12 @@
 .titlebox {
     width:500px;
     text-align: center;
-    margin: 10px auto 5 auto;
+    margin: 200px auto 50px auto;
 }
 .siteMapbox { 
     display: flex;
     justify-content: space-between;
     width: 900px;
-    margin: auto;
+    margin: 50px auto;
 }
+a:visited { text-decoration: none; }

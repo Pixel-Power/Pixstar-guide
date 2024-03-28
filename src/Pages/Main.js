@@ -5,13 +5,12 @@ import React, { useState, useEffect, } from 'react';
 function Main() {
 
     const userCode = 1;
+    
     const onClickHandler = () => { navigate(`/restaurantsearchresult/${userCode}`, {state : {searchTerm}}); }
 
     const [searchTerm, setSearchTerm] = useState('');
 
     const navigate = useNavigate();
-
-
 
     return (
         <>
