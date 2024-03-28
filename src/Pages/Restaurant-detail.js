@@ -86,6 +86,7 @@ function RestaurantDetail(){
     return (
 
         <>
+            <div className={styles.allbox}>
             <div className={styles.allContents}>
                 <div className={styles.resImages}>
                     <img className={styles.resImage} src={restaurant.img1}></img>

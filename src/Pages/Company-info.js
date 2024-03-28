@@ -5,7 +5,7 @@ function CompanyInfo() {
         <>
         <div className={companyinfo.allutpv}>
 
-        <img src="./imges/company-info/companyinfoImg.png" alt="회사소개"></img>
+        <img src="./images/company-info/companyinfoimg.png" alt="회사소개"></img>
         </div>
         </>
     );

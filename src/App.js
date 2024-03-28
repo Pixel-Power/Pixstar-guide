@@ -17,7 +17,9 @@ import UseTerms from './Pages/UseTerms';
 import Privacy from './Pages/Privacy';
 import SiteMap from './Pages/SiteMap';
 import Layout4 from './Layouts/Layout4';
-import Md from './Pages/Md';
+import MD from './Pages/Md';
+import CompanyInfo from './Pages/Company-info';
+
 
 function App() {
   return (
@@ -34,6 +36,7 @@ function App() {
           <Route path='/useterms' element={<UseTerms />} />
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/sitemap' element={<SiteMap />} />
+
         </Route>
 
       {/* 로그인 o, 사이드바 o */}
@@ -54,9 +57,8 @@ function App() {
         <Route path="/" element={<Layout3 />}>
           <Route path="/login" element={<Login />} />
           <Route path="/restaurantdetail" element={<RestaurantDetail />} />
-          {/* <Route path="/restaurantsearchresult" element={<RestaurantSearchResult />} /> */}
+          <Route path="companyinfo" element={<CompanyInfo/>}/>
         </Route>
-          {/* <Route path="/restaurantdetail" element={<RestaurantDetail />} /> */}
 
 
       {/* 로그인 o, 사이드바 x */}
@@ -66,6 +68,7 @@ function App() {
           <Route path="/restaurantdetail/:userCode" element={<RestaurantDetail/>}/>
           <Route path='/reservationdetail/:userCode' element={<ReservationDetail/>}/>
           <Route path='/reservationdetailfake/:userCode' element={<ReservationDetailFake/>}/>
+          <Route path='companyinfo/:userCode' element={<CompanyInfo/>}/>
         </Route>
 
         <Route path="/popup" element={<Md />} />
