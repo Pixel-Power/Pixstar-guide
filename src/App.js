@@ -26,6 +26,7 @@ function App() {
         <Route path="/" element={<Layout1 />}>
           <Route index element={<Main />} />
           <Route path="main" element={<Main />} />
+          <Route path="/restaurantsearchresult/:userCode" element={<RestaurantSearchResult />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/useterms' element={<UseTerms />} />
