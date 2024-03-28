@@ -137,6 +137,9 @@ function ReservationDetail() {
                         <p>예약 시간보다 5분 일찍 오시기 바랍니다.</p>
                     </div>
                 </div>
+                <Link to="/cancelmember">
+                    <img src="/images/myPage-images/editImg.png" alt="UserEdit"/>
+                </Link>
             </div>
             <div className={styles.Box}>
                 <h3 className={styles.BoxList}>식당정보</h3>

@@ -24,6 +24,7 @@ function App() {
     <BrowserRouter>
       <Routes>
 
+      {/* 로그인 x, 사이드바 o */}
         <Route path="/" element={<Layout1 />}>
           <Route index element={<Main />} />
           <Route path="main" element={<Main />} />
@@ -32,30 +33,32 @@ function App() {
           <Route path='/useterms' element={<UseTerms />} />
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/sitemap' element={<SiteMap />} />
-
-        
         </Route>
 
+      {/* 로그인 o, 사이드바 o */}
         <Route path="/" element={<Layout2 />}>
           <Route index element={<Main />} />
           <Route path="main/:userCode" element={<Main />} />
           <Route path="/restaurantsearchresult/:userCode" element={<RestaurantSearchResult />} />
           <Route path="/logout" element={<Logout />} />
+          <Route path='/mypage/:userCode' element={<MyPage />} />
+          <Route path='reservation/:userCode' element={<Reservation />} />
           <Route path='/useterms' element={<UseTerms />} />
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/sitemap' element={<SiteMap />} />
+          <Route path='/cancelmember' element={<CancelMember/>}/>
         </Route>
 
+      {/* 로그인 x, 사이드바 x */}
         <Route path="/" element={<Layout3 />}>
           <Route path="/login" element={<Login />} />
-          {/* <Route path="/restaurantsearchresult" element={<RestaurantSearchResult />} /> */}
           <Route path="/restaurantdetail" element={<RestaurantDetail />} />
-          <Route path='/mypage/:userCode' element={<MyPage />} />
-          <Route path='reservation/:userCode' element={<Reservation />} />
+          {/* <Route path="/restaurantsearchresult" element={<RestaurantSearchResult />} /> */}
         </Route>
-
           {/* <Route path="/restaurantdetail" element={<RestaurantDetail />} /> */}
 
+
+      {/* 로그인 o, 사이드바 x */}
         <Route path="/" element={<Layout4/>}>
           <Route path='/mypage/:userCode' element={<MyPage/>}/>
           <Route path='reservation/:userCode' element={<Reservation/>}/>
