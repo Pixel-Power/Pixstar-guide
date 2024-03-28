@@ -3,6 +3,7 @@
     flex-wrap: nowrap;
     overflow: auto;
     justify-content: center;
+    margin-top:108px;
 }
 
 .flexItem1 {
@@ -25,7 +26,6 @@
 
 .RestaurantBox1
 {
-    
     flex: 0 0 auto;
     width: 380px;
     margin-left: 70px;

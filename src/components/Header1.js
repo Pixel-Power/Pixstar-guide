@@ -5,8 +5,10 @@ function Header1(){
 
     return(
         <header>
-            <div>
+            <div >
+                <Link to={'/'}>
                 <img className={styles.logoImg} src="/images/header-images/pixstar-guide-logo.png" alt="PixSTAR Guide Logo"/>
+                </Link>
             </div>
 
             <div className={styles.headerMenu}>

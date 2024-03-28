@@ -43,7 +43,6 @@
   margin-right: 10px;
 }
 
-
 .bodyBox {
   display: flex;
   justify-content: center;
@@ -58,7 +57,7 @@
 
 .row2 {
   display: flex;
-  margin:30px 0px;
+  margin: 30px 0px;
   gap: 51px;
 }
 
@@ -128,3 +127,4 @@
   align-items: center;
   opacity: 0.7;
 }
+

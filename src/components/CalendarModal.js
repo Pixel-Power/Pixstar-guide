@@ -25,9 +25,12 @@ function CalendarModal ({ code, userCode}) {
     const formattedDate = `${date.getFullYear()}년 ${date.getMonth()+1}월 ${date.getDate()}일 (${dayList[date.getDay()]})`;
     console.log(formattedDate);
     const [count, setCount] = useState(1);
-    const [bookTime, setBookTime] = useState('');
+    const [bookTime, setBookTime] = useState('오후 6:00');
     const timeList = ['오후 6:00', '오후 6:30', '오후 7:00', '오후 7:30', '오후 8:00'];
     const [reservation, setReservation] = useState(`오늘(${dayList[date.getDay()]}) / 2명`);
+    const [textNavigate, setTextNavigate] = useState(`${code} / ${formattedDate} / ${bookTime} / ${count}명`);
+    console.log(`initial reservation ${reservation}`);
+    console.log(`initial textNavigate ${textNavigate}`);
 
     const [btnActive, setBtnActive] = useState("");
 
@@ -49,7 +52,8 @@ function CalendarModal ({ code, userCode}) {
     };
 
     const onClickReservation = () => {
-        const text = `${code} / ${formattedDate} / ${bookTime} / ${count}명`;
+        const text = `${formattedDate} / ${bookTime} / ${count}명`;
+        setTextNavigate(`${code} / ${formattedDate} / ${bookTime} / ${count}명`);
         setReservation(text);
         setIsOpen(false)
     }; 
@@ -57,7 +61,8 @@ function CalendarModal ({ code, userCode}) {
     const onClickRealReservation = () => {
 
         if (userCode != 0) {
-            navigate(`/reservationdetail/${userCode}_${code}`, {state: {reservation}});
+            navigate(`/reservationdetail/${userCode}`, {state: {textNavigate}});
+            console.log(`textNavigate : ${textNavigate}`);
         }
         else {
             Swal.fire({

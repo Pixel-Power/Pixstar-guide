@@ -1,10 +1,18 @@
+/* <은성님/> 하나로 합치세요 아시겠어요? 은파은파~ */
+.allbox {
+    margin-top:108px;
+}
+
+.allContents {
+    size: 100%;
+}
+
 .resImages {
     text-align: center;
     display: flex;
     /* position: absolute; */
     height: 400px;
     object-fit: cover;
-    /* border: 1px solid greenyellow; */
     margin-left: 95px;
     margin-right: 85px;
 }
@@ -29,7 +37,7 @@
 }
 
 .pixStar {
-    height: 130%;
+    height: 160%;
     object-fit: cover;
     margin-top: 17px;
     margin-left: 10px;
@@ -41,17 +49,42 @@
 }
 
 .name {
-    font-size: 20pt;
+    font-size: 30pt;
     font-weight: bold;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 .category {
-    font-size: 0.9em;
-    background-color: #f0f0f0;
+    align-self: center;
+    font-size: 1.2em;
+    background-color: #f8f8f8;
+    color: rgb(70, 70, 70);
     padding: 7px;
     border-radius: 3px;
-    font-weight: 400;
+    font-weight: bolder;
     margin-left: 30px;
+}
+
+.numberReviewText {
+    cursor: pointer;
+    padding: 7px;
+    align-self: center;
+    margin-left: 20px;
+    color: rgb(145, 145, 145);
+    font-weight: 500;
+}
+
+
+.bookmarkLikeBox {
+    float: right;
+    display: flex;
+    width: 90px;
+    height: 40px;
+    margin-top: -55px;
+    margin-bottom: 20px;
+    /* background-color: aqua; */
+    justify-content: space-between;
 }
 
 .resInfoBox {
@@ -60,19 +93,23 @@
 }
 
 .address {
+    margin-right: 54px;
     font-weight: bold;
     margin-left: 7px;
 }
 
 .phone {
+    margin-right: 54px;
     font-weight: bold;
 }
 
 .time {
+    margin-right: 24px;
     font-weight: bold;    
 }
 
 .price {
+    margin-right: 40px;
     font-weight: bold;
 }
 
@@ -111,7 +148,7 @@
 }
 
 .resdeSide {
-    margin-left: 48px;
+    margin-left: 53px;
     font-size: 9pt;
     
 }
@@ -119,6 +156,60 @@
 .reservationDateTimeText {
     margin-left: 2%;
 }
+
+.photoReviewBox {
+    display: flex;
+    margin-top: 40px;
+}
+
+.allReviewText {
+    cursor: pointer;
+    padding: 7px;
+    align-self: center;
+    margin-left: 20px;
+    color: rgb(129, 129, 129);
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.resReviewBox {
+    border: 1px solid rgb(190, 190, 190);
+    block-size: 100%;
+    margin-bottom: 2%;
+    /* height: 100%; */
+    width: 100%;
+}
+
+.review {
+    width: 100px;
+    margin-left: 7px;
+}
+
+.resReviewImages {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+.reviewImage {
+    
+    left: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.reviewInfo {
+    margin-top: 5px;
+    margin-left: 1%;
+    display: flex;
+    align-items: center;
+}
+
+.reviewContent {
+    margin-left: 48px;
+    font-size: 9pt;
+}    
 
 .map {
     block-size: 100%;
@@ -142,9 +233,10 @@
 }
 
 .mapButton {
-    margin-top: -1.5%;
+    margin-top: -17px;
     cursor: pointer;
     border: 0;
+    padding: 0;
     text-decoration: underline;
     float: right;
     color: rgb(251, 75, 85);
