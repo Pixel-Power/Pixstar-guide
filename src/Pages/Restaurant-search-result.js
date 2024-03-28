@@ -1,4 +1,4 @@
-import {NavLink, useNavigate, useSearchParams} from 'react-router-dom';
+import {NavLink, useNavigate, useSearchParams, useLocation} from 'react-router-dom';
 import {useState, useEffect} from 'react';
 import { searchRestaurant } from '../apis/RestaurantAPI';
 import ResDetailStyle from './Restaurant-search-result.module.css';
@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom';
 
 
 function RestaurantSearchDetail(){
+
+    // const location = useLocation();
+
     const [restaurantList, setRestaurantList ] = useState([]);
     const [searchParams] = useSearchParams();
     const itemsPerPage = 6;
