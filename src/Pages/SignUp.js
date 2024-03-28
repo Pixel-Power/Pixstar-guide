@@ -36,7 +36,7 @@ function SignUp() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // 빈 값 검사
+        
         if (!id || !password || !cfPassword || !name || !phone || !email) {
             alert('모든 필드를 입력해주세요');
             return;
@@ -52,7 +52,7 @@ function SignUp() {
             return;
         }
 
-        // 사용자 데이터 추가
+        
         const newUser = { id, password, cfPassword, name, phone, email };
         setUsers([...users, newUser]);
 

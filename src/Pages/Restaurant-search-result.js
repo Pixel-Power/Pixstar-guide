@@ -11,6 +11,7 @@ function RestaurantSearchDetail(){
     // const userCode = 1;
     const {userCode} = useParams();
     console.log(`userCode : ${userCode}`);
+
     const [restaurantList, setRestaurantList ] = useState([]);
     const [searchParams] = useSearchParams();
     const itemsPerPage = 6;
