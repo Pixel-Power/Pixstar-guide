@@ -2,22 +2,22 @@ import {NavLink, useNavigate, useSearchParams, useLocation, useParams} from 'rea
 import {useState, useEffect} from 'react';
 import { searchRestaurant } from '../apis/RestaurantAPI';
 import ResDetailStyle from './Restaurant-search-result.module.css';
-import { Link } from 'react-router-dom';
+
 
 
 function RestaurantSearchDetail(){
 
-    // const location = useLocation();
-    // const userCode = 1;
-    const {userCode} = useParams();
-    console.log(`userCode : ${userCode}`);
+    const location = useLocation();
+
+    const searchTerm = location.state.searchTerm;
+    console.log(searchTerm);
 
     const [restaurantList, setRestaurantList ] = useState([]);
     const [searchParams] = useSearchParams();
     const itemsPerPage = 6;
     const [currentPage, setCurrentPage] = useState(1);
 
-    const  category = searchParams.get('category');
+    const category = searchParams.get('category');
 
     const navigate = useNavigate();
 
@@ -62,13 +62,12 @@ function RestaurantSearchDetail(){
                             )}
                             { restaurant && (
                                 <div className={ResDetailStyle.ResDetail}>
-                                    <img src="images/restaurant-detail/location-pin.png" alt='주소' className={ResDetailStyle.address}></img>{restaurant.address}<br/>
-                                    <img src="images/restaurant-detail/phone.png" alt='전화' className={ResDetailStyle.phone}></img>{restaurant.phone}
+                                    <img src="/images/restaurant-detail/location-pin.png" alt='주소' className={ResDetailStyle.address}></img>{restaurant.address}<br/>
+                                    <img src="/images/restaurant-detail/phone.png" alt='전화' className={ResDetailStyle.phone}></img>{restaurant.phone}
                                     <div className={ResDetailStyle.description}>{restaurant.description}</div>
                                 </div>
                             )}
                         </div>
-
                         ))
                         ) : (
                             <div className={ResDetailStyle.noResult}>맛집 검색 결과가없습니다.</div>

@@ -21,36 +21,50 @@ function Main() {
         <>
 
             <div className={mainPageStyles.allmainPageBody}>
+
                 <div className={mainPageStyles.searchbox}>
-                    <img id="searchBg" src="/images/mainPage-images/검색창배경.png" alt="검색창 배경" />
+                    <img className={mainPageStyles.searchBg}  src="/images/mainPage-images/검색창배경.png" alt="검색창 배경" />
                     <div className={mainPageStyles.searchinputbox}>
-                        <img id="searchButton" type="button" cursor='pointer' onClick={onClickHandler} src="/images/mainPage-images/search-icon.png" alt="검색"></img>
-                        <input id="searchInput" type="search" placeholder="검색어를 입력하세요" onChange={e => setSearchTerm(e.target.value)}></input>
+                        <img className={mainPageStyles.searchButton}  type="button" onClick={onClickHandler} src="/images/mainPage-images/search-icon.png" alt="검색"></img>
+                        <input className={mainPageStyles.searchInput} type="search" placeholder="검색어를 입력하세요" onChange={e => setSearchTerm(e.target.value)}></input>
                     </div>
                 </div>
+
                 <div className={mainPageStyles.bodybox}>
                     <div className={mainPageStyles.row1}>
+
                         <div className={mainPageStyles.box1}>
-                            <img className={mainPageStyles.menuImage} src="/images/mainPage-images/이달의 식당.jpg" alt="이달의 식당" />
-                                <p className={mainPageStyles.Text}>이달의 식당</p>
+                            <article className={mainPageStyles.imageContainer}>
+                            <img className={mainPageStyles.menuImage} type="button" onClick={onClickHandler} src="/images/mainPage-images/이달의 식당3.jpg" alt="이달의 식당" />
+                            <div className={mainPageStyles.imageOverlay}>
+                                <span className={mainPageStyles.monthRes}>류니끄</span>
+                                <p className={mainPageStyles.overlayText}>이달의 식당</p>
+                            </div>
+                            </article>
+                        </div>
+
+                        <div className={mainPageStyles.box2}>
+                            <article className={mainPageStyles.imageContainer}>
+
+                                <img className={mainPageStyles.menuImage} type="button" onClick={onClickHandler} src="/images/mainPage-images/픽스타 매거진.jpeg" alt="픽스타 매거진" />
+                                <div className={mainPageStyles.imageOverlay}>
+                                <span className={mainPageStyles.pixmagazine}>2024 4월호</span>
+                                <p className={mainPageStyles.overlayText}>픽스타 매거진</p>
+                                </div>
+                            </article>
                             </div>
                         </div>
-                        <div className={mainPageStyles.box1}>
-                            <img className={mainPageStyles.menuImage} type="button" onClick={() => alert("서비스 준비중 입니다.")} src="/images/mainPage-images/이달의 식당.jpg" alt="픽스타 매거진" />
-                                <p className={mainPageStyles.Text}>픽스타 매거진</p>
-                            </div>
-                        </div>
-                    </div>
                     <hr></hr>
-                    <div className={mainPageStyles.row1}>
-                        <div className={mainPageStyles.box1}>
-                            <img className={mainPageStyles.menuImage} src="/images/mainPage-images/체험단.png" />
+
+                    <div className={mainPageStyles.row2}>
+                        <div className={mainPageStyles.box3}>
+                            <img className={mainPageStyles.menuImage2} src="/images/mainPage-images/체험단.png" />
                         </div>
-                        <div className={mainPageStyles.box1}>
+                        <div className={mainPageStyles.box4}>
                             <p> pix 체험단</p>
                             <hr></hr>
-                            <p>픽스타 체험단은
-                                다양한 쩝쩝박사님들의
+                            <p>픽스타 체험단은<br/>
+                                다양한 쩝쩝박사님들의<br/>
                                 신뢰도 높은 리뷰를 전달해줍니다.
 
                                 다양한 혜택과 함께 PIX 체험단을 경험해보세요</p>
@@ -58,6 +72,7 @@ function Main() {
                         </div>
                     </div>
                     <hr></hr>
+
                     <div className={mainPageStyles.row2}>
                         <div className={mainPageStyles.box2}>
                             <img className={mainPageStyles.menuImage} type="button" onClick={() => alert("서비스 준비중 입니다.")} src="/images/mainPage-images/커피의효능.png" alt="커피의 효능" />

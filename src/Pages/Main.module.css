@@ -1,33 +1,58 @@
 .allmainPageBody {
-  margin: 108px 15% 0 25%;
+  margin-left: 25%;
+  margin-right: 15%;
 }
 
-.searchbox{
-  display: flex;
-  #searchBg {
-    position: absolute;
-    width: 1100px;
-    height: 250px;
-  }
-  
-  .searchinputbox {
-    position: absolute;
+.searchbox {
+  width: 1468.96px;
+  height: 250px;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* 수평 가운데 정렬 */
+  z-index: 1;
+}
 
-    #searchImput {}
-    
-    #searchButton {}
-  }
-  
+.searchBg {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  vertical-align: middle;
+  margin-top: 109px;
+  position: relative; /* 상대 위치로 설정 */
+  z-index: -1;
+  width: 100%;
+}
+
+
+.searchinputbox {
+  position: absolute;
+  top: 70%;
+  left: 36%;
+  width: 100%;
+}
+
+.searchInput {
+  width: 400px;
+  height: 30px;
+}
+
+.searchButton {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 .bodyBox {
-  width: 600px;
+  display: flex;
+  justify-content: center;
 }
 
 .row1 {
   display: flex;
-  margin: 30px 0px;
-  gap: 100px;
+  justify-content: center;
+  margin:50px 0px;
+  gap: 150px;
 }
 
 .row2 {
@@ -37,19 +62,69 @@
 }
 
 .box1 {
-  position: relative;
-  width: 250px;
-  height: 250px;
+  text-align: center;
 }
 
-.box2 {
+.box1 article {
+  float: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.box2 article {
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  width: 166px;
-  height: 166px;
+  width: 100%;
+}
+
+.imageContainer img {
+  width: 400px;
+  height: 350px;
+}
+
+.imageContainer p {
+  text-align: center;
+}
+
+.overlayText {
+  /* position: absolute; */
+  top: 455px;
+  font-size: 17pt;
+  font-weight: 600;
+}
+
+.monthRes {
+  position: absolute; 
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30pt;
+  font-weight: 800;
+  color: rgba(133, 38, 38, 0.899);
+}
+
+.pixmagazine {
+  position: absolute; 
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25pt;
+  font-weight: 800;
+  color:aliceblue;
 }
 
 .menuImage {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  cursor: pointer;
+  display: block;
+  align-items: center;
+  opacity: 0.7;
 }
+
