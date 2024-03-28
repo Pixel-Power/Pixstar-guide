@@ -1,10 +1,14 @@
-import {NavLink, useSearchParams} from 'react-router-dom';
+import {NavLink, useNavigate, useSearchParams, useLocation} from 'react-router-dom';
 import {useState, useEffect} from 'react';
 import { searchRestaurant } from '../apis/RestaurantAPI';
 import ResDetailStyle from './Restaurant-search-result.module.css';
+import { Link } from 'react-router-dom';
 
 
 function RestaurantSearchDetail(){
+
+    // const location = useLocation();
+
     const [restaurantList, setRestaurantList ] = useState([]);
     const [searchParams] = useSearchParams();
     const itemsPerPage = 6;
@@ -12,11 +16,18 @@ function RestaurantSearchDetail(){
 
     const  category = searchParams.get('category');
 
+    const navigate = useNavigate();
+
     useEffect(
         () => {
             setRestaurantList(searchRestaurant(category));
         },[category]
     );
+
+    const onClickHanlder = (code) => {
+        navigate(`/restaurantdetail/${restaurantList.code}`, {state : {code}});
+    }
+
 
     const indexOfLastRestaurant = currentPage * itemsPerPage;
     const indexOfFirstRestaurant = indexOfLastRestaurant - itemsPerPage;
@@ -29,32 +40,36 @@ function RestaurantSearchDetail(){
             <div className={ResDetailStyle.flexcontainer}>
             <div className={ResDetailStyle.ResTitleName}>{category} 맛집 검색 결과</div>
                 <div className={ResDetailStyle.flexItem1}>
-                    {currentItems.length > 0 ? (
-                        currentItems.map((restaurant, index) => (
-                    <div key={index} className={ResDetailStyle.RestaurantBox1}>
-                        <div className={ResDetailStyle.ResTitle}>
+                        {currentItems.length > 0 ? (
+                            currentItems.map((restaurant, code) => (
+                        <div key={code} className={ResDetailStyle.RestaurantBox1} onClick={() => onClickHanlder(restaurant.code)}>
+                            { restaurant && (
+                                <div className={ResDetailStyle.ResTitle}>
 
-                            <div className={ResDetailStyle.pixpic}>
-                            <img src={restaurant.img} alt="식당" className={ResDetailStyle.imgRes}></img><br/>
-                            </div>
+                                    <div className={ResDetailStyle.pixpic}>
+                                    <img src={restaurant.img} alt="식당" className={ResDetailStyle.imgRes}></img><br/>
+                                    </div>
 
-                            <div className={ResDetailStyle.pixbox}>
-                            <img src={restaurant.pixstar} className={ResDetailStyle.pixstar} alt="픽스타"></img><br/>
-                            </div>
-                            <span className={ResDetailStyle.ResName}>{restaurant.name}</span>
-                            <span className={ResDetailStyle.ResCategory}>#{restaurant.category}</span>
+                                    <div className={ResDetailStyle.pixbox}>
+                                    <img src={restaurant.pixstar} className={ResDetailStyle.pixstar} alt="픽스타"></img><br/>
+                                    </div>
+                                    <span className={ResDetailStyle.ResName}>{restaurant.name}</span>
+                                    <span className={ResDetailStyle.ResCategory}>#{restaurant.category}</span>
+                                </div>
+                            )}
+                            { restaurant && (
+                                <div className={ResDetailStyle.ResDetail}>
+                                    <img src="images/restaurant-detail/location-pin.png" alt='주소' className={ResDetailStyle.address}></img>{restaurant.address}<br/>
+                                    <img src="images/restaurant-detail/phone.png" alt='전화' className={ResDetailStyle.phone}></img>{restaurant.phone}
+                                    <div className={ResDetailStyle.description}>{restaurant.description}</div>
+                                </div>
+                            )}
                         </div>
-                        <div className={ResDetailStyle.ResDetail}>
-                            <img src="images/restaurant-detail/location-pin.png" alt='주소' className={ResDetailStyle.address}></img>{restaurant.address}<br/>
-                            <img src="images/restaurant-detail/phone.png" alt='전화' className={ResDetailStyle.phone}></img>{restaurant.phone}
-                            <div className={ResDetailStyle.description}>{restaurant.description}</div>
-                        </div>
-                    </div>
 
-                    ))
-                    ) : (
-                        <div className={ResDetailStyle.noResult}>맛집 검색 결과가없습니다.</div>
-                    )}
+                        ))
+                        ) : (
+                            <div className={ResDetailStyle.noResult}>맛집 검색 결과가없습니다.</div>
+                        )}
                 </div>
 
 

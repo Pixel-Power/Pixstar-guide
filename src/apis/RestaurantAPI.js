@@ -7,8 +7,8 @@ export function getResList(){
 
 
 export function getResDetail(code){
-    const restaurant = resDetail.find(restaurant => restaurant.code === code);
-    return resDetail ? restaurant : null;
+    // const restaurant = resDetail.find(restaurant => restaurant.code === code);
+    // return resDetail ? restaurant : null;
     console.log(typeof code);
     return resDetail.filter(restaurant => restaurant.code === parseInt(code))[0];
 }

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getResDetail } from "../apis/RestaurantAPI";
 import styles from "./Restaurant-detail.module.css";
@@ -9,7 +9,12 @@ const { kakao } =  window;
 function RestaurantDetail(){
 
     // const {code} = useParams();
-    const code = 1;
+    const location = useLocation();
+    // console.log(`나는 식당코드 => ${location.state.code}`);
+    const code = location.state.code;
+    // const code = 1;
+    const {userCode} = useParams();
+    // const userCode = 0;
     const [restaurant, setRestaurant] = useState({
         name: '',
         address: '',
@@ -74,16 +79,18 @@ function RestaurantDetail(){
         <>
             <div>
                 <div className={styles.resImages}>
-                    <img className={styles.resImage} src="/images/food/salad/salad (4).jpg"></img>
+                    <img className={styles.resImage} src={restaurant.img1}></img>
                     <img className={styles.resImage} src={restaurant.img}></img>
-                    <img className={styles.resImage} src="/images/food/pasta/pasta (5).jpg"></img>
+                    <img className={styles.resImage} src={restaurant.img2}></img>
                 </div>
                 <div className={styles.resInfoBox}>
                     <div>
+                    <div className={styles.pixboxdetail}>
                         <img className={styles.pixStar} src={restaurant.pixstar}></img>
+                    </div>
                         <div className={styles.nameCategoryBox}>
-                            <h1>{restaurant.name}</h1>
-                            <h3 className={styles.category}>#{restaurant.category}</h3>
+                            <span className={styles.name}>{restaurant.name}</span><br/>
+                            <span className={styles.category}>#{restaurant.category}</span>
                         </div>
                     </div>
                     <hr/>
@@ -91,19 +98,19 @@ function RestaurantDetail(){
                         <div className={styles.resInfo}>
                             <img className={styles.iconSize} src="/images/restaurant-detail/location-pin.png"></img>
                             <p>&nbsp;&nbsp;&nbsp;</p>
-                            <p>주소&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p className={styles.address}>주소&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                             <p>{restaurant.address}</p>
                         </div>
                         <div className={styles.resInfo}>
                             <img className={styles.iconSize} src="/images/restaurant-detail/phone.png"></img>
                             <p>&nbsp;&nbsp;&nbsp;</p>
-                            <p>전화&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p className={styles.phone}>전화&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                             <p>{restaurant.phone}</p>
                         </div>
                         <div className={styles.resInfo}>
                             <img className={styles.iconSize} src="/images/restaurant-detail/clock.png"></img>
                             <p>&nbsp;&nbsp;&nbsp;</p>
-                            <p>영업시간&nbsp;&nbsp;</p>
+                            <p className={styles.time}>영업시간&nbsp;&nbsp;</p>
                             <p>{restaurant.time}</p>
                         </div>
                     </div>
@@ -111,21 +118,19 @@ function RestaurantDetail(){
                         <div className={styles.resInfo}>
                             <img className={styles.iconSize} src="/images/restaurant-detail/won.png"></img>
                             <p>&nbsp;&nbsp;&nbsp;</p>
-                            <p>가격대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p className={styles.price}>가격대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                             <p>{restaurant.price}</p>
                         </div>
-                        <div className={styles.resInfo}>
-                            {/* <img className={styles.iconSize} src="/images/restaurant-detail/bulleted-list.png"></img>
-                            <p>&nbsp;&nbsp;&nbsp;</p> */}
-                            {/* <p>설명&nbsp;&nbsp;&nbsp;</p> */}
-                            <p>{restaurant.description}</p>
+                        <div className={styles.resDetailDe}>
+                            <span className={styles.resdeTitle}>안내</span>
+                            <span className={styles.resdeSide}>{restaurant.description}</span>
                         </div>
                     </div>
                     <div>
                         <h2>예약하기</h2>
                         <div className={styles.resInfoTextBox}>
                             <h4 className={styles.reservationDateTimeText}>예약 일시</h4>
-                            <CalendarModal/>
+                            <CalendarModal code={code} userCode={userCode}/>
                         </div>
                     </div>
                     <div>
