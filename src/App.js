@@ -17,6 +17,8 @@ import UseTerms from './Pages/UseTerms';
 import Privacy from './Pages/Privacy';
 import SiteMap from './Pages/SiteMap';
 import Layout4 from './Layouts/Layout4';
+import MD from './Pages/Md';
+import CompanyInfo from './Pages/Company-info';
 
 function App() {
   return (
@@ -30,7 +32,6 @@ function App() {
           <Route path='/signup' element={<SignUp />} />
           <Route path='/useterms' element={<UseTerms />} />
           <Route path='/privacy' element={<Privacy />} />
-          <Route path='/sitemap' element={<SiteMap />} />
 
         
         </Route>
@@ -51,6 +52,7 @@ function App() {
           <Route path="/restaurantdetail" element={<RestaurantDetail />} />
           <Route path='/mypage/:userCode' element={<MyPage />} />
           <Route path='reservation/:userCode' element={<Reservation />} />
+          <Route path="companyinfo" element={<CompanyInfo/>}/>
         </Route>
 
           {/* <Route path="/restaurantdetail" element={<RestaurantDetail />} /> */}
@@ -61,8 +63,10 @@ function App() {
           <Route path="/restaurantdetail/:userCode" element={<RestaurantDetail/>}/>
           <Route path='/reservationdetail/:userCode' element={<ReservationDetail/>}/>
           <Route path='/reservationdetailfake/:userCode' element={<ReservationDetailFake/>}/>
+          <Route path='companyinfo/:userCode' element={<CompanyInfo/>}/>
         </Route>
 
+        <Route path="popup" element={<MD/>}/>
         <Route path="*" element={<Error/>} />
       </Routes>
     </BrowserRouter>
