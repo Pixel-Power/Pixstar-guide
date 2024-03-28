@@ -17,6 +17,7 @@ import UseTerms from './Pages/UseTerms';
 import Privacy from './Pages/Privacy';
 import SiteMap from './Pages/SiteMap';
 import Layout4 from './Layouts/Layout4';
+import CancelMember from './Pages/Mypage-cancelmember';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
           <Route path='/useterms' element={<UseTerms />} />
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/sitemap' element={<SiteMap />} />
+          <Route path='/cancelmember' element={<CancelMember/>}/>
         </Route>
 
       {/* 로그인 x, 사이드바 x */}
@@ -56,7 +58,7 @@ function App() {
           {/* <Route path="/restaurantdetail" element={<RestaurantDetail />} /> */}
 
 
-      {/* 로그인 o, 사이드바 o */}
+      {/* 로그인 o, 사이드바 x */}
         <Route path="/" element={<Layout4/>}>
           <Route path='/mypage/:userCode' element={<MyPage/>}/>
           <Route path='reservation/:userCode' element={<Reservation/>}/>
