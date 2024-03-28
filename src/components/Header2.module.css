@@ -1,24 +1,26 @@
 header{
-    position: fixed;
     display: flex;
+    position: fixed;
     width: 100%;
     background-color: white;
     border-bottom: 1px solid rgba(155, 155, 155, 0.541);
     padding: 20px 20%;
     margin: 0px;
+    top:0;
+    left:0;
+    
 }
 
 .logoImg {
     position: absolute;
     height: 70px;
-    width:300px;
-    margin: 0 auto;
+    margin-left: 320px;
 }
 
 .headerMenu{
     position: relative;
     width: 200px;
-    margin-left: 950px;
+    margin-left: 700px;
     margin-top: 23px;
 }
 

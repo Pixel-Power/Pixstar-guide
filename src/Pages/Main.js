@@ -1,10 +1,16 @@
+import { useNavigate } from 'react-router-dom';
 import mainPageStyles from './Main.module.css';
+import React, { useState, useEffect, } from 'react';
 
 function Main() {
 
-    const onClickHandler = () => {
-        alert("서비스 준비중 입니다.");
-    }
+    const userCode = 1;
+    const onClickHandler = () => { navigate(`/restaurantsearchresult/${userCode}`, {state : {searchTerm}}); }
+
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const navigate = useNavigate();
+
 
 
     return (
@@ -13,8 +19,9 @@ function Main() {
                 <div className={mainPageStyles.searchbox}>
                     <img id="searchBg" src="/images/mainPage-images/검색창배경.png" alt="검색창 배경" />
                     <div className={mainPageStyles.searchinputbox}>
-                        <input id="searchInput" type="text" placeholder="검색어를 입력하세요"></input>
-                        <img id="searchButton" src="/images/mainPage-images/search-icon.png" alt="검색"></img>
+                        <img id="searchButton" type="button" onClick={onClickHandler} src="/images/mainPage-images/search-icon.png" alt="검색"></img>
+                        <input id="searchInput" type="search" placeholder="검색어를 입력하세요" onChange={e => setSearchTerm(e.target.value)}></input>
+                
                     </div>
                 </div>
                 <div className={mainPageStyles.bodybox}>
