@@ -2,30 +2,53 @@ import {NavLink, useNavigate, useSearchParams, useLocation, useParams} from 'rea
 import {useState, useEffect} from 'react';
 import { searchRestaurant } from '../apis/RestaurantAPI';
 import ResDetailStyle from './Restaurant-search-result.module.css';
-
+import RestaurantItem from '../components/RestaurantItem.js'
 
 
 function RestaurantSearchDetail(){
 
     const location = useLocation();
     const {userCode} = useParams();
-    const searchTerm = location.state.searchTerm;
-    console.log(searchTerm);
-
+    const searchTerm = location.state?.searchTerm;
     const [restaurantList, setRestaurantList ] = useState([]);
-    const [searchParams] = useSearchParams();
+    const [searchInput, setSearchInput] = useState('');
+    const [categories, setCategories] = useState([]);
     const itemsPerPage = 6;
     const [currentPage, setCurrentPage] = useState(1);
+    const [searchParams] = useSearchParams();
 
     const category = searchParams.get('category');
 
     const navigate = useNavigate();
 
-    useEffect(
-        () => {
-            setRestaurantList(searchRestaurant(category));
-        },[category]
+    useEffect (() => {
+        if (searchTerm) {
+            setSearchInput(searchTerm);
+        }
+    },[searchTerm]
     );
+
+    useEffect (() => {
+        const fetchRestaurantList = async () => {
+            const filteredList = await searchRestaurant(searchInput);
+            setRestaurantList(filteredList);
+            const allCategories = filteredList.map(restaurant => restaurant.category);
+            const uniqueCategories = [...new Set(allCategories)]; // 중복 제거
+            setCategories(uniqueCategories);
+        };
+        fetchRestaurantList();
+    },[searchInput]
+    );
+
+    const handleSearchInputChange = (e) => {
+        setSearchInput(e.target.value);
+    };
+
+    // useEffect(
+    //     () => {
+    //         setRestaurantList(searchRestaurant(category));
+    //     },[category]
+    // );
 
     const onClickHanlder = (code) => {
         navigate(`/restaurantdetail/${userCode}`, {state : {code}});
@@ -41,7 +64,15 @@ function RestaurantSearchDetail(){
     return(
         <>
             <div className={ResDetailStyle.flexcontainer}>
-            <div className={ResDetailStyle.ResTitleName}>{category} 맛집 검색 결과</div>
+            <div className={ResDetailStyle.ResTitleName}>{categories.join(', ')} 맛집 검색 결과</div>
+            <input
+                type='text'
+                value={searchInput}
+                onChange={handleSearchInputChange}
+                placeholder='search category'
+                className={ResDetailStyle.searchInput}
+            />
+                
                 <div className={ResDetailStyle.flexItem1}>
                         {currentItems.length > 0 ? (
                             currentItems.map((restaurant, code) => (
@@ -70,7 +101,7 @@ function RestaurantSearchDetail(){
                         </div>
                         ))
                         ) : (
-                            <div className={ResDetailStyle.noResult}>맛집 검색 결과가없습니다.</div>
+                            <div className={ResDetailStyle.noResult}>맛집 검색 결과가 없습니다.</div>
                         )}
                 </div>
 
