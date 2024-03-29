@@ -32,7 +32,7 @@ function Reservation(){
                     <p className={styles.UserName}>{user.userName}</p>님
                     <p className={styles.UserIntroduce}>주요 활동 지역 :</p>
                 </div>
-                <Link to="/mypagememberout">
+                <Link to="/cancelmember">
                     <img src="/images/myPage-images/editImg.png" alt="UserEdit"/>
                 </Link>
             </div>
