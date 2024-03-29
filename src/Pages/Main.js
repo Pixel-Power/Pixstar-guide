@@ -23,7 +23,7 @@ function Main() {
             <div className={mainPageStyles.allmainPageBody}>
 
                 <div className={mainPageStyles.searchbox}>
-                    <img className={mainPageStyles.searchBg}  src="/images/mainPage-images/검색창배경.png" alt="검색창 배경" />
+                    {/* <img className={mainPageStyles.searchBg}  src="/images/mainPage-images/검색창배경.png" alt="검색창 배경" /> */}
                     <div className={mainPageStyles.searchinputbox}>
                         <input className={mainPageStyles.searchInput} type="search" placeholder="검색어를 입력하세요" onChange={e => setSearchTerm(e.target.value)}></input>
                         <img className={mainPageStyles.searchButton}  type="button" onClick={onClickHandler} src="/images/mainPage-images/search-icon.png" alt="검색"></img>

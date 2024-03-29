@@ -1,11 +1,11 @@
 import styles from './Header2.module.css';
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 
 function Header2() {
 
     // const [userId, setUserId] = useState();
-    const userCode = 1;
+    const {userCode} = useParams();
 
     const navigate = useNavigate();
 
