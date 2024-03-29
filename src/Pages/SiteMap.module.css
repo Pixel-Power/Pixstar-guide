@@ -1,7 +1,12 @@
+.allbox {
+    margin-left:10%;
+}
+
 .titlebox {
     width: 500px;
     text-align: center;
     margin: 230px auto 50px auto;
+    
 }
 
 .siteMapbox {
