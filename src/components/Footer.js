@@ -12,6 +12,7 @@ function Footer() {
                 <a href="/SiteMap">사이트맵</a>
                 <br />
                 <br />
+                <br />
                 <a>@CopyRight 2024. PixStar Co. | </a>
                 <a>사업자등록번호 : 222-222-222 | </a>
                 <a>통신판매업 신고번호 : 2024-서울강남-11111호 | </a>

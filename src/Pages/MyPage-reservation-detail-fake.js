@@ -53,7 +53,7 @@ function ReservationDetailFake() {
                 infowindow.open(map, marker);
             });
         },
-        []
+        [restaurant]
     );
     
     return (
