@@ -12,9 +12,9 @@
 }
 
 .Box{
-    width: 80%;
+    width: 1000px;
     height: 300px;
-    margin: auto;
+    margin-left: 10%;
 }
 
 .ListInfoBox{
