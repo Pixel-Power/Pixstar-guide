@@ -21,6 +21,7 @@ import Md from './Pages/Md';
 import CompanyInfo from './Pages/Company-info';
 import CancelMember from './Pages/Mypage-cancelmember';
 
+import ReservationTest from './Pages/Mypage-reservation-test';
 
 function App() {
   return (
@@ -57,8 +58,9 @@ function App() {
           <Route path='/cancelmember' element={<CancelMember/>}/>
           <Route path="/restaurantdetail/:userCode" element={<RestaurantDetail/>}/>
           <Route path='/reservationdetail/:userCode' element={<ReservationDetail/>}/>
-          <Route path='/reservationdetailfake/:userCode' element={<ReservationDetailFake/>}/>
           <Route path='companyinfo/:userCode' element={<CompanyInfo/>}/>
+            
+          <Route path='reservationtest/:userCode' element={<ReservationTest/>}/>
         </Route>
 
         <Route path="/popup" element={<Md />} />

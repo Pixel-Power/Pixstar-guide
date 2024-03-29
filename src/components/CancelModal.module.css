@@ -1,0 +1,18 @@
+.cancel{
+    text-align: center;
+    margin-top: 200px;
+}
+.cancelButton {
+    /* position: relative; */
+    cursor: pointer;
+    border: none;
+    background: rgb(251, 75, 85);
+    color: rgb(255, 255, 255);
+    border-radius: 10%;
+    height: 30px;
+}
+
+.cancelButton:hover {
+    
+    background: rgb(255, 117, 124);
+}

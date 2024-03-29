@@ -36,14 +36,18 @@ function RestaurantDetail(){
         img2: ''
     });
 
+    useEffect (() => {
+        setRestaurant(getResDetail(code));
+    }, []
+    );
+
     // 카카오지도 관리
     const [kakaoMap, setKakaoMap] = useState(null);
+    const latitude = restaurant.latitude;
+    const longitude = restaurant.longitude;
 
     useEffect(
         () => {
-            setRestaurant(getResDetail(code));
-            const latitude = restaurant.latitude;
-            const longitude = restaurant.longitude;
             const container = document.getElementById('map');           // 지도를 담을 영역의 DOM 레퍼런스
             console.log(`container ${container}`);
             const options = {
@@ -73,6 +77,7 @@ function RestaurantDetail(){
         [restaurant]
     );
 
+    console.log(`restaurant ${restaurant}`);
     console.log(restaurant);
 
     const onClickPanTo = () => {
@@ -182,7 +187,7 @@ function RestaurantDetail(){
                             <button className={styles.mapButton} onClick={onClickPanTo}>매장 위치로 돌아가기</button>
                         </div>
                         <div className={styles.map}>
-                            <div id="map" style={{width: '100%', height: '100%'}}>실제지도</div>
+                            <div id="map" style={{width: '100%', height: '499.5px'}}></div>
                         </div>
                     </div>
                     <div>

@@ -16,13 +16,41 @@ function Reservation(){
         userEmail: '',
         userPhone: ''
     });
+
+    const restaurantCode = 1;
+
+    const [reservation, setReservation] = useState({
+        RSVDate: '',
+        RSVTime: '',
+        headcount: 0,
+        avail: ''
+    });
     
+    // const [textNavigate, setTextNavigate] = useState("");
+
     useEffect(
         () => {
-            setUser(getUserDetail(userCode))
+            setUser(getUserDetail(userCode));
+            setReservation( getRSVDetail(restaurantCode));
         },
         []
     );
+
+    console.log('사용자..');
+    console.log(user);
+    console.log('식당코드..');
+    console.log(reservation);
+    console.log('텍스트..');
+    const text = `${restaurantCode} / ${reservation.RSVDate} / ${reservation.RSVTime} / ${reservation.headcount}명`;
+    const textNavigate = text;
+    console.log(textNavigate);
+
+    const onClickReservation = () => {
+        navigate(`/reservationdetail/${userCode}`, {state: {textNavigate}});
+        console.log(`textNavigate : ${textNavigate}`);
+        console.log(textNavigate);
+    };
+
 
     return(
         <div className={styles.MyPage1}>
@@ -32,7 +60,7 @@ function Reservation(){
                     <p className={styles.UserName}>{user.userName}</p>님
                     <p className={styles.UserIntroduce}>주요 활동 지역 :</p>
                 </div>
-                <Link to="/mypagememberout">
+                <Link to="/cancelmember">
                     <img src="/images/myPage-images/editImg.png" alt="UserEdit"/>
                 </Link>
             </div>
@@ -44,8 +72,8 @@ function Reservation(){
             </div>
             <div>
                 <div>
-                    <Link to={`/reservationdetailfake/${userCode}`}>
-                        <div className={styles.ReservationBox}> 
+                    {/* <Link to={`/reservationdetailfake/${userCode}`}> */}
+                        <div className={styles.ReservationBox} value={1} onClick={onClickReservation}> 
                             <img className={styles.ReservationImgs} src="/images/food/pasta/pasta (6).jpg" alt='reviewImg1'/>
                             <div className={styles.ReservationText}>
                                 <h4>류니끄</h4>
@@ -55,7 +83,7 @@ function Reservation(){
                                 <p className={styles.Use}>이용 전</p>
                             </div>
                         </div>
-                    </Link>
+                    {/* </Link> */}
                     <div className={styles.ReservationBox}> 
                         <img className={styles.ReservationImgs} src="/images/food/dessert/dessert (3).jpg" alt='reviewImg1'/>
                         <div className={styles.ReservationText}>    
