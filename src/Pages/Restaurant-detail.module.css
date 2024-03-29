@@ -1,6 +1,7 @@
 /* <은성님/> 하나로 합치세요 아시겠어요? 은파은파~ */
 .allbox {
     margin-top:108px;
+    margin-left:10%;
 }
 
 .allContents {
@@ -127,7 +128,7 @@
     block-size: 100%;
     margin-bottom: 1%;
     height: 100%;
-    width: 100%;
+    width: 99.2%;
     padding-left: 10px;
 }
 

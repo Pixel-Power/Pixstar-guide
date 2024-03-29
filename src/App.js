@@ -39,6 +39,8 @@ function App() {
           <Route path='/useterms' element={<UseTerms />} />
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/sitemap' element={<SiteMap />} />
+          <Route path="/restaurantdetail" element={<RestaurantDetail />} />
+          <Route path="companyinfo" element={<CompanyInfo/>}/>
 
         </Route>
 
@@ -47,33 +49,18 @@ function App() {
           <Route index element={<Main />} />
           <Route path="main/:userCode" element={<Main />} />
           <Route path="/restaurantsearchresult/:userCode" element={<RestaurantSearchResult />} />
-          <Route path="/logout" element={<Logout />} />
+          <Route path="logout/:userCode" element={<Logout />} />
           <Route path='/mypage/:userCode' element={<MyPage />} />
           <Route path='reservation/:userCode' element={<Reservation />} />
           <Route path='/useterms' element={<UseTerms />} />
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/sitemap' element={<SiteMap />} />
           <Route path='/cancelmember' element={<CancelMember/>}/>
-
-          <Route path='reservationtest/:userCode' element={<ReservationTest/>}/>
-        </Route>
-
-      {/* 로그인 x, 사이드바 x */}
-        <Route path="/" element={<Layout3 />}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/restaurantdetail" element={<RestaurantDetail />} />
-          <Route path="companyinfo" element={<CompanyInfo/>}/>
-        </Route>
-
-
-      {/* 로그인 o, 사이드바 x */}
-        <Route path="/" element={<Layout4/>}>
-          <Route path='/mypage/:userCode' element={<MyPage/>}/>
-          <Route path='reservation/:userCode' element={<Reservation/>}/>
           <Route path="/restaurantdetail/:userCode" element={<RestaurantDetail/>}/>
           <Route path='/reservationdetail/:userCode' element={<ReservationDetail/>}/>
-          <Route path='/reservationdetailfake/:userCode' element={<ReservationDetailFake/>}/>
           <Route path='companyinfo/:userCode' element={<CompanyInfo/>}/>
+            
+          <Route path='reservationtest/:userCode' element={<ReservationTest/>}/>
         </Route>
 
         <Route path="/popup" element={<Md />} />
