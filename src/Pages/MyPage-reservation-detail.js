@@ -93,7 +93,7 @@ function ReservationDetail() {
                 infowindow.open(map, marker);
             });
         },
-        []
+        [restaurant]
     );
 
     const {userCode} = useParams();
