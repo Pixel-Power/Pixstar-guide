@@ -69,7 +69,7 @@ function RestaurantSearchDetail(){
                 type='text'
                 value={searchInput}
                 onChange={handleSearchInputChange}
-                placeholder='search category'
+                placeholder=' '
                 className={ResDetailStyle.searchInput}
             />
                 

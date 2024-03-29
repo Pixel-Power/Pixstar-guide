@@ -11,12 +11,14 @@ function Sidebar1() {
         const navigate = useNavigate();
 
         const handleCategoryClick = (category) => {
-            navigate(`/restaurant-search?category=${category}`);
+            navigate(`/restaurantsearchresult?category=${category}`);
         };
 
         const onClickHandler = () => {
             setIsOpen(isOpen=>!isOpen);
         };
+
+        
 
 
     return(

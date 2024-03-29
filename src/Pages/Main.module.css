@@ -44,7 +44,23 @@
   font-size: 12pt;
   border-radius: 25px;
   border: 2px solid rgb(255, 209, 45, 0.8);
+  padding-inline: 40px;
+  font-size: 1.05rem;
 }
+
+input::placeholder{
+  position: absolute;
+  top: 47%;
+  left: 8%; /* 원하는 위치로 조정 */
+  transform: translateY(-50%);
+  pointer-events: none; 
+}
+
+input:focus {
+  border-color: rgb(255, 209, 45, 0.8);
+  outline: none;
+}
+
 
 .searchButton {
   width: 40px;
@@ -211,7 +227,8 @@
   background-color: white;
   border-color: rgba(121, 120, 120, 0.692);
   color: rgb(251, 75, 85);
-  font-size: 15pt;
-  padding: 2%;
-  margin-top: 5%;
+  font-size: 13pt;
+  padding: 3%;
+  margin-top: 4%;
+  border-radius: 10px;
 }
