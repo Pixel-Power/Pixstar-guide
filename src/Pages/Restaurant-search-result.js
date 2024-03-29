@@ -30,14 +30,14 @@ function RestaurantSearchDetail(){
 
     useEffect (() => {
         const fetchRestaurantList = async () => {
-            const filteredList = await searchRestaurant(searchInput);
+            const filteredList = category? await searchRestaurant(category): await searchRestaurant(searchInput);
             setRestaurantList(filteredList);
             const allCategories = filteredList.map(restaurant => restaurant.category);
             const uniqueCategories = [...new Set(allCategories)]; // 중복 제거
             setCategories(uniqueCategories);
         };
         fetchRestaurantList();
-    },[searchInput]
+    },[searchInput, category]
     );
 
     const handleSearchInputChange = (e) => {

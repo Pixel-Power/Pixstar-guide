@@ -31,9 +31,8 @@ function Sidebar1() {
                     <ul className={isOpen? `${a.nav__linkCollapse}${a.showNav}` : `${a.nav__linkCollapse}`}>
                         {isOpen && ( 
                             <>
-                            {/* <li className={a.nav_list}><a href='#' className={a.nav_name} onClick={() => handleCategoryClick('카페')}>#분좋카</a></li> */}
                             <li className={a.nav_list}><NavLink to="/restaurantsearchresult?category=카페" className={a.nav_name} onClick={() => handleCategoryClick('카페')}>#분좋카</NavLink></li>
-                            <li className={a.nav_list}><a href='#' className={a.nav_name}>#오마카세</a></li>
+                            <li className={a.nav_list}><NavLink to="/restaurantsearchresult?category=일식" className={a.nav_name} onClick={() => handleCategoryClick('오마카세')}>#오마카세</NavLink></li>
                             <li className={a.nav_list}><a href='#' className={a.nav_name}>#회식</a></li>
                             <li className={a.nav_list}><a href='#' className={a.nav_name}>#갓성비</a></li>
                             <li className={a.nav_list}><a href='#' className={a.nav_name}>#맛도링</a></li>

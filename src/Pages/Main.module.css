@@ -119,22 +119,24 @@ input:focus {
 .row3 {
   justify-content: center;
   display: flex;
-  margin-top: 3%;
+  margin-top: 2.5%;
   margin-bottom: 3%;
 }
 
 .box5 {
   float: left;
+  cursor: pointer;
 }
 
 .box5 img {
   width: 370px;
   height: 350px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .box6 {
   float: left;
+  cursor: pointer;
 }
 
 .box6 img {
@@ -143,7 +145,8 @@ input:focus {
 }
 
 .box7 {
-  margin-left: 20px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .box7 img {
@@ -171,30 +174,32 @@ input:focus {
 
 .overlayText {
   /* position: absolute; */
-  top: 455px;
-  font-size: 17pt;
-  font-weight: 600;
+  top: 460px;
+  font-size: 15pt;
+  font-weight: 500;
 }
 
 .monthRes {
   position: absolute; 
-  top: 45%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 30pt;
   font-weight: 800;
   color: rgba(133, 38, 38, 0.899);
+  cursor: pointer;
 }
 
 .pixmagazine {
   position: absolute; 
-  top: 45%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 30pt;
   font-weight: 800;
   color:white;
   text-align: center;
+  cursor: pointer;
 }
 
 .menuImage {
@@ -224,11 +229,14 @@ input:focus {
 }
 
 .pixbtn {
-  background-color: white;
-  border-color: rgba(121, 120, 120, 0.692);
+  background-color: rgb(251, 75, 85);
+  border-color: rgb(251, 75, 85);
   color: rgb(251, 75, 85);
   font-size: 13pt;
+  font-weight: 500;
   padding: 3%;
   margin-top: 4%;
   border-radius: 10px;
+  border: 1px solid;
+  color: white;
 }
