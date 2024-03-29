@@ -21,6 +21,7 @@ import Md from './Pages/Md';
 import CompanyInfo from './Pages/Company-info';
 import CancelMember from './Pages/Mypage-cancelmember';
 
+import ReservationTest from './Pages/Mypage-reservation-test';
 
 function App() {
   return (
@@ -53,6 +54,8 @@ function App() {
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/sitemap' element={<SiteMap />} />
           <Route path='/cancelmember' element={<CancelMember/>}/>
+
+          <Route path='reservationtest/:userCode' element={<ReservationTest/>}/>
         </Route>
 
       {/* 로그인 x, 사이드바 x */}

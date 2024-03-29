@@ -36,7 +36,7 @@ function MyPage(){
             </div>
             <div>
                 <button className={styles.Button1}>리뷰</button>
-                <NavLink to={`/reservation/${user.userCode}`}>
+                <NavLink to={`/reservationtest/${user.userCode}`}>
                     <button className={styles.Button2}>예약</button>
                 </NavLink>
             </div>

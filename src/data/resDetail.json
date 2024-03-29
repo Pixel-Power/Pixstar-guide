@@ -25,8 +25,8 @@
         "category": "우동",
         "price": "8,000 - 14,000",
         "img": "/images/restaurant-detail/img2.jpg",
-        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
-        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
+        "img1": "/images/food/japanesefood/japanesefood (13).jpg",
+        "img2": "/images/food/japanesefood/japanesefood (6).jpg",
         "description": "통통한 우동 면발을 한입 가득 베어 물면 매끈하면서도 탄력 있는 사리의 기분 좋은 식감과 씹을수록 은은하게 퍼지는 단맛을 동시에 즐길 수 있다.",
         "time": "11:30 - 21:30",
         "pixstar":"/images/restaurant-detail/pixstar2.png"
@@ -41,8 +41,8 @@
         "category": "일식",
         "price": "110,000 - 130,000",
         "img": "/images/food/japanesefood/japanesefood (7).jpg",
-        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
-        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
+        "img1": "/images/food/japanesefood/japanesefood (2).jpg",
+        "img2": "/images/food/japanesefood/japanesefood (3).jpg",
         "description":"미토우는 제철 식재료를 이용해 자신들만의 방식으로 일본 전통 요리를 표현하는 권영운, 김보미 셰프의 재능이 돋보이는 공간이다. ",
         "time": "18:00 - 22:00",
         "pixstar":"/images/restaurant-detail/pixstar1.png"
@@ -57,8 +57,8 @@
         "category": "쿠시아게",
         "price": "80,000 - 100,000",
         "img": "/images/food/japanesefood/japanesefood (5).jpg",
-        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
-        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (14).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (15).jpg",
         "description":"'쿠시카와'는 일본의 대표적인 대중 음식 중 하나인 꼬치 튀김(쿠시카츠)을 전문으로 하는 곳이다.",
         "time": "12:00 - 22:00",
         "pixstar":"/images/restaurant-detail/pixstar1.png"
@@ -73,8 +73,8 @@
         "category": "창작",
         "price": "65,000 - 180,000",
         "img": "/images/food/steak/steak (5).jpg",
-        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
-        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (19).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (20).jpg",
         "description":"호주 출신 셰프 Joseph Lidgerwood이 운영하는 레스토랑.",
         "time": "17:30 - 22:30",
         "pixstar":"/images/restaurant-detail/pixstar1.png"
