@@ -1,21 +1,49 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import mainPageStyles from './Main.module.css';
 import React, { useState, useEffect } from 'react';
+import { getResDetail } from '../apis/RestaurantAPI';
 
 function Main() {
+    const navigate = useNavigate();
 
     const {userCode} = useParams();
-
-    const onClickHandler = () => { navigate(`/restaurantsearchresult/${userCode}`, { state: { searchTerm } }); }
-
     const [searchTerm, setSearchTerm] = useState('');
+    const [restaurant, setRestaurant] = useState({});
+    
+    const onClickHandler = () => { 
+        navigate(`/restaurantsearchresult/${userCode}`, { state: { searchTerm } }); 
+    }
+    
+    const onClickHandler2 = (code) => {
+        return () => {
+            navigate(`/restaurantdetail/${userCode}`, {state: {code}});
+        }
+    }
 
-    const navigate = useNavigate();
-    var option = "width = 500, height = 500, top = 100, left = 200, location=no, toolbar= no, status=no, scrollbars=no, resizable=no"
-
+    const handleOnKeyPress = (e) => {
+        if(e.key === 'Enter') {
+            onClickHandler();
+        }
+    };
+    
     useEffect(() => {
         window.open('/popup', '/popup', option);
     }, []);
+
+    useEffect(() => {
+            const fetchRestaurantDetail = async () => {
+                try {
+                    const resDetail = await getResDetail(userCode);
+                    setRestaurant(resDetail);
+                } catch (error) {
+                    console.error("Error fetching restaurant detail:", error);
+                }
+            };
+            fetchRestaurantDetail();
+        }, [userCode]);
+
+    var option = "width = 500, height = 500, top = 100, left = 200, location=no, toolbar= no, status=no, scrollbars=no, resizable=no"
+
 
     return (
         <>
@@ -25,7 +53,7 @@ function Main() {
                 <div className={mainPageStyles.searchbox}>
                     {/* <img className={mainPageStyles.searchBg}  src="/images/mainPage-images/검색창배경.png" alt="검색창 배경" /> */}
                     <div className={mainPageStyles.searchinputbox}>
-                        <input className={mainPageStyles.searchInput} type="search" placeholder="검색어를 입력하세요" onChange={e => setSearchTerm(e.target.value)}></input>
+                        <input className={mainPageStyles.searchInput} type="search" placeholder="검색어를 입력하세요" onChange={e => setSearchTerm(e.target.value)} onKeyDown={handleOnKeyPress}></input>
                         <img className={mainPageStyles.searchButton}  type="button" onClick={onClickHandler} src="/images/mainPage-images/search-icon.png" alt="검색"></img>
                     </div>
                 </div>
@@ -35,9 +63,13 @@ function Main() {
 
                         <div className={mainPageStyles.box1}>
                             <article className={mainPageStyles.imageContainer}>
-                            <img className={mainPageStyles.menuImage} type="button" onClick={onClickHandler} src="/images/mainPage-images/이달의 식당3.jpg" alt="이달의 식당" />
+
+                            <img className={mainPageStyles.menuImage} type="button" onClick={onClickHandler2(1)} src="/images/mainPage-images/이달의 식당3.jpg" alt="이달의 식당" />
+
                             <div className={mainPageStyles.imageOverlay}>
-                                <span className={mainPageStyles.monthRes}>류니끄<br/>RYUNIQUE</span>
+
+                                <span className={mainPageStyles.monthRes} onClick={onClickHandler2(1)}>류니끄<br/>RYUNIQUE</span>
+
                                 <p className={mainPageStyles.overlayText}>이달의 식당</p>
                             </div>
                             </article>
@@ -48,12 +80,12 @@ function Main() {
 
                                 <img className={mainPageStyles.menuImage} type="button" onClick={onClickHandler} src="/images/mainPage-images/픽스타 매거진.jpeg" alt="픽스타 매거진" />
                                 <div className={mainPageStyles.imageOverlay}>
-                                <span className={mainPageStyles.pixmagazine}>2024년<br/>4월호</span>
+                                <span className={mainPageStyles.pixmagazine} onClick={onClickHandler}>2024년<br/>4월호</span>
                                 <p className={mainPageStyles.overlayText}>픽스타 매거진</p>
                                 </div>
                             </article>
-                            </div>
                         </div>
+                    </div>
                     <hr></hr>
 
                     <div className={mainPageStyles.row2}>
@@ -86,6 +118,7 @@ function Main() {
                             <img className={mainPageStyles.menuImage5} type="button" onClick={() => alert("서비스 준비중 입니다.")} src="/images/mainPage-images/오늘의레시피.png" alt="오늘의 레시피" />
                         </div>
                     </div>
+
                 </div>
             </div>
         </>

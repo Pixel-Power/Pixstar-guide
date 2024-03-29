@@ -44,7 +44,23 @@
   font-size: 12pt;
   border-radius: 25px;
   border: 2px solid rgb(255, 209, 45, 0.8);
+  padding-inline: 40px;
+  font-size: 1.05rem;
 }
+
+input::placeholder{
+  position: absolute;
+  top: 47%;
+  left: 8%; /* 원하는 위치로 조정 */
+  transform: translateY(-50%);
+  pointer-events: none; 
+}
+
+input:focus {
+  border-color: rgb(255, 209, 45, 0.8);
+  outline: none;
+}
+
 
 .searchButton {
   width: 40px;
@@ -103,22 +119,24 @@
 .row3 {
   justify-content: center;
   display: flex;
-  margin-top: 3%;
+  margin-top: 2.5%;
   margin-bottom: 3%;
 }
 
 .box5 {
   float: left;
+  cursor: pointer;
 }
 
 .box5 img {
   width: 370px;
   height: 350px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .box6 {
   float: left;
+  cursor: pointer;
 }
 
 .box6 img {
@@ -127,7 +145,8 @@
 }
 
 .box7 {
-  margin-left: 20px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .box7 img {
@@ -155,30 +174,32 @@
 
 .overlayText {
   /* position: absolute; */
-  top: 455px;
-  font-size: 17pt;
-  font-weight: 600;
+  top: 460px;
+  font-size: 15pt;
+  font-weight: 500;
 }
 
 .monthRes {
   position: absolute; 
-  top: 45%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 30pt;
   font-weight: 800;
   color: rgba(133, 38, 38, 0.899);
+  cursor: pointer;
 }
 
 .pixmagazine {
   position: absolute; 
-  top: 45%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 30pt;
   font-weight: 800;
   color:white;
   text-align: center;
+  cursor: pointer;
 }
 
 .menuImage {
@@ -208,10 +229,14 @@
 }
 
 .pixbtn {
-  background-color: white;
-  border-color: rgba(121, 120, 120, 0.692);
+  background-color: rgb(251, 75, 85);
+  border-color: rgb(251, 75, 85);
   color: rgb(251, 75, 85);
-  font-size: 15pt;
-  padding: 2%;
-  margin-top: 5%;
+  font-size: 13pt;
+  font-weight: 500;
+  padding: 3%;
+  margin-top: 4%;
+  border-radius: 10px;
+  border: 1px solid;
+  color: white;
 }
