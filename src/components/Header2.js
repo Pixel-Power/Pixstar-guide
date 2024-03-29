@@ -5,7 +5,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 function Header2() {
 
     // const [userId, setUserId] = useState();
-    const {userCode} = useParams();
+    const { userCode } = useParams();
 
     const navigate = useNavigate();
 
@@ -18,6 +18,10 @@ function Header2() {
         navigate(`/main/${userCode}`)
     }
 
+    const onClickLogout = () => {
+        navigate(`/logout/${userCode}`)
+    }
+
     return (
 
         <header>
@@ -26,9 +30,7 @@ function Header2() {
             </div>
 
             <div className={styles.headerMenu}>
-                <Link to={'/logout'}>
-                    <img src="/images/header-images/Logout Rounded.png" alt="Logout" />
-                </Link>
+                <img onClick={onClickLogout} src="/images/header-images/Logout Rounded.png" alt="Logout" />
                 <img onClick={onClickHandler} src="/images/header-images/Home.png" alt="Home" />
             </div>
         </header>

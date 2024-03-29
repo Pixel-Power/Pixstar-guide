@@ -48,7 +48,7 @@ function App() {
           <Route index element={<Main />} />
           <Route path="main/:userCode" element={<Main />} />
           <Route path="/restaurantsearchresult/:userCode" element={<RestaurantSearchResult />} />
-          <Route path="/logout" element={<Logout />} />
+          <Route path="logout/:userCode" element={<Logout />} />
           <Route path='/mypage/:userCode' element={<MyPage />} />
           <Route path='reservation/:userCode' element={<Reservation />} />
           <Route path='/useterms' element={<UseTerms />} />
