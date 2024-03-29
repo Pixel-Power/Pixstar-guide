@@ -9,8 +9,6 @@ const { kakao } = window;
 
 function ReservationDetail() {
 
-    // const {code} = useParams();
-    // const code = 1;
     const [restaurant, setRestaurant] = useState({
         code: 0,
         name: '',
@@ -22,7 +20,7 @@ function ReservationDetail() {
     });
 
     const [reservation, setReservation] = useState({
-        restaurantCode: 0,
+        // restaurantCode: 0,
         RSVDate: "",
         RSVTime: "",
         headcount: "",
@@ -30,37 +28,21 @@ function ReservationDetail() {
     });
 
     const location = useLocation();
-    // // const restaurantCode = 0;
-    // const info = isNaN(location.state) != true? location.state : location.state.reservation.split('/', 4);
-    // console.log(`info : ${info}`);
-    
-
-    // const restaurantCode = location.state;
-    // console.log(`reservationCode : ${location.state}`);
-    // // console.log(`나는 예약코드 : ${typeof restaurantCode}`);
-    // const code = restaurantCode;
-    // code = parseInt(reservationCode);
-
-    // if (location.state) {
-
-    // }
 
     console.log(`나는 예약내역 => ${location.state.textNavigate}`);
-    const info = location.state.textNavigate.split('/', 3);
-    reservation.restaurantCode = info[0];
-    const code = 1;
+    const info = location.state.textNavigate.split('/', 4);
+    // reservation.restaurantCode = info[0];
+    const code = info[0];
     console.log(`code : ${code}`);
-    const restaurantCode = 1;
-    console.log(`restaurantCode : ${restaurantCode}`);
-    reservation.RSVDate = info[1];
-    reservation.RSVTime = info[2];
-    reservation.headcount = info[3];
+    // const restaurantCode = 1;
+    console.log(`restaurantCode : ${code}`);
+    const RSVDate = info[1];
+    const RSVTime = info[2];
+    const date = `${RSVDate} ${RSVTime}`;
+    const headcount = info[3];
 
     const [kakaoMap, setKakaoMap] = useState(null);
     
-
-
-
     useEffect(
         () => {
             setRestaurant(getResDetail(code));
@@ -80,12 +62,9 @@ function ReservationDetail() {
                 clickable: true
             });
             marker.setMap(map);
-            const iwContent = '<div style="padding:5px;"><p>양귀족 양꼬치 양갈비</p><br><p>서울특별시 강남구 역삼동 815-5, 1층</p></div>';
+            const iwContent = `<div style="padding:5px; width: 300px"><p>${restaurant.name}</p><br><p>${restaurant.address}</p></div>`;
             const iwRemoveable = true;
-            const iwPosition = new kakao.maps.LatLng(latitude, longitude);
             const infowindow = new kakao.maps.InfoWindow({
-                // position : iwPosition,
-                // content : iwContent
                 content: iwContent,
                 removable: iwRemoveable
             });
@@ -93,7 +72,7 @@ function ReservationDetail() {
                 infowindow.open(map, marker);
             });
         },
-        []
+        [restaurant]
     );
 
     const {userCode} = useParams();
@@ -111,13 +90,12 @@ function ReservationDetail() {
     useEffect(
         () => {
             setUser(getUserDetail(userCode));
-            setReservation(getRSVDetail(restaurantCode));
+            // setReservation(getRSVDetail(code));
         },
         []
     );
     
     console.log(`사용자 : ${user}`);
-    console.log(`나는 예약정보 : ${reservation}`);
 
     return (
         <div>
@@ -131,8 +109,8 @@ function ReservationDetail() {
                         <p>안내사항</p>
                     </div>
                     <div className={styles.ListInfo}>
-                        <p>{reservation.RSVDate}</p>
-                        <p>{reservation.headcount}</p>
+                        <p>{date}</p>
+                        <p>{headcount}</p>
                         <p>예약 시간보다 5분 일찍 오시기 바랍니다.</p>
                     </div>
                 </div>
