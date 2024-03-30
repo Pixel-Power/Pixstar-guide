@@ -1,0 +1,37 @@
+.allutpv{
+    margin-left:10%;
+    margin: 200px auto; 
+    width: 900px;
+}
+
+
+a[href]:visited {
+    text-decoration: none;
+}
+
+a[href]:hover {
+    text-decoration: none;
+}
+
+a[href]:focus {
+    text-decoration: none;
+}
+
+a[href]:hover,
+a[href]:active {
+    text-decoration: none;
+}
+
+a[href] {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+button {cursor: pointer;}
+
+Link img { cursor: pointer;}
+
+div [onClick] {cursor: pointer;}
+
+img [onClick] {cursor: pointer;}

@@ -1,6 +1,7 @@
 .RestaurantName{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 158px;
+    margin-left:10%;
 }
 
 .BoxList{
@@ -9,6 +10,7 @@
     height: 30px;
     text-align: center;
     border-radius: 15%;
+    margin-left:10%;
 }
 
 .Box{
@@ -19,6 +21,7 @@
 
 .ListInfoBox{
     margin-top: -20px;
+    margin-left:10%;
     background-color: #F8F8F8;
 }
 
@@ -33,10 +36,11 @@
 }
 
 .Hr{
-    width: 90%;
+    width: 75%;
+    margin-left:16.5%;
 }
 
 .map{
     display: flex;
-    justify-content: center;
+    margin-left:22%;    
 }

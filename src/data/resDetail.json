@@ -8,10 +8,12 @@
         "phone": "02-567-1234",
         "category": "창작",
         "price": "120,000 - 230,000",
-        "img": "images/food/koreanfood/koreanfood (16).png",
+        "img": "/images/food/koreanfood/koreanfood (16).png",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description": "로컬 식재료를 현대적인 재해석을 통해 지금 시점에서 그 이상 그 이하(No more,No less)도 아닌 식재료의 본질의 맛을 가장 잘 살릴수있는 조리법으로 결과물을 만들어 내고 있습니다.",
         "time": "12:00 - 22:30",
-        "pixstar":"images/restaurant-detail/pixstar3.png"
+        "pixstar":"/images/restaurant-detail/pixstar3.png"
     },
     {
         "code": 2,
@@ -22,10 +24,12 @@
         "phone": "02-503-8888",
         "category": "우동",
         "price": "8,000 - 14,000",
-        "img": "images/restaurant-detail/img2.jpg",
+        "img": "/images/restaurant-detail/img2.jpg",
+        "img1": "/images/food/japanesefood/japanesefood (13).jpg",
+        "img2": "/images/food/japanesefood/japanesefood (6).jpg",
         "description": "통통한 우동 면발을 한입 가득 베어 물면 매끈하면서도 탄력 있는 사리의 기분 좋은 식감과 씹을수록 은은하게 퍼지는 단맛을 동시에 즐길 수 있다.",
         "time": "11:30 - 21:30",
-        "pixstar":"images/restaurant-detail/pixstar2.png"
+        "pixstar":"/images/restaurant-detail/pixstar2.png"
     },
     {
         "code": 3,
@@ -36,10 +40,12 @@
         "phone": "02-1111-2222",
         "category": "일식",
         "price": "110,000 - 130,000",
-        "img": "images/food/japanesefood/japanesefood (7).jpg",
+        "img": "/images/food/japanesefood/japanesefood (7).jpg",
+        "img1": "/images/food/japanesefood/japanesefood (2).jpg",
+        "img2": "/images/food/japanesefood/japanesefood (3).jpg",
         "description":"미토우는 제철 식재료를 이용해 자신들만의 방식으로 일본 전통 요리를 표현하는 권영운, 김보미 셰프의 재능이 돋보이는 공간이다. ",
         "time": "18:00 - 22:00",
-        "pixstar":"images/restaurant-detail/pixstar1.png"
+        "pixstar":"/images/restaurant-detail/pixstar1.png"
     },
     {
         "code": 4,
@@ -50,10 +56,12 @@
         "phone": "02-658-5311",
         "category": "쿠시아게",
         "price": "80,000 - 100,000",
-        "img": "images/food/japanesefood/japanesefood (5).jpg",
+        "img": "/images/food/japanesefood/japanesefood (5).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (14).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (15).jpg",
         "description":"'쿠시카와'는 일본의 대표적인 대중 음식 중 하나인 꼬치 튀김(쿠시카츠)을 전문으로 하는 곳이다.",
         "time": "12:00 - 22:00",
-        "pixstar":"images/restaurant-detail/pixstar1.png"
+        "pixstar":"/images/restaurant-detail/pixstar1.png"
     },
     {
         "code": 5,
@@ -64,10 +72,12 @@
         "phone": "02-654-3151",
         "category": "창작",
         "price": "65,000 - 180,000",
-        "img": "images/food/steak/steak (5).jpg",
+        "img": "/images/food/steak/steak (5).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (19).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (20).jpg",
         "description":"호주 출신 셰프 Joseph Lidgerwood이 운영하는 레스토랑.",
         "time": "17:30 - 22:30",
-        "pixstar":"images/restaurant-detail/pixstar1.png"
+        "pixstar":"/images/restaurant-detail/pixstar1.png"
     },
     {
         "code": 6,
@@ -78,10 +88,12 @@
         "phone": "02-654-1452",
         "category": "한식",
         "price": "10,000 - 86,000",
-        "img": "images/food/koreanfood/koreanfood (15).jpg",
+        "img": "/images/food/koreanfood/koreanfood (15).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"전복 돌솥밥과 소라성게돌솥밥,순살갈치돌솥밥, 옥돔구이 등을 주메뉴로 하고 있으며, 해물뚝배기, 성게미역국 등 다양한 메뉴 구성과 신선한 재료로 만족스러운 식사를 하실 수 있도록 준비하고 있습니다.",
         "time": "10:00 - 21:00",
-        "pixstar":"images/restaurant-detail/pixstar2.png"
+        "pixstar":"/images/restaurant-detail/pixstar2.png"
     },
     {
         "code": 7,
@@ -92,10 +104,12 @@
         "phone": "02-563-9645",
         "category": "스시",
         "price": "45,000 - 150,000",
-        "img": "images/restaurant-detail/img7.jpg",
+        "img": "/images/restaurant-detail/img7.jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"숯과 불 그리고 도화지, 최성훈 셰프가 하쿠시를 통해 표현하고자 하는 세 가지 주제를 멋지게 공간에 담아 냈다.",
         "time": "18:00 - 23:00",
-        "pixstar":"images/restaurant-detail/pixstar2.png"
+        "pixstar":"/images/restaurant-detail/pixstar2.png"
     },
     {
         "code": 8,
@@ -106,10 +120,12 @@
         "phone": "02-456-7895",
         "category": "한식",
         "price": "280,000 - 300,000",
-        "img": "images/restaurant-detail/img8.jpg",
+        "img": "/images/restaurant-detail/img8.jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"진주지역 전통음식을 재해석하여 과하지 않은 양념으로 담백하게 맛을 냅니다. 산지 직송한 식재료를 사용하여, 소박하고 정성들인 음식을 제공합니다.",
         "time": "11:00 - 21:30",
-        "pixstar":"images/restaurant-detail/pixstar1.png"
+        "pixstar":"/images/restaurant-detail/pixstar1.png"
     },
     {
         "code": 9,
@@ -120,10 +136,12 @@
         "phone": "02-565-7877",
         "category": "프렌치",
         "price": "65,000 - 150,000",
-        "img": "images/restaurant-detail/img9.jpg",
+        "img": "/images/restaurant-detail/img9.jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"매일 엄선된 최상의 신선한 재료로 오너쉐프의 열정을 담은 코스 요리를 만들어 드립니다. (런치, 디너 각 한가지의 코스만 제공합니다.)",
         "time": "11:30 - 21:30",
-        "pixstar":"images/restaurant-detail/pixstar3.png"
+        "pixstar":"/images/restaurant-detail/pixstar3.png"
     },
     {
         "code": 10,
@@ -134,10 +152,12 @@
         "phone": "02-514-1522",
         "category": "이탈리안",
         "price": "45,000 - 80,000",
-        "img": "images/restaurant-detail/img10.jpg",
+        "img": "/images/restaurant-detail/img10.jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"김지운쉐프의 쿠촐로, 마렘마를 이어 볼피노 리스토란테, 파스타로 정평이 난 미슐랭 등재 파인다이닝",
         "time": "12:00 - 22:00",
-        "pixstar":"images/restaurant-detail/pixstar3.png"
+        "pixstar":"/images/restaurant-detail/pixstar3.png"
     },
     {
         "code": 11,
@@ -148,10 +168,12 @@
         "phone": "02-511-2579",
         "category": "카페",
         "price": "8,000 - 15,000",
-        "img": "images/restaurant-detail/img11.jpg",
+        "img": "/images/restaurant-detail/img11.jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"크레미아 아이스크림. 파베초콜릿. 120겹 파이 등 디저트가 있으며 넓은 테라스가 준비되어 있습니다.",
         "time": "09:30 - 23:00",
-        "pixstar":"images/restaurant-detail/pixstar1.png"
+        "pixstar":"/images/restaurant-detail/pixstar1.png"
     },
     {
         "code": 12,
@@ -162,10 +184,12 @@
         "phone": "02-540-1533",
         "category": "카페",
         "price": "5,000 - 10,000",
-        "img": "images/restaurant-detail/img12.jpg",
+        "img": "/images/restaurant-detail/img12.jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"유럽의 한 가정집의 따스함, 찰나에 스치는 런던과 파리의 빈티지한 무드를 공간 전체에 녹여낸 카페 레이어드에서 유럽의 로망을 느껴보세요.",
         "time": "10:00 - 22:00",
-        "pixstar":"images/restaurant-detail/pixstar2.png"
+        "pixstar":"/images/restaurant-detail/pixstar2.png"
     },
     {
         "code": 13,
@@ -174,12 +198,14 @@
         "longitude": 127.040738,
         "latitude": 37.523692,
         "phone": "02-515-1392",
-        "category": "브런치",
+        "category": "카페",
         "price": "20,000 - 35,000",
-        "img": "images/restaurant-detail/img13.jpg",
+        "img": "/images/restaurant-detail/img13.jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"France 미슐랭스타 Cafe'Constant 출신 쉐프와 오마카세 전문 ManekuHanas 조리실장이 만나 Brunch & dining 전문 브랜드 VIEW66 Maneku를 런칭했습니다.",
         "time": "10:00 - 23:00",
-        "pixstar":"images/restaurant-detail/pixstar3.png"
+        "pixstar":"/images/restaurant-detail/pixstar3.png"
     },
     {
         "code": 14,
@@ -190,10 +216,12 @@
         "phone": "02-511-3394",
         "category": "카페",
         "price": "8,000 - 16,000",
-        "img": "images/restaurant-detail/img14.jpg",
+        "img": "/images/restaurant-detail/img14.jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"청담동에서 이태리의 분위기를 그대로 만끽하며 편안하게 힐링 할 수 있는 공간이 되고자 노력하고 있습니다.",
         "time": "10:30 - 21:30",
-        "pixstar":"images/restaurant-detail/pixstar1.png"
+        "pixstar":"/images/restaurant-detail/pixstar1.png"
     },
     {
         "code": 15,
@@ -204,10 +232,12 @@
         "phone": "02-511-0700",
         "category": "이자카야",
         "price": "20,000 - 50,000",
-        "img": "images/restaurant-detail/img15.jpg",
+        "img": "/images/restaurant-detail/img15.jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"火の라는 이름에 맞게 불 요리를 메인으로 하며 테판야끼(철판구이)와 와라야키(볏짚구이)를 주로 합니다. 스몰디쉬라는 개념으로 다양한 음식을 제공하는것이 목표입니다",
         "time": "18:00 - 02:00",
-        "pixstar":"images/restaurant-detail/pixstar1.png"
+        "pixstar":"/images/restaurant-detail/pixstar1.png"
     },
     {
         "code": 16,
@@ -218,10 +248,12 @@
         "phone": "02-3446-1104",
         "category": "멕시코",
         "price": "15,000 - 25,000",
-        "img": "images/restaurant-detail/img16.jpg",
+        "img": "/images/restaurant-detail/img16.jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"한국식으로 조리하여, 멕시코 음식을 누구나 쉽게 즐길 수 있는 장점을 가지고 있습니다.",
         "time": "11:00 - 21:00",
-        "pixstar":"images/restaurant-detail/pixstar1.png"
+        "pixstar":"/images/restaurant-detail/pixstar1.png"
     },
     {
         "code": 17,
@@ -232,10 +264,12 @@
         "phone": "02-3443-0508",
         "category": "카페",
         "price": "8,000 - 15,000",
-        "img": "images/restaurant-detail/img17.jpg",
+        "img": "/images/restaurant-detail/img17.jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"낮에는 카페였다가 밤에는 지하에서 라이브공연을 하는 곳",
         "time": "11:30 - 02:00",
-        "pixstar":"images/restaurant-detail/pixstar1.png"
+        "pixstar":"/images/restaurant-detail/pixstar1.png"
     },
     {
         "code": 18,
@@ -246,10 +280,12 @@
         "phone": "02-3446-0669",
         "category": "카페",
         "price": "6,000 - 12,000",
-        "img": "images/restaurant-detail/img18.jpg",
+        "img": "/images/restaurant-detail/img18.jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"소중한 경험으로 기억에 남고 싶은 카페가 되겠습니다.",
         "time": "07:00 - 21:00",
-        "pixstar":"images/restaurant-detail/pixstar1.png"
+        "pixstar":"/images/restaurant-detail/pixstar1.png"
     },
     {
         "code": 19,
@@ -260,22 +296,26 @@
         "phone": "02-511-2414",
         "category": "카페",
         "price": "6,000 - 12,000",
-        "img": "images/food/beverage/beverage (18).jpg",
+        "img": "/images/food/beverage/beverage (18).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"청담공원 바로 옆에 위치한 도심 속 자연을 느낄 수 있는 공간입니다.",
         "time": "10:00 - 21:00",
-        "pixstar":"images/restaurant-detail/pixstar2.png"
+        "pixstar":"/images/restaurant-detail/pixstar2.png"
     },
     {
         "code": 20,
         "name": "프렌치에그베이커리",
         "address": "서울특별시 강남구 도산대로 256",
         "phone": "02-511-2564",
-        "category": "도넛",
+        "category": "베이커리",
         "price": "2,000 - 4,000",
-        "img": "images/food/beverage/beverage (19).jpg",
+        "img": "/images/food/beverage/beverage (19).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"2016년부터 시작하여 한국의 도넛 유행을 선도하고 있는 1세대 도넛 브랜드입니다.",
         "time": "11:00 - 21:00",
-        "pixstar":"images/restaurant-detail/pixstar2.png"
+        "pixstar":"/images/restaurant-detail/pixstar2.png"
     },
     {
         "code": 22,
@@ -284,12 +324,14 @@
         "longitude": 127.040746,
         "latitude": 37.522965,
         "phone": "02-540-3112",
-        "category": "베이글",
+        "category": "베이커리",
         "price": "3,000 - 5,000",
-        "img": "images/food/beverage/beverage (20).jpg",
+        "img": "/images/food/beverage/beverage (20).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"직접 만든 유기농베이글과 커피를 들고 피크닉가기 좋은 예쁜 공간입니다. 신선하고 좋은 재료만 사용하고있습니다.",
         "time": "09:00 - 18:00",
-        "pixstar":"images/restaurant-detail/pixstar3.png"
+        "pixstar":"/images/restaurant-detail/pixstar3.png"
     },
     {
         "code": 23,
@@ -300,10 +342,12 @@
         "phone": "02-3443-0805",
         "category": "베이커리",
         "price": "4,000 - 8,000",
-        "img": "images/food/beverage/beverage (21).jpg",
+        "img": "/images/food/beverage/beverage (21).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"프렌치 구움과자 전문 도미니크앤존 입니다.",
         "time": "12:30 - 21:00",
-        "pixstar":"images/restaurant-detail/pixstar2.png"
+        "pixstar":"/images/restaurant-detail/pixstar2.png"
     },
     {
         "code": 24,
@@ -312,12 +356,14 @@
         "longitude": 127.041473,
         "latitude": 37.522866,
         "phone": "02-511-2672",
-        "category": "서양식",
+        "category": "양식",
         "price": "15,000 - 30,000",
-        "img": "images/food/beverage/beverage (22).jpg",
+        "img": "/images/food/beverage/beverage (22).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"다양한 유러피언 음식과 와인을 쾌적하고 감각적인 공간에서 합리적인 가격에 즐길 수 있는 파인캐주얼 레스토랑입니다.",
         "time": "17:00 - 22:00",
-        "pixstar":"images/restaurant-detail/pixstar3.png"
+        "pixstar":"/images/restaurant-detail/pixstar3.png"
     },
     {
         "code": 25,
@@ -328,10 +374,12 @@
         "phone": "02-540-2102",
         "category": "카페",
         "price": "6,000 - 10,000",
-        "img": "images/food/beverage/beverage (23).jpg",
+        "img": "/images/food/beverage/beverage (23).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"2014년도부터 지금까지 오랫동안 사랑받고 있는 스페셜티 커피 전문 로스터스입니다.",
         "time": "10:00 - 21:00",
-        "pixstar":"images/restaurant-detail/pixstar3.png"
+        "pixstar":"/images/restaurant-detail/pixstar3.png"
     },
     {
         "code": 26,
@@ -342,10 +390,12 @@
         "phone": "02-511-2680",
         "category": "한식",
         "price": "20,000 - 40,000",
-        "img": "images/food/koreanfood/koreanfood (1).jpg",
+        "img": "/images/food/koreanfood/koreanfood (1).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"음식으로 저희의 마음을 전하는 소중한 공간으로, 순대국으로 경험할수 있는 최상의 가치를 드리겠습니다.",
         "time": "08:00 - 22:00",
-        "pixstar":"images/restaurant-detail/pixstar2.png"
+        "pixstar":"/images/restaurant-detail/pixstar2.png"
     },
     {
         "code": 27,
@@ -354,12 +404,14 @@
         "longitude": 127.040752,
         "latitude": 37.522802,
         "phone": "02-540-3696",
-        "category": "아시아음식",
+        "category": "중식",
         "price": "12,000 - 20,000",
-        "img": "images/food/chinesefood/chinesefood (12).jpg",
+        "img": "/images/food/chinesefood/chinesefood (12).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"본매장 라이라이는 최상품의 식재료만을 직구매하여 40년 경력의 화교 주방장이 직업 음식을 조리해 고객님들께 해드리고 있습니다.",
         "time": "11:00 - 21:30",
-        "pixstar":"images/restaurant-detail/pixstar2.png"
+        "pixstar":"/images/restaurant-detail/pixstar2.png"
     },
     {
         "code": 28,
@@ -370,10 +422,12 @@
         "phone": "02-511-2420",
         "category": "일식",
         "price": "15,000 - 30,000",
-        "img": "images/food/japanesefood/japanesefood (12).jpg",
+        "img": "/images/food/japanesefood/japanesefood (12).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"요리에 어울리는 와인 사케 위스키 소츄 등을 마리아쥬하여 즐기실 수 있도록 가성비 있는 구성으로 준비했습니다.",
         "time": "18:00 - 22:00",
-        "pixstar":"images/restaurant-detail/pixstar1.png"
+        "pixstar":"/images/restaurant-detail/pixstar1.png"
     },
     {
         "code": 29,
@@ -384,10 +438,12 @@
         "phone": "02-540-3478",
         "category": "패스트푸드",
         "price": "5,000 - 10,000",
-        "img": "images/food/hamburger/hamburger (2).jpg",
+        "img": "/images/food/hamburger/hamburger (2).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"미국에서 2021년부터 시작된 핫치킨&버거브랜드입니다.",
         "time": "11:00 - 21:00",
-        "pixstar":"images/restaurant-detail/pixstar1.png"
+        "pixstar":"/images/restaurant-detail/pixstar1.png"
     },
     {
         "code": 30,
@@ -398,9 +454,11 @@
         "phone": "02-511-2422",
         "category": "한식",
         "price": "20,000 - 40,000",
-        "img": "images/food/koreanfood/koreanfood (1).jpg",
+        "img": "/images/food/koreanfood/koreanfood (1).jpg",
+        "img1": "/images/food/koreanfood/koreanfood (17).jpg",
+        "img2": "/images/food/koreanfood/koreanfood (18).jpg",
         "description":"부드러운 계란이 올라간 구름계란덮밥 입니다.",
         "time": "10:30 - 21:30",
-        "pixstar":"images/restaurant-detail/pixstar1.png"
+        "pixstar":"/images/restaurant-detail/pixstar1.png"
     }
 ]

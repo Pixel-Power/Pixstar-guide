@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 
-function UserItem({main}) {
+function UserItem({user}) {
     return(
-        <Link to={`/main/${main.userCode}`}>
+        <Link to={`/main/${user.userId}`}>
             
         </Link>
     )
 }
+
+export default UserItem;

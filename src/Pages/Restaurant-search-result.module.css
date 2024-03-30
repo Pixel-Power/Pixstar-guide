@@ -3,6 +3,7 @@
     flex-wrap: nowrap;
     overflow: auto;
     justify-content: center;
+    margin-top:108px;
 }
 
 .flexItem1 {
@@ -15,17 +16,16 @@
 }
 
 .ResTitleName{
-    margin-top: 50px;
+    margin-top: 180px;
     margin-left: 390px;
     margin-bottom: 30px;
     font-weight: bold;
-    font-size: large;
+    font-size: 18pt;
     text-align: left;
 }
 
 .RestaurantBox1
 {
-    
     flex: 0 0 auto;
     width: 380px;
     margin-left: 70px;
@@ -146,4 +146,11 @@
 .navlink:focus, .navlink:active , .navlink:visited {
     text-decoration: none;
     color: black;
+}
+
+.noResult {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin-left: 70px;
+    font-size: 25pt;
 }

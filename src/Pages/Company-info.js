@@ -1,7 +1,15 @@
+import companyinfo from './UTPV.module.css';
+
 function CompanyInfo() {
     return(
-        <h1>회사 정보</h1>
+        <>
+        <div className={companyinfo.allutpv}>
+
+        <img src="./images/company-info/companyinfoimg.png" alt="회사소개"></img>
+        </div>
+        </>
     );
+
 }
 
 export default CompanyInfo;
