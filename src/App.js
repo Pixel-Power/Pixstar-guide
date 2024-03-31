@@ -22,10 +22,12 @@ import CompanyInfo from './Pages/Company-info';
 import CancelMember from './Pages/Mypage-cancelmember';
 
 import ReservationTest from './Pages/Mypage-reservation-test';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop/>
       <Routes>
 
       {/* 로그인 x, 사이드바 o */}
