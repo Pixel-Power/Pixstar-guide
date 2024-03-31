@@ -13,11 +13,12 @@ function Logout() {
       };
 
     return(
-        <div style={{
+        <div style={{margin:'5%',
           display: 'flex', justifyContent: 'center', alignItems: 'center',
           width: '100%', height: '100vh'
       }}>
-            <p>송강님! 로그아웃 하시겠습니까?</p>
+            <p>송강님! 로그아웃 하시겠습니까?  </p>
+            
           <button onClick={handleLogout}>Logout</button>
 
 
