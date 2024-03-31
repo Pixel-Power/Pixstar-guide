@@ -13,6 +13,7 @@
     margin-left: 320px;
     flex-wrap: wrap;
     justify-content: flex-start;
+    cursor: pointer;
 }
 
 .ResTitleName{

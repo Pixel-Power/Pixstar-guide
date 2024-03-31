@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import userData from '../data/memDetail.json';
+import signStyle from './SignUp.module.css';
 
 function SignUp() {
     const navigate = useNavigate();
@@ -62,57 +63,55 @@ function SignUp() {
     };
 
     return (
-        <div
-            style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                width: "100%",
-                height: "100vh",
-            }}
-        >
-            <form
-                style={{ display: "flex", flexDirection: "column" }}
-                onSubmit={handleSubmit}
-            >
-                <label>id</label>
+        <div className={signStyle.box1}>
+            <form className={signStyle.form}
+                onSubmit={handleSubmit}>
+                <label className={signStyle.label}>Id</label>
                 <input
+                    className={signStyle.box2}
                     type="text"
                     name="id"
                     placeholder='아이디를 입력해주세요'
                     value={id}
                     onChange={handleChange}
                 />
-                <label>Password</label>
+                <label className={signStyle.label}>Password</label>
                 <input
+                    className={signStyle.box2}
                     type="password"
                     name="password"
                     placeholder='비밀번호를 입력해주세요'
                     value={password}
                     onChange={handleChange}
                 />
-                <label>Confirm Password</label>
+                <label className={signStyle.label}>Confirm Password</label>
                 <input
+                    className={signStyle.box2}
                     type="password"
                     name="cfPassword"
                     placeholder='비밀번호를 입력해주세요'
                     value={cfPassword}
                     onChange={handleChange}
                 />
-                <label>Name</label>
-                <input type="text"
+                <label className={signStyle.label}>Name</label>
+                <input 
+                    className={signStyle.box2}
+                    type="text"
                     name="name"
                     placeholder='이름을 입력해주세요'
                     value={name}
                     onChange={handleChange} />
-                <label>Phone</label>
-                <input type="text"
+                <label className={signStyle.label}>Phone</label>
+                <input 
+                    className={signStyle.box2}
+                    type="text"
                     name="phone"
                     placeholder='전화번호를 입력해주세요'
                     value={phone}
                     onChange={handleChange} />
-                <label>Email</label>
+                <label className={signStyle.label}>Email</label>
                 <input
+                    className={signStyle.box2}
                     type="email"
                     name="email"
                     placeholder='이메일을 입력해주세요'
@@ -121,7 +120,7 @@ function SignUp() {
                 />
 
                 <br />
-                <button type="submit">회원가입</button>
+                <button type="submit" className={signStyle.btn}>회원가입</button>
             </form>
         </div>
     );

@@ -1,11 +1,9 @@
+* {
+  font-family: 'Noto Sans';
+}
 .allmainPageBody {
   margin-left: 25%;
   margin-right: 15%;
-}
-
-.swiper {
-  width: 600px;
-  height: 300px;
 }
 
 .searchbox {
@@ -33,8 +31,8 @@
 
 .searchinputbox {
   position: absolute;
-  top: 70%;
-  left: 36%;
+  top: 46%;
+  left: 50%;
   width: 100%;
 }
 
@@ -43,7 +41,7 @@
   height: 50px;
   font-size: 12pt;
   border-radius: 25px;
-  border: 2px solid rgb(255, 209, 45, 0.8);
+  border: 2px solid white;
   padding-inline: 40px;
   font-size: 1.05rem;
 }
@@ -56,8 +54,8 @@ input::placeholder{
   pointer-events: none; 
 }
 
-input:focus {
-  border-color: rgb(255, 209, 45, 0.8);
+.searchInput:focus {
+  border-color: white;
   outline: none;
 }
 
@@ -78,17 +76,20 @@ input:focus {
   display: flex;
   justify-content: center;
   margin-top: 80px;
-  gap: 150px;
+  gap: 100px;
 }
 
 .row2 {
   display: flex;
-  margin: 30px 0px;
+  margin: 10px 0px;
+  margin-top: 3%;
+  margin-bottom: 3%;
   gap: 20px;
 }
 
 .box1 {
   text-align: center;
+  margin-bottom: 3%;
 }
 
 .box1 article {
@@ -113,13 +114,13 @@ input:focus {
 }
 
 .box4 {
-  margin-left: 11%;
+  margin-left: 8%;
 }
 
 .row3 {
   justify-content: center;
   display: flex;
-  margin-top: 2.5%;
+  margin-top: 3%;
   margin-bottom: 3%;
 }
 
@@ -166,10 +167,6 @@ input:focus {
 .imageContainer img {
   width: 400px;
   height: 350px;
-}
-
-.imageContainer p {
-  text-align: center;
 }
 
 .overlayText {

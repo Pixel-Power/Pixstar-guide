@@ -18,14 +18,13 @@ function Sidebar1() {
             setIsOpen(isOpen=>!isOpen);
         };
 
-        
-
-
     return(
         <div class={a.l_navbar}>
         <nav class={a.nav}>
             <div className={a.navBox} style={{textAlign: 'center'}}>
-            <img src='/images/header-images/pixstar-guide-logo.png' alt='픽스타로고' className={a.sidelogo} style={{width: '100px', height: 'auto', display:'block',margin: '20px auto'}}></img>
+                <div className={a.logo}>
+                    <img src='/images/header-images/pixstar-guide-logo.png' alt='픽스타로고' className={a.sidelogo}></img>
+                </div>
                 <div class={a.nav__list}>
                     <label type='button' className={a.nav__linkActive} onClick={onClickHandler}>해시태그별</label>
                     <ul className={isOpen? `${a.nav__linkCollapse}${a.showNav}` : `${a.nav__linkCollapse}`}>
