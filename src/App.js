@@ -7,7 +7,6 @@ import SignUp from './Pages/SignUp';
 import MyPage from './Pages/MyPage';
 import RestaurantDetail from './Pages/Restaurant-detail';
 import ReservationDetail from './Pages/MyPage-reservation-detail';
-import ReservationDetailFake from './Pages/MyPage-reservation-detail-fake';
 import Reservation from './Pages/MyPage-reservation';
 import Layout2 from './Layouts/Layout2';
 import Logout from './Pages/Logout';
@@ -33,11 +32,11 @@ function App() {
           <Route path="/restaurantsearchresult/:userCode" element={<RestaurantSearchResult />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
-          <Route path="/restaurantsearchresult/:userCode" element={<RestaurantSearchResult />} />
+          <Route path="/restaurantsearchresult" element={<RestaurantSearchResult />} />
           <Route path='/useterms' element={<UseTerms />} />
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/sitemap' element={<SiteMap />} />
-          <Route path="/restaurantdetail/:userCode" element={<RestaurantDetail />} />
+          <Route path="/restaurantdetail" element={<RestaurantDetail />} />
           <Route path="companyinfo" element={<CompanyInfo/>}/>
 
         </Route>
