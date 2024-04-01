@@ -9,14 +9,27 @@ function Main() {
     const {userCode} = useParams();
     const [searchTerm, setSearchTerm] = useState('');
     const [restaurant, setRestaurant] = useState({});
+    const realUserCode = (userCode !== 'undefined')? userCode: 0;
     
     const onClickHandler = () => { 
-        navigate(`/restaurantsearchresult/${userCode}`, { state: { searchTerm } }); 
-    }
+        
+         if (userCode != null) {
+            navigate(`/restaurantsearchresult/${userCode}`, { state: { searchTerm } }); 
+        }
+        else{
+            navigate(`/restaurantsearchresult`, {state: {searchTerm}});
+            }
+        }
+    
     
     const onClickHandler2 = (code) => {
         return () => {
-            navigate(`/restaurantdetail/${userCode}`, {state: {code}});
+            if (userCode != null) {
+                navigate(`/restaurantdetail/${userCode}`, {state: {code}});
+            }
+            else {
+            navigate(`/restaurantdetail`, {state: {code}});
+            }
         }
     }
 

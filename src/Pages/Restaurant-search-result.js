@@ -51,7 +51,14 @@ function RestaurantSearchDetail(){
     // );
 
     const onClickHanlder = (code) => {
-        navigate(`/restaurantdetail/${userCode}`, {state : {code}});
+        return () => {
+            if (userCode != null) {
+                navigate(`/restaurantdetail/${userCode}`, {state: {code}});
+            }
+            else {
+            navigate(`/restaurantdetail`, {state: {code}});
+            }
+        }
     }
 
 
@@ -76,7 +83,7 @@ function RestaurantSearchDetail(){
                 <div className={ResDetailStyle.flexItem1}>
                         {currentItems.length > 0 ? (
                             currentItems.map((restaurant, code) => (
-                        <div key={code} className={ResDetailStyle.RestaurantBox1} onClick={() => onClickHanlder(restaurant.code)}>
+                        <div key={code} className={ResDetailStyle.RestaurantBox1} onClick={onClickHanlder(restaurant.code)}>
                             { restaurant && (
                                 <div className={ResDetailStyle.ResTitle}>
 

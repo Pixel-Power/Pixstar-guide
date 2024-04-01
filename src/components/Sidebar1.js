@@ -1,25 +1,30 @@
 import { useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import a from './Sidebar1.module.css'
 
 /* EXPANDER MENU */
 
 function Sidebar1() {
-    
-        const[isOpen, setIsOpen] = useState(false);
 
+
+        const[isOpen, setIsOpen] = useState(false);
+        const {userCode} = useParams();
         const navigate = useNavigate();
 
         const handleCategoryClick = (category) => {
-            navigate(`/restaurantsearchresult?category=${category}`);
+            return () => {
+                if (userCode != null) {
+                    navigate(`/restaurantsearchresult/${userCode}`, {state: {category}});
+                }
+                else {
+                navigate(`/restaurantsearchresult`, {state: {category}});
+                }
+            }
         };
 
         const onClickHandler = () => {
             setIsOpen(isOpen=>!isOpen);
         };
-
-        
-
 
     return(
         <div class={a.l_navbar}>

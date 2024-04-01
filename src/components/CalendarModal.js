@@ -60,7 +60,7 @@ function CalendarModal ({ code, userCode}) {
 
     const onClickRealReservation = () => {
 
-        if (userCode != 0) {
+        if (userCode != null) {
             navigate(`/reservationdetail/${userCode}`, {state: {textNavigate}});
             console.log(`textNavigate : ${textNavigate}`);
         }

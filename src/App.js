@@ -50,7 +50,7 @@ function App() {
           <Route path="/restaurantsearchresult/:userCode" element={<RestaurantSearchResult />} />
           <Route path="logout/:userCode" element={<Logout />} />
           <Route path='/mypage/:userCode' element={<MyPage />} />
-          <Route path='reservation/:userCode' element={<Reservation />} />
+          {/* <Route path='reservation/:userCode' element={<Reservation />} /> */}
           <Route path='/useterms' element={<UseTerms />} />
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/sitemap' element={<SiteMap />} />
@@ -59,7 +59,7 @@ function App() {
           <Route path='/reservationdetail/:userCode' element={<ReservationDetail/>}/>
           <Route path='companyinfo/:userCode' element={<CompanyInfo/>}/>
             
-          <Route path='reservationtest/:userCode' element={<ReservationTest/>}/>
+          <Route path='reservation/:userCode' element={<ReservationTest/>}/>
         </Route>
 
         <Route path="/popup" element={<Md />} />

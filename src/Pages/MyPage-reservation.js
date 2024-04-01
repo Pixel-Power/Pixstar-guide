@@ -58,7 +58,7 @@ function Reservation(){
                 <img className={styles.UserImg} src="/images/myPage-images/memberImg.png" alt="UserImg"/>
                 <div className={styles.UserNameBox}>
                     <p className={styles.UserName}>{user.userName}</p>님
-                    <p className={styles.UserIntroduce}>주요 활동 지역 :</p>
+                    <p className={styles.UserIntroduce}>주요 활동 지역 : 서울 강남구</p>
                 </div>
                 <Link to="/cancelmember">
                     <img src="/images/myPage-images/editImg.png" alt="UserEdit"/>

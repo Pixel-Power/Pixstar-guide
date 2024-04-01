@@ -1,6 +1,7 @@
 .MyPage1{
     text-align: center;
     margin-top:108px;
+    margin-left:10%;
 }
 
 .UserBox{
@@ -47,7 +48,8 @@
     font-weight: bold;
 
     background: #7E7D79;
-    border-radius: 25%;
+
+    border-radius: 10px;
 
     color: white;
 
@@ -62,60 +64,21 @@
     font-weight: bold;
 
     background: rgb(251, 75, 85);
-    border-radius: 25%;
+    border-radius: 10px;
 
     color: white;
 
     margin: 20px;
 }
 
-.reservationBox {
+.reservationBox{
     display: flex;
     justify-content: space-evenly;
     overflow: auto;
     flex-wrap: wrap;
     justify-content: center;
-    width: 60%;
-    margin-left: 375px;
+    width: 70%;
+    margin-left: 255px;
+    cursor: pointer;
     /* margin-right: 500px; */
-}
-.ReservationBox{
-    width: 300px;
-    height: 300px;
-    text-align: left;
-
-    display: inline-block;
-    margin: 20px;
-
-    background: linear-gradient(to bottom, rgb(255, 255, 255) 90%, rgb(241, 241, 241));
-    border-radius: 5%;
-}
-
-.ReservationImgs{
-    width: 300px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5%;
-}
-
-.ReservationText{
-    margin-left: 10px;
-    color: black;
-}
-
-.Date{
-    margin-top: -10px;
-}
-
-.Personnel{
-    display: inline-table;
-}
-
-.PersonnelCount{
-    display: inline-table;
-}
-
-.Use{
-    text-align: right;
-    margin-top: -40px;
 }

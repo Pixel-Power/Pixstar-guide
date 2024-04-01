@@ -15,7 +15,7 @@ function RestaurantDetail(){
     const {userCode} = useParams();
     console.log(`파람스 불러오기 : ${userCode}`);
     console.log(`userCode 타입 : ${typeof userCode}`);
-    const realUserCode = (userCode !== 'undefined')? userCode: 0;
+    const realUserCode = (userCode !== null)? userCode: 0;
     console.log(`사용자코드 불러오기 : ${realUserCode}`);
 
 
