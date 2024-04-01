@@ -72,13 +72,13 @@ function RestaurantSearchDetail(){
         <>
             <div className={ResDetailStyle.flexcontainer}>
             <div className={ResDetailStyle.ResTitleName}>{categories.join(', ')} 맛집 검색 결과</div>
-            <input
+            {/*<input
                 type='text'
                 value={searchInput}
                 onChange={handleSearchInputChange}
                 placeholder=' '
                 className={ResDetailStyle.searchInput}
-            />
+    />*/}
                 
                 <div className={ResDetailStyle.flexItem1}>
                         {currentItems.length > 0 ? (
