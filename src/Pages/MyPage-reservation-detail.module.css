@@ -1,0 +1,47 @@
+.RestaurantName{
+    text-align: center;
+    margin-top: 158px;
+    margin-left:10%;
+}
+
+.BoxList{
+    background-color: rgb(216, 216, 216);
+    width: 120px;
+    height: 35px;
+    padding-top: 7px;
+    text-align: center;
+    border-radius: 15%;
+    margin-left:10%;
+}
+
+.Box{
+    width: 80%;
+    height: 300px;
+    margin: auto;
+}
+
+.ListInfoBox{
+    margin-top: -20px;
+    margin-left:10%;
+    background-color: #F8F8F8;
+}
+
+.ListName{
+    display: inline-table;
+    width: 200px;
+    margin-left: 10px;
+}
+
+.ListInfo{
+    display: inline-table;
+}
+
+.Hr{
+    width: 75%;
+    margin-left:16.5%;
+}
+
+.map{
+    display: flex;
+    margin-left:22%;    
+}

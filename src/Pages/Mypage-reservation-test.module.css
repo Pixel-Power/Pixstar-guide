@@ -1,0 +1,84 @@
+.MyPage1{
+    text-align: center;
+    margin-top:108px;
+    margin-left:10%;
+}
+
+.UserBox{
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid black;
+    padding: 50px;
+}
+
+.UserImg{
+    display: inline-table;
+    margin-left: 20px;
+}
+
+.UserName {
+    font-size: 35px;
+    font-weight: bold;
+    display: inline;
+}
+
+.UserRefer{
+    font-size: 20px;
+    font-weight: bold;
+    display: inline;
+}
+
+.UserNameBox{
+    display: inline-block;
+    width: 50%;
+    margin-left: 30px;
+    
+    text-align: left;
+}
+
+.UserIntroduce{
+    display: block;
+}
+
+.Button1{
+    width: 90px;
+    height: 45px;
+
+    font-size: large;
+    font-weight: bold;
+
+    background: #7E7D79;
+
+    border-radius: 10px;
+
+    color: white;
+
+    margin: 20px;
+}
+
+.Button2{
+    width: 90px;
+    height: 45px;
+
+    font-size: large;
+    font-weight: bold;
+
+    background: rgb(251, 75, 85);
+    border-radius: 10px;
+
+    color: white;
+
+    margin: 20px;
+}
+
+.reservationBox{
+    display: flex;
+    justify-content: space-evenly;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    margin-left: 255px;
+    cursor: pointer;
+    /* margin-right: 500px; */
+}

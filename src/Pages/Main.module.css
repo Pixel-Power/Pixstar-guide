@@ -1,0 +1,239 @@
+* {
+  font-family: 'Noto Sans';
+}
+.allmainPageBody {
+  margin-left: 25%;
+  margin-right: 15%;
+}
+
+.searchbox {
+  width: 1468.96px;
+  height: 250px;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* 수평 가운데 정렬 */
+  z-index: 1;
+}
+
+.searchBg {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  vertical-align: middle;
+  margin-top: 109px;
+  position: relative; /* 상대 위치로 설정 */
+  z-index: -1;
+  width: 1400px;
+  height: 280px;
+}
+
+
+.searchinputbox {
+  position: absolute;
+  top: 46%;
+  left: 45%;
+  width: 100%;
+}
+
+.searchInput {
+  width: 550px;
+  height: 60px;
+  font-size: 12pt;
+  border-radius: 25px;
+  border: 2px solid white;
+  padding-inline: 40px;
+  font-size: 1.05rem;
+}
+
+input::placeholder{
+  position: absolute;
+  top: 47%;
+  left: 8%; /* 원하는 위치로 조정 */
+  transform: translateY(-50%);
+  pointer-events: none; 
+}
+
+.searchInput:focus {
+  border-color: white;
+  outline: none;
+}
+
+
+.searchButton {
+  width: 45px;
+  vertical-align: middle;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.bodyBox {
+  display: flex;
+  justify-content: center;
+}
+
+.row1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+  gap: 100px;
+}
+
+.row2 {
+  display: flex;
+  margin: 10px 0px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  gap: 20px;
+}
+
+.box1 {
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.box1 article {
+  float: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.box2 article {
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.box3 {
+  margin-left: 11%;
+}
+
+.box3 img {
+  width: 400px;
+  height: auto;
+}
+
+.box4 {
+  margin-left: 8%;
+}
+
+.row3 {
+  justify-content: center;
+  display: flex;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.box5 {
+  float: left;
+  cursor: pointer;
+}
+
+.box5 img {
+  width: 370px;
+  height: 350px;
+  margin-right: 10px;
+}
+
+.box6 {
+  float: left;
+  cursor: pointer;
+}
+
+.box6 img {
+  width: 370px;
+  height: 350px;
+}
+
+.box7 {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.box7 img {
+  width: 370px;
+  height: 350px;
+}
+
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.imageContainer img {
+  width: 400px;
+  height: 350px;
+}
+
+.overlayText {
+  /* position: absolute; */
+  top: 460px;
+  font-size: 15pt;
+  font-weight: 500;
+}
+
+.monthRes {
+  position: absolute; 
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30pt;
+  font-weight: 800;
+  color: rgba(133, 38, 38, 0.899);
+  cursor: pointer;
+}
+
+.pixmagazine {
+  position: absolute; 
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30pt;
+  font-weight: 800;
+  color:white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menuImage {
+  cursor: pointer;
+  display: block;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.menuImage2 {
+  display: block;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.pixTitle {
+  font-size: 30pt;
+  font-weight: bold;
+  margin-bottom: 5%;
+  color: rgb(251, 75, 85);
+}
+
+.pixDetail {
+  margin-top: 10%;
+  font-size: 13pt;
+  margin-bottom: 5%;
+}
+
+.pixbtn {
+  background-color: rgb(251, 75, 85);
+  border-color: rgb(251, 75, 85);
+  color: rgb(251, 75, 85);
+  font-size: 13pt;
+  font-weight: 500;
+  padding: 3%;
+  margin-top: 4%;
+  border-radius: 10px;
+  border: 1px solid;
+  color: white;
+}

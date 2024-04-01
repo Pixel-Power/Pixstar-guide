@@ -1,0 +1,56 @@
+[
+    {
+        "restaurantCode": 1,
+        "restaurantName": "류니끄",
+        "RSVDate":"2024.04.01",
+        "RSVTime":"6:30",
+        "headcount": 3,
+        "image": "/images/food/pasta/pasta (6).jpg",
+        "avail":"이용 전"
+    },
+    {
+        "restaurantCode": 23,
+        "restaurantName": "도미니크앤존",
+        "RSVDate":"2024.05.05",
+        "RSVTime":"7:30",
+        "headcount": 9,
+        "image": "/images/food/dessert/dessert (3).jpg",
+        "avail":"이용 전"
+    },
+    {
+        "restaurantCode": 15,
+        "restaurantName": "히노",
+        "RSVDate":"2024.03.07",
+        "RSVTime":"6:30",
+        "headcount": 7,
+        "image": "/images/food/japanesefood/japanesefood (12).jpg",
+        "avail":"이용 완료"
+    },
+    {
+        "restaurantCode": 30,
+        "restaurantName": "구름식당",
+        "RSVDate":"2024.04.12",
+        "RSVTime":"6:00",
+        "headcount": 2,
+        "image": "/images/food/koreanfood/koreanfood (15).jpg",
+        "avail":"이용 전"
+    },
+    {
+        "restaurantCode": 7,
+        "restaurantName": "하쿠시",
+        "RSVDate":"2024.02.27",
+        "RSVTime":"8:00",
+        "headcount": 5,
+        "image": "/images/food/japanesefood/japanesefood (7).jpg",
+        "avail":"이용 완료"
+    },
+    {
+        "restaurantCode": 26,
+        "restaurantName": "청와옥",
+        "RSVDate":"2024.01.20",
+        "RSVTime":"8:00",
+        "headcount": 3,
+        "image": "/images/food/koreanfood/koreanfood (1).jpg",
+        "avail":"이용 완료"
+    }
+]
