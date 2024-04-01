@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+<h1 align = "center">쩝쩝박사 PixSTAR guide</h1>
+<p align="center"><img align="center" width= 400px src="https://github.com/nunu1101/React/assets/134928447/a3255afd-a5ce-4791-99a1-a8558eb862d6"> </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 프로젝트 소개
+- 청년들에게 pixel power만의 기준으로 선정된 PixSTAR맛집을 손쉽게 사용자가 찾아 볼 수 있는 센스있는 페이지
+- pixel power만의 국내 맛집의 재 방문 수를 기준으로 선정하고 가격대 별 PixSTAR 맛집 소개
+- 홈페이지 이용자의 평점과 좋아요 수를 기준으로 선정된 PixSTAR맛집 소개
 
-In the project directory, you can run:
+## 메인페이지
+<img src="https://github.com/Pixel-Power/Pixstar-guide/assets/134928447/211bbeb3-f678-46b1-9625-802d72b08867">
+<img src="https://github.com/Pixel-Power/Pixstar-guide/assets/134928447/e13b5521-33dc-4f5f-87b4-a0856a0cb50e">
 
-### `npm start`
+## 사용 기술
+<img src="https://github.com/Pixel-Power/.github/assets/134928447/e2cc050b-d6fe-48fe-a534-c431af00695e">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## UseCase Diagram (사용자,관리자 기능)
+<img src="https://github.com/nunu1101/React/assets/134928447/f1dedfe3-67d7-4da8-971a-bf30292845b3">
+<img src="https://github.com/nunu1101/React/assets/134928447/f76333f4-2afc-4fb2-8f40-69ff3348965a">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Flow Chart
+<img src="https://github.com/Pixel-Power/Pixstar-guide/assets/134928447/8d009606-f039-4b0f-8607-87e24c677237">
 
-### `npm test`
+## 메뉴 구조도
+<img src="https://github.com/Pixel-Power/Pixstar-guide/assets/134928447/ff1210b0-7dab-404b-bb5f-325554da817d">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 사이트맵
+<img src="https://github.com/Pixel-Power/Pixstar-guide/assets/134928447/839fc928-4eeb-4637-a28d-8308689b891d">
 
-### `npm run build`
+## 일정관리
+<img src="https://github.com/Pixel-Power/Pixstar-guide/assets/134928447/3d95db63-d7dd-473b-b601-1c1434470f17">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Member of Pixel Power 💪
+|                                         Project Manager                                          |                                         Configuration Manager                                          |                                                                                   |                                                                                  |                                                                               | 
+| :--------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------: |
+| <img src="https://avatars.githubusercontent.com/u/134928447?v=4" width=410px alt="윤수빈"/> | <img src="https://avatars.githubusercontent.com/u/152046800?v=4" width=400px alt="조은성"/> | <img src="https://avatars.githubusercontent.com/u/155221216?s=70&v=4" width=500px alt="강민서"/> | <img src="https://avatars.githubusercontent.com/u/157683550?s=70&v=4" width=500px alt="김진용"> | <img src="https://avatars.githubusercontent.com/u/157683303?s=70&v=4" width=500px alt="윤해빈"> |
+|                       [Yun SooBin](https://github.com/nunu1101)                        |                            [Cho EunSeong](https://github.com/eunseongjo)                            |                            [Kang MinSeo](https://github.com/KANGMINSEO0)                            |                          [Kim JinYong](https://github.com/rlawlsdyd5932)                           |                         [Yun HaeBin](https://github.com/Bini0104)                         |
