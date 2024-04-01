@@ -32,7 +32,7 @@ function Login() {
 
   return (
     <div>
-        <div style={{
+        <div style={{margin: '5%',
           display: 'flex', justifyContent: 'center', alignItems: 'center',
           width: '100%', height: '100vh', }}>
           <form style={{ display: 'flex', flexDirection: 'column' }}>

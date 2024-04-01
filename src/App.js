@@ -22,17 +22,19 @@ import CompanyInfo from './Pages/Company-info';
 import CancelMember from './Pages/Mypage-cancelmember';
 
 import ReservationTest from './Pages/Mypage-reservation-test';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop/>
       <Routes>
 
       {/* 로그인 x, 사이드바 o */}
         <Route path="/" element={<Layout1 />}>
           <Route index element={<Main />} />
           <Route path="main" element={<Main />} />
-          <Route path="/restaurantsearchresult/:userCode" element={<RestaurantSearchResult />} />
+          <Route path="/restaurantsearchresult" element={<RestaurantSearchResult />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path="/restaurantsearchresult" element={<RestaurantSearchResult />} />
