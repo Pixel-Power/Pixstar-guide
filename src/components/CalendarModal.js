@@ -86,7 +86,7 @@ function CalendarModal ({ code, userCode}) {
 
     return (
         <>
-            <div>
+            <div className={styles.allBox}>
                 <div className={styles.reservationBox}>
                     <div className={styles.calendarIconTextBox}>
                         <img className={styles.calendarIcon} src="/images/restaurant-detail/calendar.png"></img>
@@ -107,7 +107,7 @@ function CalendarModal ({ code, userCode}) {
                             <hr/>
                         </div>
                         <div className={styles.numberText}>
-                            <p>인원</p>
+                            <p> 인원</p>
                         </div>
                         <div className={styles.countBox}>
                             <button id={styles.countButton} onClick={onClickMinus}>-</button>

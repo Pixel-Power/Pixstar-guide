@@ -42,7 +42,7 @@ function Main() {
             fetchRestaurantDetail();
         }, [userCode]);
 
-    var option = "width = 500, height = 500, top = 100, left = 200, location=no, toolbar= no, status=no, scrollbars=no, resizable=no"
+    var option = "width = 500, height = 505, top = 100, left = 200, location=no, toolbar= no, status=no, scrollbars=no, resizable=no"
 
 
     return (
