@@ -1,0 +1,20 @@
+.log {
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 15pt;
+}
+
+.btn {
+    border: 1px solid rgb(251, 75, 85);
+    background-color: rgb(251, 75, 85);
+    border-radius: 10px;
+    margin-left: 10px;
+    color: white;
+    font-size: 13pt;
+    padding: 7px;
+    font-weight: 700;
+}

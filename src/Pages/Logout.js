@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {useNavigate} from 'react-router-dom'
+import logStyle from './Logout.module.css';
 
 function Logout() {
 
@@ -13,16 +14,9 @@ function Logout() {
       };
 
     return(
-        <div style={{margin:'5%',
-          display: 'flex', justifyContent: 'center', alignItems: 'center',
-          width: '100%', height: '100vh'
-      }}>
-            <p>송강님! 로그아웃 하시겠습니까?  </p>
-            
-          <button onClick={handleLogout}>Logout</button>
-
-
-          
+        <div className={logStyle.log}>
+            <p>송강님! 로그아웃 하시겠습니까? </p>
+          <button className={logStyle.btn} onClick={handleLogout}>Logout</button>
         </div>
     )
 
