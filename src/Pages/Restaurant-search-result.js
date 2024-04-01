@@ -1,6 +1,6 @@
 import {NavLink, useNavigate, useSearchParams, useLocation, useParams} from 'react-router-dom';
 import {useState, useEffect} from 'react';
-import { searchRestaurant } from '../apis/RestaurantAPI';
+import { searchRestaurants } from '../apis/RestaurantAPI';
 import ResDetailStyle from './Restaurant-search-result.module.css';
 import RestaurantItem from '../components/RestaurantItem.js'
 
@@ -13,11 +13,13 @@ function RestaurantSearchDetail(){
     const [restaurantList, setRestaurantList ] = useState([]);
     const [searchInput, setSearchInput] = useState('');
     const [categories, setCategories] = useState([]);
+    const [addresses, setAddresses]=useState([]);
     const itemsPerPage = 6;
     const [currentPage, setCurrentPage] = useState(1);
     const [searchParams] = useSearchParams();
 
     const category = searchParams.get('category');
+    const address= searchParams.get('address');
 
     const navigate = useNavigate();
 
@@ -28,21 +30,38 @@ function RestaurantSearchDetail(){
     },[searchTerm]
     );
 
-    useEffect (() => {
+    useEffect(() => {
         const fetchRestaurantList = async () => {
-            const filteredList = await searchRestaurant(searchInput);
+            let filteredList = [];
+    
+            if (searchInput) {
+                filteredList = await searchRestaurants(searchInput);
+                setCategories([]);
+                setAddresses([]);
+            } else if (category) {
+                filteredList = await searchRestaurants(category);
+                setCategories([category]);
+                setAddresses([]);
+                setSearchInput('');
+            } else if (address) {
+                filteredList = await searchRestaurants(address);
+                setAddresses([address]);
+                setCategories([]);
+                setSearchInput('');
+            }
+    
             setRestaurantList(filteredList);
-            const allCategories = filteredList.map(restaurant => restaurant.category);
-            const uniqueCategories = [...new Set(allCategories)]; // 중복 제거
-            setCategories(uniqueCategories);
         };
+    
         fetchRestaurantList();
-    },[searchInput]
-    );
+    }, [searchInput, category, address]);
+    
 
-    const handleSearchInputChange = (e) => {
-        setSearchInput(e.target.value);
-    };
+
+        const handleSearchInputChange = (e) => {
+            setSearchInput(e.target.value);
+        };
+
 
     // useEffect(
     //     () => {
@@ -64,7 +83,8 @@ function RestaurantSearchDetail(){
     return(
         <>
             <div className={ResDetailStyle.flexcontainer}>
-            <div className={ResDetailStyle.ResTitleName}>{categories.join(', ')} 맛집 검색 결과</div>
+            <div className={ResDetailStyle.ResTitleName}> {searchInput ? `${searchInput} ` : ''}
+    {categories.join(', ')} {addresses.join(', ')} 맛집 검색 결과</div>
             <input
                 type='text'
                 value={searchInput}

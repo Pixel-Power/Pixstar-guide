@@ -14,6 +14,26 @@ export function getResDetail(code){
 }
 
 
-export function searchRestaurant(category){
-    return category ? resDetail.filter(restaurant => restaurant.category === category) : resDetail;
+// export function searchRestaurants(category,address){
+//     if(category) {
+//         return category ? resDetail.filter(restaurant => restaurant.category === category) : resDetail;
+//     } else {
+//         return address ? resDetail.filter(restaurant => restaurant.address === address) : resDetail;
+//     }
+    
+   
+// } 
+
+export function searchRestaurants(category,address) {
+    if (category) {
+        return resDetail.filter(restaurant => restaurant.category.match(category));
+    } else {
+        return resDetail.filter(restaurant => restaurant.address.match(address));
+    } 
 }
+
+
+
+
+
+

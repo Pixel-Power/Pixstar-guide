@@ -70,7 +70,7 @@ function RestaurantDetail(){
                 infowindow.open(map, marker);
             });
         },
-        []
+        [restaurant]
     );
 
     console.log(restaurant);
