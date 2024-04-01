@@ -1,11 +1,9 @@
+* {
+  font-family: 'Noto Sans';
+}
 .allmainPageBody {
   margin-left: 25%;
   margin-right: 15%;
-}
-
-.swiper {
-  width: 600px;
-  height: 300px;
 }
 
 .searchbox {
@@ -26,24 +24,24 @@
   margin-top: 109px;
   position: relative; /* 상대 위치로 설정 */
   z-index: -1;
-  width: 100%;
-  opacity: 0.8;
+  width: 1400px;
+  height: 280px;
 }
 
 
 .searchinputbox {
   position: absolute;
-  top: 70%;
-  left: 36%;
+  top: 46%;
+  left: 45%;
   width: 100%;
 }
 
 .searchInput {
-  width: 500px;
-  height: 50px;
+  width: 550px;
+  height: 60px;
   font-size: 12pt;
   border-radius: 25px;
-  border: 2px solid rgb(255, 209, 45, 0.8);
+  border: 2px solid white;
   padding-inline: 40px;
   font-size: 1.05rem;
 }
@@ -56,14 +54,14 @@ input::placeholder{
   pointer-events: none; 
 }
 
-input:focus {
-  border-color: rgb(255, 209, 45, 0.8);
+.searchInput:focus {
+  border-color: white;
   outline: none;
 }
 
 
 .searchButton {
-  width: 40px;
+  width: 45px;
   vertical-align: middle;
   margin-left: 10px;
   cursor: pointer;
@@ -77,18 +75,21 @@ input:focus {
 .row1 {
   display: flex;
   justify-content: center;
-  margin-top: 80px;
-  gap: 150px;
+  margin-top: 75px;
+  gap: 100px;
 }
 
 .row2 {
   display: flex;
-  margin: 30px 0px;
+  margin: 10px 0px;
+  margin-top: 3%;
+  margin-bottom: 3%;
   gap: 20px;
 }
 
 .box1 {
   text-align: center;
+  margin-bottom: 3%;
 }
 
 .box1 article {
@@ -113,13 +114,13 @@ input:focus {
 }
 
 .box4 {
-  margin-left: 11%;
+  margin-left: 8%;
 }
 
 .row3 {
   justify-content: center;
   display: flex;
-  margin-top: 2.5%;
+  margin-top: 3%;
   margin-bottom: 3%;
 }
 
@@ -166,10 +167,6 @@ input:focus {
 .imageContainer img {
   width: 400px;
   height: 350px;
-}
-
-.imageContainer p {
-  text-align: center;
 }
 
 .overlayText {

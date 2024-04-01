@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getUserList } from '../apis/MemAPI';
 import { useNavigate } from 'react-router-dom';
+import LogStyle from './Login.module.css';
 
 
 function Login() {
@@ -32,27 +33,25 @@ function Login() {
 
   return (
     <div>
-        <div style={{margin: '5%',
-          display: 'flex', justifyContent: 'center', alignItems: 'center',
-          width: '100%', height: '100vh', }}>
-          <form style={{ display: 'flex', flexDirection: 'column' }}>
-            <label>ID</label>
+        <div className={LogStyle.box}>
+          <form className={LogStyle.form}>
+            <label className={LogStyle.idpw}>ID</label>
             <input
+              className={LogStyle.id}
               type="text"
               placeholder="아이디를 입력해주세요"
               value={id}
-              onChange={(e) => setId(e.target.value)}
-              style={{ width: '100%', padding: '12px', marginBottom: '15px' }}/>
-            <label>PASSWORD</label>
+              onChange={(e) => setId(e.target.value)}/>
+            <label className={LogStyle.idpw}>PASSWORD</label>
             <input
+              className={LogStyle.id}
               type="password"
               placeholder="비밀번호를 입력해주세요"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              style={{ width: '100%', padding: '12px', marginBottom: '15px' }}/>
-            <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
-              <button onClick={handleLogin} style={{ width: '70%', padding: '3px 5px', marginTop: '15px' }}>로그인</button>
-            <button onClick={onClickHandler} style={{ width: '80%', padding: '3px 5px', marginTop: '15px' }}>회원이 아니신가요?</button>
+              onChange={(e) => setPassword(e.target.value)}/>
+            <div className={LogStyle.apply}>
+              <button onClick={handleLogin} className={LogStyle.login}>로그인</button>
+              <button onClick={onClickHandler} className={LogStyle.login}>회원이 아니신가요?</button>
             </div>
           </form>
     </div>
