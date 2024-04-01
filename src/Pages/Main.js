@@ -51,7 +51,7 @@ function Main() {
             <div className={mainPageStyles.allmainPageBody}>
 
                 <div className={mainPageStyles.searchbox}>
-                    {/* <img className={mainPageStyles.searchBg}  src="/images/mainPage-images/mainbar.png" alt="검색창 배경" /> */}
+                    <img className={mainPageStyles.searchBg}  src="/images/mainPage-images/배경8.png" alt="검색창 배경" />
                     <div className={mainPageStyles.searchinputbox}>
                         <input className={mainPageStyles.searchInput} type="search" placeholder="검색어를 입력하세요" onChange={e => setSearchTerm(e.target.value)} onKeyDown={handleOnKeyPress}></input>
                         <img className={mainPageStyles.searchButton}  type="button" onClick={onClickHandler} src="/images/mainPage-images/search-icon2.png" alt="검색"></img>
@@ -77,7 +77,7 @@ function Main() {
                         <div className={mainPageStyles.box2}>
                             <article className={mainPageStyles.imageContainer}>
 
-                                <img className={mainPageStyles.menuImage} type="button" onClick={onClickHandler} src="/images/mainPage-images/픽스타 매거진2.png" alt="픽스타 매거진" />
+                                <img className={mainPageStyles.menuImage} type="button" onClick={() => alert("서비스 준비중 입니다.")} src="/images/mainPage-images/픽스타 매거진2.png" alt="픽스타 매거진" />
                                 {/* <div className={mainPageStyles.imageOverlay}>
                                 <span className={mainPageStyles.pixmagazine} onClick={onClickHandler}>2024년<br/>4월호</span>
                                 <p className={mainPageStyles.overlayText}>픽스타 매거진</p>
